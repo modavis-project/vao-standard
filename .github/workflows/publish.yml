@@ -1,0 +1,141 @@
+name: Publish VAO 0.4.0
+
+on:
+  push:
+    tags:
+      - "v0.4.0"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-vao-0.4.0
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    uses: ./.github/workflows/validate.yml
+
+  verify-release-ref:
+    name: Verify signed release ref
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Require the exact annotated tag and authorized signatures
+        run: |
+          test "$GITHUB_REF" = "refs/tags/v0.4.0"
+          test "$(git cat-file -t refs/tags/v0.4.0)" = "tag"
+          printf '%s\n' 'modavis-project@users.noreply.github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC0hRn2syRAD3vCm9MLm766FprDF3GfVMVmj5C2wYPkk' > "$RUNNER_TEMP/vao-allowed-signers"
+          git -c gpg.ssh.allowedSignersFile="$RUNNER_TEMP/vao-allowed-signers" verify-tag refs/tags/v0.4.0
+          VAO_RELEASE_COMMIT="$(git rev-list -n 1 refs/tags/v0.4.0)"
+          test "$VAO_RELEASE_COMMIT" = "$GITHUB_SHA"
+          git -c gpg.ssh.allowedSignersFile="$RUNNER_TEMP/vao-allowed-signers" verify-commit "$VAO_RELEASE_COMMIT"
+          test "$(git show -s --format=%ae "$VAO_RELEASE_COMMIT")" = "modavis-project@users.noreply.github.com"
+          test "$(tr -d '\n' < VERSION)" = "0.4.0"
+
+  require-public-repository:
+    name: Require public repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stop publication while the repository is private
+        env:
+          REPOSITORY_VISIBILITY: ${{ github.event.repository.visibility }}
+        run: test "$REPOSITORY_VISIBILITY" = "public"
+
+  build-publication:
+    name: Build publication assets
+    needs: [validate, verify-release-ref, require-public-repository]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.14"
+          cache: pip
+      - name: Install locked release dependencies
+        run: python -m pip install --disable-pip-version-check --require-hashes -r requirements-lock.txt
+      - name: Build and verify the source bundle and publication site
+        run: |
+          python Tools/check_release.py
+          python Tools/build_release.py --output-directory "$RUNNER_TEMP/vao-release"
+          cd "$RUNNER_TEMP/vao-release"
+          sha256sum --check vao-standard-0.4.0.zip.sha256
+          cd "$GITHUB_WORKSPACE"
+          python Tools/build_site.py --output "$RUNNER_TEMP/vao-site" --publication-state published
+          python Tools/check_site.py --site "$RUNNER_TEMP/vao-site" --publication-state published
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: vao-0.4.0-release-assets
+          path: |
+            ${{ runner.temp }}/vao-release/vao-standard-0.4.0.zip
+            ${{ runner.temp }}/vao-release/vao-standard-0.4.0.zip.sha256
+          if-no-files-found: error
+          retention-days: 14
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: ${{ runner.temp }}/vao-site
+
+  prepare-release:
+    name: Prepare draft GitHub release
+    needs: build-publication
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@70fc10c6e5e1ce46ad2ea6f2b72d43f7d47b13c3 # v8.0.0
+        with:
+          name: vao-0.4.0-release-assets
+          path: ${{ runner.temp }}/vao-release
+      - name: Create or refresh the draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view v0.4.0 --json isDraft --jq .isDraft > "$RUNNER_TEMP/release-is-draft" 2>/dev/null; then
+            test "$(cat "$RUNNER_TEMP/release-is-draft")" = "true"
+            gh release upload v0.4.0 "$RUNNER_TEMP/vao-release/vao-standard-0.4.0.zip" "$RUNNER_TEMP/vao-release/vao-standard-0.4.0.zip.sha256" --clobber
+          else
+            gh release create v0.4.0 "$RUNNER_TEMP/vao-release/vao-standard-0.4.0.zip" "$RUNNER_TEMP/vao-release/vao-standard-0.4.0.zip.sha256" --draft --verify-tag --title "Virtual Acoustic Object (VAO) Standard 0.4.0" --notes-file .github/release-notes-0.4.0.md
+          fi
+
+  deploy-pages:
+    name: Deploy GitHub Pages
+    needs: prepare-release
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy the verified publication site
+        id: deployment
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
+
+  publish-release:
+    name: Publish GitHub release
+    needs: deploy-pages
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Publish the prepared release after Pages succeeds
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh release edit v0.4.0 --draft=false --latest

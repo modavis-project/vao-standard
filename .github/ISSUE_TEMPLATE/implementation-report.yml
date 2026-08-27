@@ -1,0 +1,29 @@
+name: Implementation report
+description: Report roles, profiles, test results, and interoperability evidence.
+title: "[Implementation] "
+labels: [implementation]
+body:
+  - type: input
+    id: implementation
+    attributes:
+      label: Name, version, and public URL
+    validations:
+      required: true
+  - type: textarea
+    id: claims
+    attributes:
+      label: Roles, profile IRIs, and capability IRIs
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: Resource limits and known limitations
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Fixture/test bundle digest and results
+    validations:
+      required: true

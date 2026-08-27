@@ -1,0 +1,42 @@
+name: Specification or tool defect
+description: Report a reproducible contradiction, invalid result, or reference-tool defect.
+title: "[Defect] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not report security vulnerabilities here; use private vulnerability reporting.
+  - type: input
+    id: version
+    attributes:
+      label: VAO/artifact version
+      placeholder: 0.4.0 / commit
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Normative specification
+        - JSON Schema
+        - Carrier or archive
+        - Profile or semantics
+        - Linked data
+        - Runtime
+        - Reference tool
+        - Documentation
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction and observed result
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result and supporting requirement
+    validations:
+      required: true

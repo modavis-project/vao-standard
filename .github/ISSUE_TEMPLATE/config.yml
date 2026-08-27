@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/modavis-project/vao-standard/security/advisories/new
+    about: Report parser, extraction, materialization, or runtime vulnerabilities privately.
+  - name: Implementation discussion
+    url: https://github.com/modavis-project/vao-standard/discussions
+    about: Ask modelling and implementation questions.

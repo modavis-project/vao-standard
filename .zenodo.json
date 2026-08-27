@@ -1,0 +1,36 @@
+{
+  "title": "Virtual Acoustic Object (VAO) Standard: Version 0.4.0",
+  "description": "Version 0.4.0 of the preservation-oriented standard for semantic, scientific, multimodal, physical, playable, rights, and exact-byte descriptions of acoustic objects. Specification text, schemas, semantic artifacts, fixtures, and knowledge documentation are CC BY 4.0; reference software, tests, and automation are Apache-2.0. The authoritative per-file mapping is in REUSE.toml.",
+  "upload_type": "software",
+  "version": "0.4.0",
+  "publication_date": "2026-08-27",
+  "access_right": "open",
+  "license": "other-open",
+  "creators": [
+    {
+      "name": "Ukolov, Dominik",
+      "orcid": "0000-0002-7904-3892",
+      "affiliation": "Digital Humanities (Image/Object), Friedrich Schiller University Jena; Research Group DIGITAL ORGANOLOGY, Leipzig University"
+    }
+  ],
+  "keywords": [
+    "Virtual Acoustic Object",
+    "musical instrument",
+    "digital preservation",
+    "multimodal research data",
+    "acoustics",
+    "provenance"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/modavis-project/vao-standard/releases/tag/v0.4.0",
+      "relation": "isIdenticalTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://w3id.org/modavis/vao/0.4.0/",
+      "relation": "isAlternateIdentifier",
+      "resource_type": "publication-other"
+    }
+  ]
+}
