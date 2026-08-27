@@ -1,0 +1,35 @@
+name: Format change proposal
+description: Propose a new field, semantic rule, profile, capability, or compatibility change.
+title: "[Proposal] "
+labels: [proposal]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and users
+      description: Explain the preservation or interoperability problem, not only the requested syntax.
+    validations:
+      required: true
+  - type: textarea
+    id: existing
+    attributes:
+      label: Existing VAO/external mechanisms considered
+    validations:
+      required: true
+  - type: textarea
+    id: contract
+    attributes:
+      label: Proposed syntax and semantics
+      description: Include absence/empty behaviour, identifiers, examples, and conformance conditions.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Compatibility, migration, privacy, and security impact
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Implementation or fixture evidence

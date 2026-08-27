@@ -1,0 +1,53 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "CreativeWork",
+  "name": "Virtual Acoustic Object (VAO) Standard",
+  "description": "Preservation-oriented standard for semantic, scientific, multimodal, physical, playable, rights, and exact-byte descriptions of acoustic objects.",
+  "version": "0.4.0",
+  "identifier": "https://doi.org/10.5281/zenodo.22122774",
+  "url": "https://w3id.org/modavis/vao/0.4.0/",
+  "datePublished": "2026-08-27",
+  "dateModified": "2026-08-27",
+  "developmentStatus": "https://www.repostatus.org/#active",
+  "codeRepository": "https://github.com/modavis-project/vao-standard",
+  "issueTracker": "https://github.com/modavis-project/vao-standard/issues",
+  "license": [
+    "https://spdx.org/licenses/CC-BY-4.0",
+    "https://spdx.org/licenses/Apache-2.0"
+  ],
+  "author": {
+    "@type": "Person",
+    "@id": "https://orcid.org/0000-0002-7904-3892",
+    "givenName": "Dominik",
+    "familyName": "Ukolov",
+    "affiliation": [
+      {
+        "@type": "Organization",
+        "name": "Digital Humanities (Image/Object)",
+        "parentOrganization": {
+          "@type": "CollegeOrUniversity",
+          "@id": "https://ror.org/05qpz1x62",
+          "name": "Friedrich Schiller University Jena"
+        }
+      },
+      {
+        "@type": "Organization",
+        "name": "Research Group DIGITAL ORGANOLOGY",
+        "parentOrganization": {
+          "@type": "CollegeOrUniversity",
+          "@id": "https://ror.org/03s7gtk40",
+          "name": "Leipzig University"
+        }
+      }
+    ]
+  },
+  "programmingLanguage": "Python 3",
+  "keywords": [
+    "virtual acoustic object",
+    "musical instruments",
+    "digital preservation",
+    "multimodal research data",
+    "acoustics",
+    "provenance"
+  ]
+}
