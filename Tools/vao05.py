@@ -3137,6 +3137,7 @@ def validate_cross_module_references(
 
 
 _LOCAL_REFERENCE_EXEMPT = {
+    "carrierId",  # identifies a carrier descriptor in the release inventory
     "scoreElementId",  # identifier inside an external score realization
     "selectionSetId",  # local grouping token, not a declared record identifier
     "softwareHeritageId",  # SWHID syntax, not a VAO record identifier

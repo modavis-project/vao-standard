@@ -91,6 +91,8 @@ class VAO05Tests(unittest.TestCase):
                 }
             )
             manifest["realizations"][0]["distributionIds"] = [distribution_id]
+            manifest_report = vao05.validate_manifest(manifest)
+            self.assertTrue(manifest_report["valid"], manifest_report["errors"])
             manifest_bytes = vao05.json_bytes(manifest)
             manifest_path = directory / "vao-manifest.json"
             manifest_path.write_bytes(manifest_bytes)
