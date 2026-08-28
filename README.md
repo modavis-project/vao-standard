@@ -1,5 +1,8 @@
 # Virtual Acoustic Object (VAO) Standard
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22122774.svg)](https://doi.org/10.5281/zenodo.22122774)
+[![VAO 0.4.0 persistent identifier](https://img.shields.io/badge/W3ID-VAO%200.4.0-2C5F73.svg)](https://w3id.org/modavis/vao/0.4.0/)
+
 The Virtual Acoustic Object (VAO) Standard is an open exchange and preservation standard for digital representations of musical instruments and other acoustic objects. A VAO release can connect descriptive metadata, measurements, recordings, images, 3D models, interaction data, provenance, rights, and exact file identities without replacing the established formats used for those resources.
 
 VAO defines a JSON manifest, a safe ZIP-based `.vao` carrier, optional domain profiles, and a linked-data projection. Its purpose is to make a complex research object understandable, verifiable, transferable, and preservable as a coherent release.
@@ -113,6 +116,12 @@ Registry submission working files are maintained separately from the versioned s
 ## Governance, citation, and license
 
 The responsible editor and main developer is **Dominik Ukolov** ([ORCID](https://orcid.org/0000-0002-7904-3892)), Digital Humanities (Image/Object), Friedrich Schiller University Jena; also Research Group DIGITAL ORGANOLOGY, Leipzig University. Affiliations identify the editor and do not imply institutional endorsement.
+
+This work was developed as part of the **MODAVIS** doctoral research project
+(2022–2026). Dominik Ukolov's doctoral research was supported by the German
+Academic Scholarship Foundation (*Studienstiftung des deutschen Volkes*).
+Funding and affiliations do not imply endorsement of the project's technical
+or scientific claims.
 
 Contribution and project policies are documented in [CONTRIBUTING.md](CONTRIBUTING.md), [GOVERNANCE.md](GOVERNANCE.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), [SECURITY.md](SECURITY.md), and [SUPPORT.md](SUPPORT.md). Citation metadata is available in [CITATION.cff](CITATION.cff) and [codemeta.json](codemeta.json).
 
