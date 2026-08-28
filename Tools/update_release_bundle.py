@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: Apache-2.0
-"""Regenerate or verify the fixity manifest for normative VAO 0.4.0 artifacts."""
+"""Regenerate or verify the fixity manifest for normative VAO 0.5.0 artifacts."""
 
 from __future__ import annotations
 
@@ -11,31 +11,31 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
-OUTPUT = ROOT / "Schemas" / "vao-release-bundle-0.4.0.json"
+OUTPUT = ROOT / "Schemas" / "vao-release-bundle-0.5.0.json"
 ARTIFACTS = [
-    "Schemas/vao-manifest-0.4.0.schema.json",
-    "Schemas/vao-context-0.4.0.jsonld",
-    "Schemas/vao-vocabulary-0.4.0.ttl",
-    "Schemas/vao-modavis-mapping-0.4.0.ttl",
-    "Schemas/vao-shapes-0.4.0.ttl",
-    "Schemas/vao-carrier-0.4.0.schema.json",
-    "Schemas/vao-release-0.4.0.schema.json",
-    "Schemas/vao-pack-manifest-0.4.0.schema.json",
-    "Schemas/vao-materialization-receipt-0.4.0.schema.json",
-    "Schemas/vao-zenodo-metadata-0.4.0.schema.json",
-    "Docs/VAO_STANDARD_0.4.0.md",
-    "Docs/VAO_CONFORMANCE_0.4.0.md",
+    "Schemas/vao-manifest-0.5.0.schema.json",
+    "Schemas/vao-context-0.5.0.jsonld",
+    "Schemas/vao-vocabulary-0.5.0.ttl",
+    "Schemas/vao-modavis-mapping-0.5.0.ttl",
+    "Schemas/vao-shapes-0.5.0.ttl",
+    "Schemas/vao-carrier-0.5.0.schema.json",
+    "Schemas/vao-release-0.5.0.schema.json",
+    "Schemas/vao-pack-manifest-0.5.0.schema.json",
+    "Schemas/vao-materialization-receipt-0.5.0.schema.json",
+    "Schemas/vao-zenodo-metadata-0.5.0.schema.json",
+    "Docs/VAO_STANDARD_0.5.0.md",
+    "Docs/VAO_CONFORMANCE_0.5.0.md",
     "Docs/SECURITY_CONSIDERATIONS.md",
-    "Docs/VAO_CORE_PROFILE_0.4.0.md",
-    "Docs/VAO_DYNAMIC_DELIVERY_PROFILE_0.4.0.md",
-    "Docs/VAO_SCIENTIFIC_PROFILE_0.4.0.md",
-    "Docs/VAO_MULTIMODAL_PROFILE_0.4.0.md",
-    "Docs/VAO_PHYSICAL_INSTRUMENT_PROFILE_0.4.0.md",
-    "Docs/VAO_PLAYABLE_PROFILE_0.4.0.md",
-    "Docs/VAO_DETERMINISTIC_RUNTIME_PROFILE_0.4.0.md",
-    "Docs/VAO_SPATIAL_PROFILE_0.4.0.md",
-    "Docs/VAO_ACOUSTICS_PROFILE_0.4.0.md",
-    "Docs/VAO_ZENODO_PROFILE_0.4.0.md",
+    "Docs/VAO_CORE_PROFILE_0.5.0.md",
+    "Docs/VAO_DYNAMIC_DELIVERY_PROFILE_0.5.0.md",
+    "Docs/VAO_SCIENTIFIC_PROFILE_0.5.0.md",
+    "Docs/VAO_MULTIMODAL_PROFILE_0.5.0.md",
+    "Docs/VAO_PHYSICAL_INSTRUMENT_PROFILE_0.5.0.md",
+    "Docs/VAO_PLAYABLE_PROFILE_0.5.0.md",
+    "Docs/VAO_DETERMINISTIC_RUNTIME_PROFILE_0.5.0.md",
+    "Docs/VAO_SPATIAL_PROFILE_0.5.0.md",
+    "Docs/VAO_ACOUSTICS_PROFILE_0.5.0.md",
+    "Docs/VAO_ZENODO_PROFILE_0.5.0.md",
 ]
 
 
@@ -52,8 +52,8 @@ def build() -> dict[str, object]:
         )
     return {
         "type": "VAOSpecificationBundle",
-        "formatVersion": "0.4.0",
-        "id": "https://w3id.org/modavis/vao/0.4.0/specification-bundle",
+        "formatVersion": "0.5.0",
+        "id": "https://w3id.org/modavis/vao/0.5.0/specification-bundle",
         "artifacts": artifacts,
     }
 

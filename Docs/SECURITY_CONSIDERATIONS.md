@@ -1,4 +1,4 @@
-# VAO 0.4.0 security and privacy considerations
+# VAO 0.5.0 security and privacy considerations
 
 This document expands the normative security requirements. VAO files must be treated as untrusted passive data, even when their fixity or signature is valid.
 
@@ -24,7 +24,7 @@ Evidence for one does not prove the others.
 | symlink/hardlink/device/FIFO | reject all links and special entries/workspace nodes |
 | ZIP bomb/oversized headers | finite entry, size, ratio, time, memory, and recursion budgets before decompression |
 | duplicate ZIP/JSON names | reject raw and normalized ZIP duplicates and duplicate JSON members |
-| encrypted/unknown compression | reject; VAO 0.4 supports Stored/Deflate only |
+| encrypted/unknown compression | reject; VAO 0.5 supports Stored/Deflate only |
 | TOCTOU during extraction | fresh private directory, no-follow/exclusive opens, atomic handoff |
 | digest confusion | hash decoded exact member bytes; require algorithm and lowercase length |
 | mutable repository target | resolve immutable record/file; verify local size/SHA-256 |

@@ -1,4 +1,4 @@
-# VAO 0.4.0 implementer guide
+# VAO 0.5.0 implementer guide
 
 This guide is informative. Normative requirements are in the standard, schemas, conformance document, and claimed profiles.
 
@@ -10,7 +10,7 @@ A metadata catalogue may need only Core reading and fixity. A preservation syste
 
 ## 2. Build a manifest
 
-Use the [minimal workspace](../Fixtures/VAO04/workspaces/minimal) for structure, the [Kinoorgel descriptor](../Fixtures/VAO04/descriptors/kinoorgel-multimodal-scientific.example.json) for multimodal/scientific/playable/runtime registries, and the [Cuntz–Positiv descriptor](../Fixtures/VAO04/descriptors/cuntz-positiv-acoustic.example.json) for a positive spatial/acoustic contract. Fixture values are conformance data, not scientific reference results.
+Use the [minimal workspace](../Fixtures/VAO05/workspaces/minimal) for structure, the [Kinoorgel descriptor](../Fixtures/VAO05/descriptors/kinoorgel-multimodal-scientific.example.json) for multimodal/scientific/playable/runtime registries, and the [Cuntz–Positiv descriptor](../Fixtures/VAO05/descriptors/cuntz-positiv-acoustic.example.json) for a positive spatial/acoustic contract. Fixture values are conformance data, not scientific reference results.
 
 Recommended order:
 
@@ -72,12 +72,12 @@ META-INF/vao-carrier.json
 payload/...
 ```
 
-`mimetype` contains exactly `application/vnd.modavis.vao+zip` with no newline. The carrier descriptor records manifest byte size/SHA-256 and maps every payload file to its realization. Use forward slashes, relative `payload/` names, and NFC-distinct names. Avoid names that differ only by case for portability even though the normative comparison is case-sensitive.
+`mimetype` contains exactly `application/vnd.modavis.vao+zip` with no newline. The carrier descriptor records a stable carrier ID and manifest byte size/SHA-256, then maps every payload file to its realization. Use forward slashes, relative `payload/` names, and NFC-distinct names. Avoid names that differ only by case for portability even though the normative comparison is case-sensitive.
 
 Validate the workspace before packing:
 
 ```sh
-python Tools/vao04.py validate path/to/workspace --json
+python Tools/vao05.py validate path/to/workspace --json
 ```
 
 ## 5. Deterministic packing
@@ -85,7 +85,7 @@ python Tools/vao04.py validate path/to/workspace --json
 The reference writer validates, streams each file into a stored ZIP member, fixes metadata, verifies the final archive, and deletes partial output on failure:
 
 ```sh
-python Tools/vao04.py pack path/to/workspace output.vao
+python Tools/vao05.py pack path/to/workspace output.vao
 ```
 
 It refuses to overwrite. Repeating the command to two new output paths over unchanged bytes must produce identical SHA-256.
@@ -101,17 +101,18 @@ The reference CLI recognizes:
 Companion contracts use an explicit kind so that a release/pack/receipt cannot be mistaken for a manifest:
 
 ```sh
-python Tools/vao04.py validate-descriptor release vao-release.json
-python Tools/vao04.py validate-descriptor pack vao-pack-manifest.json
-python Tools/vao04.py validate-descriptor receipt vao-materialization-receipt.json
-python Tools/vao04.py validate-descriptor zenodo-metadata zenodo-legacy.json
-python Tools/vao04.py validate-publication vao-release.json zenodo-legacy.json
-python Tools/vao04.py validate-release vao-release.json vao-manifest.json
-python Tools/vao04.py validate-pack vao-pack-manifest.json vao-manifest.json
-python Tools/vao04.py validate-receipt vao-materialization-receipt.json vao-manifest.json source.vao
+python Tools/vao05.py validate-descriptor release vao-release.json
+python Tools/vao05.py validate-descriptor pack vao-pack-manifest.json
+python Tools/vao05.py validate-descriptor receipt vao-materialization-receipt.json
+python Tools/vao05.py validate-descriptor zenodo-metadata zenodo-legacy.json
+python Tools/vao05.py validate-publication vao-release.json zenodo-legacy.json
+python Tools/vao05.py validate-release vao-release.json vao-manifest.json
+python Tools/vao05.py validate-release-carriers vao-release.json vao-manifest.json bootstrap.vao preservation.vao
+python Tools/vao05.py validate-pack vao-pack-manifest.json vao-manifest.json
+python Tools/vao05.py validate-receipt vao-materialization-receipt.json vao-manifest.json source.vao
 ```
 
-The companion validator applies the same bounded strict-JSON, nesting, Unicode-scalar, finite-binary64, and safe-integer domain as manifest validation. It also checks publication topology, exact/NFC/NFC-plus-case-fold file and path uniqueness, relation inverses, receipt chronology/uniqueness, and the legacy Zenodo projection scope. The cross-document commands additionally compare release/pack/receipt assertions with exact manifest and carrier bytes. The examples in `Fixtures/VAO04/companions` are conformance contracts, not publication instructions; the cross-document examples are bound to the maintained minimal fixture while the failure-status receipt remains explicitly synthetic.
+The companion validator applies the same bounded strict-JSON, nesting, Unicode-scalar, finite-binary64, and safe-integer domain as manifest validation. It also checks publication topology, exact/NFC/NFC-plus-case-fold file and path uniqueness, unique carrier IDs, relation inverses, receipt chronology/uniqueness, and the legacy Zenodo projection scope. The cross-document commands compare release/pack/receipt assertions with exact manifest and carrier bytes. `validate-release-carriers` requires every inventoried carrier and verifies outer file fixity, inner descriptor fixity, manifest bytes, carrier identity/mode, and complete groups. The examples in `Fixtures/VAO05/companions` are conformance contracts, not publication instructions.
 
 Human output is default; `--json` produces a stable report object. Exit codes are 0 valid, 1 invalid, and 2 operational/invocation failure.
 
@@ -122,9 +123,9 @@ from pathlib import Path
 import sys
 
 sys.path.insert(0, "Tools")
-import vao04
+import vao05
 
-report = vao04.validate(Path("example.vao"))
+report = vao05.validate(Path("example.vao"))
 if not report["valid"]:
     raise ValueError(report["errors"])
 ```
@@ -148,6 +149,10 @@ Do not call a generic `extractall` on untrusted input.
 
 Keep resolution disabled by default. When enabled, restrict schemes and hosts, resolve DNS/redirects under SSRF policy, isolate credentials, limit redirects/time/bytes, and write to temporary storage. Verify decoded byte size and SHA-256 before cache visibility. Repository concept identifiers are discovery aids, not exact file identity.
 
+For `carrier-member`, first match carrier ID, immutable version PID, record ID, and filename against `vao-release.json`. Fetch and verify the target carrier descriptor, then use its realization mapping. When the repository supports byte ranges, read the ZIP end record/central directory and request only the stored member's local-header range plus data. Treat the range response as untrusted: require `206`, validate `Content-Range`, reject compression for selective member streaming unless the client implements bounded decoding, and hash the exact decoded member before exposure. If ranges are unavailable, report the full-carrier transfer size and obtain explicit caller authorization before the fallback download.
+
+Materialization copies exact declared realizations into a `custom` carrier and leaves the manifest unchanged. Transcoding is different: it creates new bytes, new realization identity, and explicit derivation provenance, so it cannot be silently performed by a materializer.
+
 Record success/failure in a receipt. Separate the attempt time from successful verification, preserve a bounded diagnostic for failure, do not fabricate byte observations for policy/authentication/unavailable outcomes, and pin both the receipt-producing implementation and exact source carrier. An acquisition names a Distribution declared by the acquired Realization; do not invent a distribution identifier for bytes already embedded in the source carrier. Do not modify the immutable manifest with a local path.
 
 ## 9. Profiles and graceful degradation
@@ -161,7 +166,7 @@ When a profile is materializable, acquire all declared groups plus dependencies 
 Place the canonical VAO context first. Use the locally pinned context in deterministic/offline pipelines; never fetch an unreviewed context during validation. The reference helper embeds the repository copy, adds RDF types/JSON pointers, and refuses additional contexts that it cannot independently pin:
 
 ```sh
-python Tools/vao04_rdf.py manifest.json --annotation-round-trip-check > projected.jsonld
+python Tools/vao05_rdf.py manifest.json --annotation-round-trip-check > projected.jsonld
 ```
 
 Parse that projection as JSON-LD and run the supplied SHACL graph. Retain canonical JSON and exact manifest bytes. Never use RDF serialization to recompute carrier manifest fixity.
@@ -181,7 +186,7 @@ Mint an HTTPS IRI owned by the extension publisher. Publish a versioned schema, 
 The reference migrator copies to a new workspace, preserves legacy source data as migration evidence, updates immutable IRIs, and records the original manifest digest:
 
 ```sh
-python Tools/vao04.py migrate-0.3 old-workspace new-workspace
+python Tools/vao05.py migrate-0.3 old-workspace new-workspace
 ```
 
 Review migrated representation status, rights, scientific typing, profiles, and developmental ontology bindings manually. Migration validity does not prove scientific equivalence.

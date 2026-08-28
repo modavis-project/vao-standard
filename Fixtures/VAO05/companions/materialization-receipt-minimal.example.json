@@ -1,0 +1,45 @@
+{
+  "$schema": "https://w3id.org/modavis/vao/0.5.0/schema/materialization-receipt.json",
+  "type": "VAOMaterializationReceipt",
+  "formatVersion": "0.5.0",
+  "releaseId": "urn:uuid:03000000-0000-4000-8000-000000000001",
+  "manifestSHA256": "9261db2780dc4cb7530c0283d3c0c3a2b94f82b77432611313c6737a256197da",
+  "instanceId": "urn:uuid:00000000-0000-4000-8000-000000000005",
+  "createdAt": "2026-08-27T12:00:00Z",
+  "implementation": {
+    "softwareEnvironmentId": "urn:vao:software:vao05-reference",
+    "name": "VAO 0.5 reference validator and migrator",
+    "version": "0.5.0",
+    "identity": {
+      "algorithm": "sha256",
+      "value": "dbacb455f084d005e6de404e76356a7d570a4d1fc0884809e62913d20799d512"
+    },
+    "identityScope": "source-file",
+    "identityDescription": "SHA-256 of the exact Tools/vao05.py entry-point source; imported behavioural sources and the normative artifact-bundle declaration are pinned separately in dependencies, together with the source checkout's Python dependency lock."
+  },
+  "sourceCarrier": {
+    "kind": "packed-carrier",
+    "descriptorByteSize": 636,
+    "descriptorSHA256": "ec0b13ee44347db727433dd1179b21099f2c1a05c733b20069c15bb5e8e24c7e",
+    "packedCarrierByteSize": 13138,
+    "packedCarrierSHA256": "9bc7ff7eb06cd50a66ab5bfeabdecaef68c8b24a15f5b47bc0013811a241403e"
+  },
+  "selectedGroupIds": [
+    "urn:uuid:03000000-0000-4000-8000-000000000030"
+  ],
+  "acquisitions": [],
+  "profileStates": [
+    {
+      "profileId": "https://w3id.org/modavis/vao/profile/core/0.5.0",
+      "state": "embedded-valid"
+    },
+    {
+      "profileId": "https://w3id.org/modavis/vao/profile/dynamic-delivery/0.5.0",
+      "state": "embedded-valid"
+    },
+    {
+      "profileId": "https://w3id.org/modavis/vao/profile/scientific/0.5.0",
+      "state": "embedded-valid"
+    }
+  ]
+}

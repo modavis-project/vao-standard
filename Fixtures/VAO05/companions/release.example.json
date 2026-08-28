@@ -1,0 +1,44 @@
+{
+  "$schema": "https://w3id.org/modavis/vao/0.5.0/schema/release.json",
+  "type": "VAORelease",
+  "formatVersion": "0.5.0",
+  "vaoId": "https://example.org/vao/fixture/embedded-private",
+  "releaseId": "urn:uuid:03000000-0000-4000-8000-000000000001",
+  "revision": 1,
+  "contentVersion": "1.0.0",
+  "publication": {
+    "topology": "single-record",
+    "rootRecord": {
+      "id": "urn:vao:publication-record:example:root",
+      "repositoryType": "https://w3id.org/modavis/vao/repository/zenodo",
+      "instance": "https://sandbox.zenodo.org",
+      "versionPersistentIdentifier": "https://sandbox.zenodo.org/records/123456",
+      "conceptPersistentIdentifier": "https://sandbox.zenodo.org/records/123455",
+      "recordIdentifier": "synthetic-review-record",
+      "files": [
+        {
+          "fileIdentifier": "vao-manifest.json",
+          "role": "manifest",
+          "byteSize": 11893,
+          "sha256": "9261db2780dc4cb7530c0283d3c0c3a2b94f82b77432611313c6737a256197da"
+        },
+        {
+          "fileIdentifier": "minimal.vao",
+          "role": "carrier",
+          "byteSize": 13138,
+          "sha256": "9bc7ff7eb06cd50a66ab5bfeabdecaef68c8b24a15f5b47bc0013811a241403e",
+          "carrierId": "urn:uuid:03000000-0000-4000-8000-000000000040",
+          "carrierMode": "bootstrap",
+          "manifestSHA256": "9261db2780dc4cb7530c0283d3c0c3a2b94f82b77432611313c6737a256197da",
+          "manifestByteSize": 11893,
+          "carrierDescriptorSHA256": "ec0b13ee44347db727433dd1179b21099f2c1a05c733b20069c15bb5e8e24c7e",
+          "carrierDescriptorByteSize": 636,
+          "completeGroupIds": [
+            "urn:uuid:03000000-0000-4000-8000-000000000030"
+          ]
+        }
+      ]
+    },
+    "familyMembers": []
+  }
+}

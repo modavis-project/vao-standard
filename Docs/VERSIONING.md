@@ -12,13 +12,13 @@ If an apparent erratum changes conformance, it requires a new version even when 
 
 ## Three distinct versions
 
-- `formatVersion` identifies serialized VAO contract (`0.4.0`).
+- `formatVersion` identifies the serialized VAO contract (`0.5.0` for the current candidate; finalized 0.4.0 remains valid under its own schema).
 - `release.contentVersion` identifies the publisher's acoustic-object release.
-- repository candidate labels such as `0.4.0-rc.2` identify pre-publication review of the specification and never appear as `formatVersion`.
+- repository candidate labels such as `0.5.0-rc.1` identify pre-publication review of the specification and never appear as `formatVersion`.
 
 ## Immutable namespaces
 
-After publication, every artifact below `https://w3id.org/modavis/vao/0.4.0/` is immutable. A moving `/latest/` alias may aid discovery but must redirect to a versioned target and must not be serialized into a preserved release.
+Every finalized artifact below `https://w3id.org/modavis/vao/0.4.0/` is immutable. The same rule applies to `https://w3id.org/modavis/vao/0.5.0/` when that candidate is released. A moving `/latest/` alias may aid discovery but must redirect to a versioned target and must not be serialized into a preserved release.
 
 Schema/context/profile IRIs change with any conformance-changing version. Release-bundle checksums pin the exact normative bytes.
 
@@ -34,4 +34,4 @@ Deprecation is documented in changelog and migration guidance for at least one s
 
 ## Candidate and release process
 
-Candidates use repository labels/tags such as `0.4.0-rc.2` and remain unpublished drafts until approval. A final release requires clean conformance, immutable artifact digests, citation/license review, registry preparation, responsible-editor approval, and a signed/tagged release according to the recorded publication process.
+Candidates use repository labels/tags such as `0.5.0-rc.1` and remain unpublished drafts until approval. A final release requires clean conformance, immutable artifact digests, citation/license review, registry preparation, responsible-editor approval, and a signed/tagged release according to the recorded publication process.

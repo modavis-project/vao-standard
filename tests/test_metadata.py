@@ -37,9 +37,9 @@ class MetadataTests(unittest.TestCase):
         self.assertIn("Apache-2.0", zenodo["description"])
         citation = yaml.safe_load((ROOT / "CITATION.cff").read_text(encoding="utf-8"))
         self.assertEqual("1.2.0", citation["cff-version"])
-        self.assertEqual("0.4.0", citation["version"])
-        self.assertEqual("2026-08-27", str(citation["date-released"]))
-        self.assertEqual("10.5281/zenodo.22122774", citation["doi"])
+        self.assertEqual("0.5.0", citation["version"])
+        self.assertNotIn("date-released", citation)
+        self.assertNotIn("doi", citation)
         self.assertEqual("CC-BY-4.0", citation["license"])
         self.assertEqual(
             "https://orcid.org/0000-0002-7904-3892", citation["authors"][0]["orcid"]
@@ -75,14 +75,14 @@ class MetadataTests(unittest.TestCase):
         from rdflib.namespace import OWL, RDF
 
         context = json.loads(
-            (ROOT / "Schemas/vao-context-0.4.0.jsonld").read_text(encoding="utf-8")
+            (ROOT / "Schemas/vao-context-0.5.0.jsonld").read_text(encoding="utf-8")
         )["@context"]
         self.assertIs(context["@protected"], True)
         self.assertEqual("https://w3id.org/modavis/vao/ontology#", context["@vocab"])
         for path in (ROOT / "Schemas").glob("*.ttl"):
             self.assertGreater(len(Graph().parse(path, format="turtle")), 0, path)
 
-        vocabulary = Graph().parse(ROOT / "Schemas/vao-vocabulary-0.4.0.ttl")
+        vocabulary = Graph().parse(ROOT / "Schemas/vao-vocabulary-0.5.0.ttl")
         object_properties = set(vocabulary.subjects(RDF.type, OWL.ObjectProperty))
         datatype_properties = set(vocabulary.subjects(RDF.type, OWL.DatatypeProperty))
         self.assertEqual(set(), object_properties & datatype_properties)
@@ -109,7 +109,7 @@ class MetadataTests(unittest.TestCase):
         )
 
         schema = json.loads(
-            (ROOT / "Schemas/vao-manifest-0.4.0.schema.json").read_text(
+            (ROOT / "Schemas/vao-manifest-0.5.0.schema.json").read_text(
                 encoding="utf-8"
             )
         )
@@ -183,11 +183,11 @@ class MetadataTests(unittest.TestCase):
         from rdflib import Graph, URIRef
         from rdflib.namespace import OWL, RDFS
 
-        mapping = Graph().parse(ROOT / "Schemas/vao-modavis-mapping-0.4.0.ttl")
-        mapping_iri = URIRef("https://w3id.org/modavis/vao/0.4.0/modavis-mapping")
+        mapping = Graph().parse(ROOT / "Schemas/vao-modavis-mapping-0.5.0.ttl")
+        mapping_iri = URIRef("https://w3id.org/modavis/vao/0.5.0/modavis-mapping")
         self.assertEqual(
             {
-                URIRef("https://w3id.org/modavis/vao/0.4.0/vocabulary"),
+                URIRef("https://w3id.org/modavis/vao/0.5.0/vocabulary"),
                 URIRef("https://w3id.org/modavis/ontology/0.1.0"),
             },
             set(mapping.objects(mapping_iri, OWL.imports)),
@@ -202,10 +202,10 @@ class MetadataTests(unittest.TestCase):
         )
 
         manifests = [
-            ROOT / "Fixtures/VAO04/workspaces/minimal/vao-manifest.json",
+            ROOT / "Fixtures/VAO05/workspaces/minimal/vao-manifest.json",
             ROOT
-            / "Fixtures/VAO04/descriptors/kinoorgel-multimodal-scientific.example.json",
-            ROOT / "Fixtures/VAO04/descriptors/cuntz-positiv-acoustic.example.json",
+            / "Fixtures/VAO05/descriptors/kinoorgel-multimodal-scientific.example.json",
+            ROOT / "Fixtures/VAO05/descriptors/cuntz-positiv-acoustic.example.json",
         ]
         serialized = ""
         for path in manifests:
@@ -218,7 +218,7 @@ class MetadataTests(unittest.TestCase):
                 binding["ontologyVersionIRI"],
             )
             self.assertEqual(str(mapping_iri), binding["mappingIRI"])
-            self.assertEqual("0.4.0", binding["mappingVersion"])
+            self.assertEqual("0.5.0", binding["mappingVersion"])
             serialized += json.dumps(document)
 
         for obsolete in (

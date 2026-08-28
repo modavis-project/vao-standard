@@ -36,6 +36,10 @@ def main() -> int:
         "Tools/vao04_interop.py",
         "Tools/vao04_rdf.py",
         "Tools/vao04_runtime.py",
+        "Tools/vao05.py",
+        "Tools/vao05_interop.py",
+        "Tools/vao05_rdf.py",
+        "Tools/vao05_runtime.py",
         "Tools/vao_resources.py",
         "tests",
     ]
@@ -48,7 +52,7 @@ def main() -> int:
         [python, "-m", "ruff", "check", "--select", "F", "Tools", "tests"],
     )
     run(
-        "0.4 reference-code formatting",
+        "reference-code formatting",
         [python, "-m", "ruff", "format", "--check", *formatted_sources],
     )
     run("REUSE 3.3 licensing compliance", [python, "-m", "reuse", "lint"])
@@ -85,6 +89,20 @@ def main() -> int:
             run(
                 f"{fixture_kind} CLI: {path.name}",
                 [python, "Tools/vao04.py", "validate", relative],
+            )
+    fixture_sets_05 = (
+        ("descriptor", sorted((ROOT / "Fixtures/VAO05/descriptors").glob("*.json"))),
+        ("workspace", sorted((ROOT / "Fixtures/VAO05/workspaces").iterdir())),
+        ("carrier", sorted((ROOT / "Fixtures/VAO05/carriers").glob("*.vao"))),
+    )
+    for fixture_kind, paths in fixture_sets_05:
+        if not paths:
+            raise SystemExit(f"No VAO 0.5 {fixture_kind} fixtures found.")
+        for path in paths:
+            relative = path.relative_to(ROOT).as_posix()
+            run(
+                f"0.5 {fixture_kind} CLI: {path.name}",
+                [python, "Tools/vao05.py", "validate", relative],
             )
     companion_directory = ROOT / "Fixtures/VAO04/companions"
     companion_sets = {
@@ -156,8 +174,59 @@ def main() -> int:
             "Fixtures/VAO04/carriers/minimal.vao",
         ],
     )
+    companion_directory_05 = ROOT / "Fixtures/VAO05/companions"
+    for kind, pattern in {
+        "release": "release*.json",
+        "pack": "pack-manifest*.json",
+        "receipt": "materialization-receipt*.json",
+        "zenodo-metadata": "zenodo-metadata*.json",
+    }.items():
+        for path in sorted(companion_directory_05.glob(pattern)):
+            run(
+                f"0.5 {kind} companion CLI: {path.name}",
+                [
+                    python,
+                    "Tools/vao05.py",
+                    "validate-descriptor",
+                    kind,
+                    path.relative_to(ROOT).as_posix(),
+                ],
+            )
+    exact_manifest_05 = "Fixtures/VAO05/workspaces/minimal/vao-manifest.json"
+    run(
+        "0.5 release-to-manifest exact cross-validation",
+        [
+            python,
+            "Tools/vao05.py",
+            "validate-release",
+            "Fixtures/VAO05/companions/release.example.json",
+            exact_manifest_05,
+        ],
+    )
+    run(
+        "0.5 release-to-carrier exact cross-validation",
+        [
+            python,
+            "Tools/vao05.py",
+            "validate-release-carriers",
+            "Fixtures/VAO05/companions/release.example.json",
+            exact_manifest_05,
+            "Fixtures/VAO05/carriers/minimal.vao",
+        ],
+    )
+    run(
+        "0.5 receipt-to-manifest-and-carrier exact cross-validation",
+        [
+            python,
+            "Tools/vao05.py",
+            "validate-receipt",
+            "Fixtures/VAO05/companions/materialization-receipt-minimal.example.json",
+            exact_manifest_05,
+            "Fixtures/VAO05/carriers/minimal.vao",
+        ],
+    )
     print(
-        "\nRELEASE GATE PASSED: final VAO 0.4.0 content is internally consistent; publication remains an external authorized action."
+        "\nRELEASE GATE PASSED: final VAO 0.4.0 and candidate VAO 0.5.0 content are internally consistent; publication remains an external authorized action."
     )
     return 0
 
