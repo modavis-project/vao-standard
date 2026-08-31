@@ -4,7 +4,7 @@ Contributions to specification text, schemas, fixtures, tools, and implementatio
 
 ## Before proposing a change
 
-Search existing issues and read the [standard](Docs/VAO_STANDARD_0.4.0.md), [conformance rules](Docs/VAO_CONFORMANCE_0.4.0.md), and [governance](GOVERNANCE.md). Security vulnerabilities must follow [SECURITY.md](SECURITY.md), not a public issue.
+Search existing issues and read the [standard](Docs/VAO_STANDARD_0.5.0.md), [conformance rules](Docs/VAO_CONFORMANCE_0.5.0.md), and [governance](GOVERNANCE.md). Security vulnerabilities must follow [SECURITY.md](SECURITY.md), not a public issue.
 
 Substantive format proposals should explain:
 
@@ -26,7 +26,7 @@ python Tools/check_release.py
 python -m unittest discover -s tests -v
 ```
 
-Generated files must be regenerated with their checked-in tool. Do not edit `Docs/VAO_SCHEMA_REFERENCE_0.4.0.md` or release-bundle digests by hand.
+Generated files must be regenerated with their checked-in tool. Do not edit `Docs/VAO_SCHEMA_REFERENCE_0.5.0.md` or release-bundle digests by hand.
 
 ## Pull requests
 

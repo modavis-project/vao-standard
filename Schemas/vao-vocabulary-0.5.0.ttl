@@ -13,7 +13,7 @@
   dcterms:title "Virtual Acoustic Object (VAO) 0.5.0 vocabulary"@en ;
   dcterms:description "Core RDF terms used by the semantic projection of VAO 0.5.0 manifests."@en ;
   dcterms:creator <https://orcid.org/0000-0002-7904-3892> ;
-  dcterms:modified "2026-08-27"^^xsd:date ;
+  dcterms:modified "2026-08-31"^^xsd:date ;
   dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
   owl:versionIRI <https://w3id.org/modavis/vao/0.5.0/vocabulary> ;
   owl:versionInfo "0.5.0" .

@@ -3,7 +3,6 @@ type: "VAO Reference Concept"
 title: "VAO security boundaries"
 description: "Minimum safe treatment of untrusted carriers and realizations."
 status: "stable"
-generated: { by: "process:codex-rc2-hardening", at: "2026-08-26T00:00:00+02:00" }
 sources:
   - id: "vao-security"
     resource: "../../Docs/SECURITY_CONSIDERATIONS.md"

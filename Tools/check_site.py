@@ -38,11 +38,13 @@ FORBIDDEN_MARKERS = (
     "file://",
     "Chat" + "GPT",
     "Open" + "AI",
-    "Cod" + "ex desktop",
+    "Cod" + "ex",
     "Clau" + "de",
     "large language " + "model",
     "AI-" + "generated",
     "As an " + "AI",
+    "engineer-" + "weeks",
+    "engineer " + "weeks",
 )
 
 

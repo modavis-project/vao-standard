@@ -2,8 +2,8 @@
 
 - Status: final 0.5.0 specification
 - Format version: `0.5.0`
-- Public release date: 2026-08-27
-- DOI: `10.5281/zenodo.22122774`
+- Public release date: 2026-08-31
+- DOI: `10.5281/zenodo.22214248`
 - Change controller: VAO project, initially represented by responsible editor Dominik Ukolov
 - Provisional media type: `application/vnd.modavis.vao+zip`
 - Recommended extension: `.vao`

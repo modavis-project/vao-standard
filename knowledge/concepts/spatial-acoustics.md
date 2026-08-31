@@ -3,7 +3,6 @@ type: "VAO Reference Concept"
 title: "Spatial and acoustic validity boundaries"
 description: "What VAO spatial/acoustic conformance establishes and what remains empirical."
 status: "stable"
-generated: { by: "process:codex-rc2-hardening", at: "2026-08-27T00:00:00+02:00" }
 sources:
   - id: "vao-spatial-profile"
     resource: "../../Docs/VAO_SPATIAL_PROFILE_0.4.0.md"

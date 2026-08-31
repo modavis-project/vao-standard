@@ -3,7 +3,6 @@ type: "VAO Reference Concept"
 title: "Carrier and materialization model"
 description: "How VAO embeds or acquires exact realizations."
 status: "stable"
-generated: { by: "process:codex-rc2-hardening", at: "2026-08-26T00:00:00+02:00" }
 sources:
   - id: "vao-standard-carrier"
     resource: "../../Docs/VAO_STANDARD_0.4.0.md#19-carrier-and-workspace-format"

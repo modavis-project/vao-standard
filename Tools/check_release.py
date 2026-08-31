@@ -226,7 +226,7 @@ def main() -> int:
         ],
     )
     print(
-        "\nRELEASE GATE PASSED: final VAO 0.4.0 and candidate VAO 0.5.0 content are internally consistent; publication remains an external authorized action."
+        "\nRELEASE GATE PASSED: final VAO 0.4.0 and VAO 0.5.0 content are internally consistent."
     )
     return 0
 

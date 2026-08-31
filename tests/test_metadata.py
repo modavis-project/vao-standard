@@ -33,13 +33,15 @@ class MetadataTests(unittest.TestCase):
             set(codemeta["license"]),
         )
         self.assertEqual("other-open", zenodo["license"])
+        self.assertEqual("0.5.0", zenodo["version"])
+        self.assertEqual("2026-08-31", zenodo["publication_date"])
         self.assertIn("CC BY 4.0", zenodo["description"])
         self.assertIn("Apache-2.0", zenodo["description"])
         citation = yaml.safe_load((ROOT / "CITATION.cff").read_text(encoding="utf-8"))
         self.assertEqual("1.2.0", citation["cff-version"])
         self.assertEqual("0.5.0", citation["version"])
-        self.assertNotIn("date-released", citation)
-        self.assertNotIn("doi", citation)
+        self.assertEqual("2026-08-31", str(citation["date-released"]))
+        self.assertEqual("10.5281/zenodo.22214248", citation["doi"])
         self.assertEqual("CC-BY-4.0", citation["license"])
         self.assertEqual(
             "https://orcid.org/0000-0002-7904-3892", citation["authors"][0]["orcid"]
@@ -301,6 +303,13 @@ class MetadataTests(unittest.TestCase):
             "T" + "BD",
             "<" + "INSERT",
             "example.com/" + "contact",
+            "Chat" + "GPT",
+            "Open" + "AI",
+            "Cod" + "ex",
+            "large language " + "model",
+            "AI-" + "generated",
+            "engineer-" + "weeks",
+            "engineer " + "weeks",
         )
         findings: list[str] = []
         for path in ROOT.rglob("*"):
@@ -308,6 +317,10 @@ class MetadataTests(unittest.TestCase):
                 not path.is_file()
                 or ".git" in path.parts
                 or ".venv" in path.parts
+                or ".pytest_cache" in path.parts
+                or ".ruff_cache" in path.parts
+                or "build" in path.parts
+                or "dist" in path.parts
                 or path.suffix == ".vao"
             ):
                 continue

@@ -3,7 +3,6 @@ type: "VAO Reference Concept"
 title: "Multimodal clocks and synchronization"
 description: "How VAO dimensions clocks and preserves synchronization evidence."
 status: "stable"
-generated: { by: "process:codex-rc2-hardening", at: "2026-08-27T00:00:00+02:00" }
 sources:
   - id: "vao-multimodal-standard"
     resource: "../../Docs/VAO_STANDARD_0.4.0.md#13-multimodal-timeline-profile"

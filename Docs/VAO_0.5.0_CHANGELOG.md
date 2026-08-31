@@ -2,6 +2,8 @@
 
 VAO 0.5.0 is a compatible semantic extension of 0.4.0 with new carrier and publication-descriptor fields. Existing 0.4.0 documents remain governed by their immutable 0.4.0 schemas and tools.
 
+Released 31 August 2026 as `v0.5.0`; version DOI: `10.5281/zenodo.22214248`.
+
 - Added the `carrier-member` distribution for exact realizations embedded in another carrier of the same immutable repository release.
 - Added a stable `id` to every carrier descriptor.
 - Added carrier identity, mode, manifest fixity, descriptor fixity, and complete-group declarations to carrier entries in the release descriptor.

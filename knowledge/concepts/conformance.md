@@ -3,7 +3,6 @@ type: "VAO Reference Concept"
 title: "Role-specific conformance"
 description: "Why VAO support is stated by implementation role and profile."
 status: "stable"
-generated: { by: "process:codex-rc2-hardening", at: "2026-08-26T00:00:00+02:00" }
 sources:
   - id: "vao-conformance"
     resource: "../../Docs/VAO_CONFORMANCE_0.4.0.md"

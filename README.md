@@ -4,9 +4,9 @@
 
 The Virtual Acoustic Object (VAO) Standard is an open exchange and preservation standard for digital representations of musical instruments and other acoustic objects. A release can connect descriptive metadata, measurements, recordings, images, 3D models, interaction data, provenance, rights, and exact file identities without replacing the established formats used for those resources.
 
-**Version 0.5.0 · candidate specification · 28 August 2026**
+**Version 0.5.0 · final specification · 31 August 2026**
 
-VAO 0.5 adds cross-carrier delivery: a small bootstrap carrier can describe and selectively materialize exact members of a complete preservation carrier deposited in the same immutable release. The finalized [VAO 0.4.0](https://doi.org/10.5281/zenodo.22122774) release remains immutable and available under its versioned paths.
+VAO 0.5 adds cross-carrier delivery: a small bootstrap carrier can describe and selectively materialize exact members of a complete preservation carrier deposited in the same immutable release. The release is archived as [Zenodo DOI 10.5281/zenodo.22214248](https://doi.org/10.5281/zenodo.22214248). The finalized [VAO 0.4.0](https://doi.org/10.5281/zenodo.22122774) release remains immutable and available under its versioned paths.
 
 ## Start here
 
@@ -62,7 +62,7 @@ To create a deterministic carrier:
 python Tools/vao05.py pack path/to/workspace path/to/output.vao
 ```
 
-The installed tools package provides `vao04` for the finalized 0.4 contract and `vao05` for the current contract.
+The installed tools package provides `vao04` for the finalized 0.4 contract and `vao05` for the finalized 0.5 contract.
 
 ## Scientific boundary
 

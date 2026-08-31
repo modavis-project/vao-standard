@@ -3,7 +3,6 @@ type: "VAO Reference Concept"
 title: "Semantic release, logical asset, and realization"
 description: "How VAO separates identity from exact bytes."
 status: "stable"
-generated: { by: "process:codex-rc2-hardening", at: "2026-08-26T00:00:00+02:00" }
 sources:
   - id: "vao-core-concepts"
     resource: "../../Docs/VAO_STANDARD_0.4.0.md#3-core-concepts"

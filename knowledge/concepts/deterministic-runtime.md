@@ -3,7 +3,6 @@ type: "VAO Reference Concept"
 title: "Deterministic runtime and offline trace scope"
 description: "Boundary between full host behaviour and the supplied offline verifier."
 status: "stable"
-generated: { by: "process:codex-rc2-hardening", at: "2026-08-27T00:00:00+02:00" }
 sources:
   - id: "vao-runtime-standard"
     resource: "../../Docs/VAO_STANDARD_0.4.0.md#17-deterministic-runtime-profile"

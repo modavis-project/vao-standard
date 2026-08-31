@@ -3,7 +3,6 @@ type: "VAO Reference Concept"
 title: "Scientific evidence, provenance, and review"
 description: "How VAO separates recorded evidence, generation, interpretation, and review."
 status: "stable"
-generated: { by: "process:codex-rc2-hardening", at: "2026-08-27T00:00:00+02:00" }
 sources:
   - id: "vao-scientific-standard"
     resource: "../../Docs/VAO_STANDARD_0.4.0.md#12-scientific-profile"

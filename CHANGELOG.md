@@ -2,11 +2,12 @@
 
 All notable public changes will be recorded here. The project follows semantic versioning for the specification bundle as described in [VERSIONING.md](Docs/VERSIONING.md).
 
-## [0.5.0] - candidate
+## [0.5.0] - 2026-08-31
 
 - Added identified cross-carrier distributions and release-descriptor fixity so a small bootstrap can retrieve exact members from a preservation carrier.
 - Defined the consistent single-record/two-carrier Zenodo profile and local custom-carrier materialization model.
 - Retained the finalized 0.4.0 specification and reference tools unchanged under their versioned names.
+- Published the signed `v0.5.0` release with version DOI `10.5281/zenodo.22214248` and immutable W3ID routes.
 
 ## [0.4.0] - 2026-08-27
 

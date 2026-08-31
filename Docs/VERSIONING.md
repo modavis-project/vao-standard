@@ -12,13 +12,13 @@ If an apparent erratum changes conformance, it requires a new version even when 
 
 ## Three distinct versions
 
-- `formatVersion` identifies the serialized VAO contract (`0.5.0` for the current candidate; finalized 0.4.0 remains valid under its own schema).
+- `formatVersion` identifies the serialized VAO contract (`0.5.0` for the current release; finalized 0.4.0 remains valid under its own schema).
 - `release.contentVersion` identifies the publisher's acoustic-object release.
 - repository candidate labels such as `0.5.0-rc.1` identify pre-publication review of the specification and never appear as `formatVersion`.
 
 ## Immutable namespaces
 
-Every finalized artifact below `https://w3id.org/modavis/vao/0.4.0/` is immutable. The same rule applies to `https://w3id.org/modavis/vao/0.5.0/` when that candidate is released. A moving `/latest/` alias may aid discovery but must redirect to a versioned target and must not be serialized into a preserved release.
+Every finalized artifact below `https://w3id.org/modavis/vao/0.4.0/` and `https://w3id.org/modavis/vao/0.5.0/` is immutable. A moving `/latest/` alias may aid discovery but must redirect to a versioned target and must not be serialized into a preserved release.
 
 Schema/context/profile IRIs change with any conformance-changing version. Release-bundle checksums pin the exact normative bytes.
 

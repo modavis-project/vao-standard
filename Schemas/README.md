@@ -1,6 +1,6 @@
 # VAO schemas and semantic artifacts
 
-## Current 0.5.0 candidate artifacts
+## Current 0.5.0 artifacts
 
 - `vao-manifest-0.5.0.schema.json`
 - `vao-carrier-0.5.0.schema.json`
@@ -13,7 +13,7 @@
 - `vao-shapes-0.5.0.ttl`
 - `vao-release-bundle-0.5.0.json`
 
-The versioned 0.5.0 candidate changes are accompanied by regeneration through `python Tools/update_release_bundle.py`; CI uses `--check` to reject stale fixity records. Finalized 0.4.0 artifact bytes remain immutable.
+The versioned 0.5.0 artifacts are accompanied by regeneration through `python Tools/update_release_bundle.py`; CI uses `--check` to reject stale fixity records. Finalized 0.4.0 artifact bytes remain immutable.
 
 ## Legacy compatibility artifacts
 

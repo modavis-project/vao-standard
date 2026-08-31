@@ -3,7 +3,6 @@ type: "VAO Reference Concept"
 title: "Canonical JSON and linked-data projection"
 description: "Boundary between authoritative VAO JSON and RDF semantics."
 status: "stable"
-generated: { by: "process:codex-rc2-hardening", at: "2026-08-26T00:00:00+02:00" }
 sources:
   - id: "vao-linked-data"
     resource: "../../Docs/VAO_STANDARD_0.4.0.md#21-linked-data-projection"
