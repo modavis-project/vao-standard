@@ -1,11 +1,14 @@
 {
-  "title": "Virtual Acoustic Object (VAO) Standard: Version 0.5.0",
-  "description": "Version 0.5.0 of the open exchange and preservation standard for digital representations of musical instruments and other acoustic objects. This release adds identified cross-carrier distributions, carrier and descriptor fixity, release-inventory validation, and a two-carrier repository profile for bootstrap and preservation delivery. Specification text, schemas, semantic artifacts, fixtures, and knowledge documentation are CC BY 4.0; reference software, tests, and automation are Apache-2.0. The authoritative per-file mapping is in REUSE.toml.",
+  "title": "Virtual Acoustic Object (VAO) Standard: Version 0.6.0",
+  "description": "Version 0.6.0 of the Virtual Acoustic Object Standard integrates Mechanical Music Information Carriers (MMICs) through the independently versioned MMIC 1.0.0 application profile and a VAO-owned mechanical-music vocabulary. It adds documentary, decoding, comparison and generation conformance; native gate, impulse, latch and envelope signals; explicit MIDI bindings; complete operational model identity; geometric and timing consistency; qualified playback alignment; immutable corrections; and separate design/fabrication lineage. The release includes JSON Schema, JSON-LD, RDF and SHACL resources, offline validation, bounded processing, reference implementations, synthetic examples and byte-preserving 0.5-to-0.6 migration. The 0.5.0 specification, schemas, readers and fixtures remain unchanged. Specification and semantic resources are CC BY 4.0; reference software, tests and automation are Apache-2.0; new MMIC synthetic data is CC0-1.0, with code and dependency-lock exceptions. REUSE.toml defines the authoritative per-file mapping. Historical accuracy and physical playability are not certified. Version 0.6.0 resolver routing is pending; the immutable GitHub release and this Zenodo version provide access to the release.",
   "upload_type": "software",
-  "version": "0.5.0",
-  "publication_date": "2026-08-31",
+  "version": "0.6.0",
+  "publication_date": "2026-10-10",
   "access_right": "open",
   "license": "other-open",
+  "communities": [
+    {"identifier": "modavis"}
+  ],
   "creators": [
     {
       "name": "Ukolov, Dominik",
@@ -22,18 +25,24 @@
     "provenance",
     "linked data",
     "file format",
-    "open standard"
+    "open standard",
+    "Mechanical Music Information Carriers",
+    "MMIC",
+    "mechanical music",
+    "MIDI",
+    "JSON Schema",
+    "SHACL"
   ],
   "related_identifiers": [
     {
-      "identifier": "https://github.com/modavis-project/vao-standard/releases/tag/v0.5.0",
+      "identifier": "https://github.com/modavis-project/vao-standard/releases/tag/v0.6.0",
       "relation": "isIdenticalTo",
       "resource_type": "software"
     },
     {
-      "identifier": "https://w3id.org/modavis/vao/0.5.0/",
-      "relation": "isAlternateIdentifier",
-      "resource_type": "publication-other"
+      "identifier": "10.5281/zenodo.22214248",
+      "relation": "isNewVersionOf",
+      "resource_type": "software"
     },
     {
       "identifier": "10.5281/zenodo.22126086",

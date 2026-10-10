@@ -4,11 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "vao-standard-tools"
-version = "0.5.0"
+version = "0.6.0"
 description = "Reference validation and release tools for the Virtual Acoustic Object standard"
 readme = "README.md"
 requires-python = ">=3.11"
-license = "Apache-2.0"
+license = "Apache-2.0 AND CC-BY-4.0"
+license-files = ["LICENSE", "NOTICE", "LICENSES/*.txt"]
 authors = [
   {name = "Dominik Ukolov"}
 ]
@@ -18,6 +19,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+rdf = ["rdflib>=7,<8", "pyshacl>=0.30,<1"]
 dev = [
   "check-jsonschema>=0.38,<1",
   "pyshacl>=0.30,<1",
@@ -34,11 +36,15 @@ Specification = "https://w3id.org/modavis/vao/0.5.0/"
 [project.scripts]
 vao04 = "vao04:main"
 vao05 = "vao05:main"
+vao06 = "vao06:main"
+vao = "vao:main"
 
 [tool.setuptools]
-py-modules = ["vao03", "vao04", "vao04_interop", "vao04_rdf", "vao04_runtime", "vao05", "vao05_interop", "vao05_rdf", "vao05_runtime", "vao_resources", "vaom"]
-packages = ["vao_standard_schemas"]
-package-dir = {"" = "Tools", vao_standard_schemas = "Schemas"}
+py-modules = ["vao03", "vao04", "vao04_interop", "vao04_rdf", "vao04_runtime", "vao05", "vao05_interop", "vao05_rdf", "vao05_runtime", "vao_resources", "vaom", "vao06", "vao06_interop", "vao06_rdf", "vao06_runtime", "vao", "mmic", "mmic_rdf", "mmic_worker", "migrate_vao05"]
+packages = ["vao_standard_schemas", "vao_standard_mmic"]
+package-dir = {"" = "Tools", vao_standard_schemas = "Schemas", vao_standard_mmic = "Profiles/MMIC/1.0.0"}
 
 [tool.setuptools.package-data]
 vao_standard_schemas = ["*.json", "*.jsonld", "*.ttl", "README.md"]
+
+vao_standard_mmic = ["*.json", "*.jsonld", "*.ttl", "*.md", "*.cff"]

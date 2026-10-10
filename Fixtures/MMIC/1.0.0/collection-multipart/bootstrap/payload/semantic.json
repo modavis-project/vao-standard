@@ -1,0 +1,219 @@
+{
+  "assignments": [],
+  "carriers": [
+    {
+      "digitalEntityId": "urn:uuid:be6bb51e-db7d-576d-b3dc-b0b1d7365132",
+      "encoding": "perforated-roll",
+      "evidenceIds": [
+        "urn:uuid:3a6f1183-d13a-5dd4-8fee-db023537ac8a"
+      ],
+      "id": "urn:uuid:68acb7b6-c9b0-5fb8-9b40-b4ba99d30abb",
+      "origin": "synthetic"
+    },
+    {
+      "digitalEntityId": "urn:uuid:c88d0e16-6576-5fed-b178-d808035fbe08",
+      "encoding": "perforated-roll",
+      "evidenceIds": [
+        "urn:uuid:3a6f1183-d13a-5dd4-8fee-db023537ac8a"
+      ],
+      "id": "urn:uuid:2dd935ec-af88-58f4-851c-c87732337d65",
+      "origin": "synthetic"
+    }
+  ],
+  "comparisons": [],
+  "corrections": [],
+  "designs": [],
+  "evidence": [
+    {
+      "agentId": "urn:uuid:151560d1-6a19-5dca-a32c-fa1a0ea37177",
+      "basis": "synthetic",
+      "id": "urn:uuid:3a6f1183-d13a-5dd4-8fee-db023537ac8a",
+      "locator": "Complete synthetic fixture",
+      "reviewStatus": "reviewed",
+      "scope": "Structural checks only; not historical accuracy",
+      "sourceIRI": "https://example.org/vao/mmic/synthetic-fixture",
+      "sourceRealizationId": "urn:uuid:40c65fe9-d6b4-5a23-8d74-a7751bc197e5"
+    }
+  ],
+  "fabrications": [],
+  "features": [],
+  "id": "urn:uuid:4bf9953b-151c-5453-863a-57ef39c78994",
+  "interpretations": [],
+  "levels": [
+    "documentation"
+  ],
+  "models": [],
+  "observations": [
+    {
+      "activityId": "urn:uuid:877a79b4-3014-53c1-9fa6-a3e315fee381",
+      "coverage": {
+        "scope": "Whole source view",
+        "status": "complete"
+      },
+      "evidenceIds": [
+        "urn:uuid:3a6f1183-d13a-5dd4-8fee-db023537ac8a"
+      ],
+      "id": "urn:uuid:be3e9eb7-11a8-5a0e-9310-d154943dfa7e",
+      "sourceBounds": [
+        [
+          0,
+          100
+        ],
+        [
+          0,
+          100
+        ]
+      ],
+      "sourceRealizationId": "urn:uuid:cfecdd23-f40b-5819-96a1-a13969641d16",
+      "stateId": "urn:uuid:79463fbf-7f09-539a-8639-65ee36542ff1"
+    },
+    {
+      "activityId": "urn:uuid:877a79b4-3014-53c1-9fa6-a3e315fee381",
+      "coverage": {
+        "scope": "Whole source view",
+        "status": "complete"
+      },
+      "evidenceIds": [
+        "urn:uuid:3a6f1183-d13a-5dd4-8fee-db023537ac8a"
+      ],
+      "id": "urn:uuid:4e97438b-544e-5d15-9ee1-91d6043ba11d",
+      "sourceBounds": [
+        [
+          0,
+          100
+        ],
+        [
+          0,
+          100
+        ]
+      ],
+      "sourceRealizationId": "urn:uuid:cfecdd23-f40b-5819-96a1-a13969641d16",
+      "stateId": "urn:uuid:1af9e9ce-2b43-5a4e-9fcc-82bb50ca5f20"
+    }
+  ],
+  "parts": [
+    {
+      "coverage": {
+        "scope": "Selected panel; joining region unobserved",
+        "status": "partial"
+      },
+      "evidenceIds": [
+        "urn:uuid:3a6f1183-d13a-5dd4-8fee-db023537ac8a"
+      ],
+      "extent": [
+        0,
+        50
+      ],
+      "face": "front",
+      "id": "urn:uuid:bcfe24f7-9ddc-5e16-9011-c3f66fab3243",
+      "sequence": 0,
+      "stateId": "urn:uuid:79463fbf-7f09-539a-8639-65ee36542ff1"
+    },
+    {
+      "coverage": {
+        "scope": "Selected panel; joining region unobserved",
+        "status": "partial"
+      },
+      "evidenceIds": [
+        "urn:uuid:3a6f1183-d13a-5dd4-8fee-db023537ac8a"
+      ],
+      "extent": [
+        50,
+        100
+      ],
+      "face": "front",
+      "id": "urn:uuid:f101bf5d-9232-528c-838e-6c2e2a19aed1",
+      "sequence": 1,
+      "stateId": "urn:uuid:79463fbf-7f09-539a-8639-65ee36542ff1"
+    }
+  ],
+  "playbacks": [],
+  "programmes": [
+    {
+      "evidenceIds": [
+        "urn:uuid:3a6f1183-d13a-5dd4-8fee-db023537ac8a"
+      ],
+      "extent": [
+        0,
+        100
+      ],
+      "id": "urn:uuid:7e9b415c-56c6-5d16-bd3f-586be2e89178",
+      "partIds": [
+        "urn:uuid:bcfe24f7-9ddc-5e16-9011-c3f66fab3243",
+        "urn:uuid:f101bf5d-9232-528c-838e-6c2e2a19aed1"
+      ],
+      "selection": {
+        "kind": "multipart",
+        "label": "Two ordered panels with incomplete join evidence"
+      },
+      "stateId": "urn:uuid:79463fbf-7f09-539a-8639-65ee36542ff1"
+    },
+    {
+      "evidenceIds": [
+        "urn:uuid:3a6f1183-d13a-5dd4-8fee-db023537ac8a"
+      ],
+      "extent": [
+        0,
+        100
+      ],
+      "id": "urn:uuid:11d3e22a-9d19-5c80-9547-e5c1647c7490",
+      "selection": {
+        "kind": "whole",
+        "label": "Synthetic programme A"
+      },
+      "stateId": "urn:uuid:1af9e9ce-2b43-5a4e-9fcc-82bb50ca5f20"
+    }
+  ],
+  "roleAssignments": [],
+  "schemaVersion": "1.0.0",
+  "states": [
+    {
+      "carrierId": "urn:uuid:68acb7b6-c9b0-5fb8-9b40-b4ba99d30abb",
+      "coverage": {
+        "scope": "Whole synthetic carrier",
+        "status": "complete"
+      },
+      "evidenceIds": [
+        "urn:uuid:3a6f1183-d13a-5dd4-8fee-db023537ac8a"
+      ],
+      "geometry": {
+        "bounds": [
+          0,
+          100
+        ],
+        "direction": "forward",
+        "kind": "linear",
+        "orientation": "Declared increasing coordinate on observed face",
+        "origin": "Synthetic registration origin",
+        "status": "assumed",
+        "unit": "http://qudt.org/vocab/unit/MilliM"
+      },
+      "id": "urn:uuid:79463fbf-7f09-539a-8639-65ee36542ff1"
+    },
+    {
+      "carrierId": "urn:uuid:2dd935ec-af88-58f4-851c-c87732337d65",
+      "coverage": {
+        "scope": "Whole synthetic carrier",
+        "status": "complete"
+      },
+      "evidenceIds": [
+        "urn:uuid:3a6f1183-d13a-5dd4-8fee-db023537ac8a"
+      ],
+      "geometry": {
+        "bounds": [
+          0,
+          100
+        ],
+        "direction": "forward",
+        "kind": "linear",
+        "orientation": "Declared increasing coordinate on observed face",
+        "origin": "Synthetic registration origin",
+        "status": "assumed",
+        "unit": "http://qudt.org/vocab/unit/MilliM"
+      },
+      "id": "urn:uuid:1af9e9ce-2b43-5a4e-9fcc-82bb50ca5f20"
+    }
+  ],
+  "synthetic": true,
+  "tracks": []
+}

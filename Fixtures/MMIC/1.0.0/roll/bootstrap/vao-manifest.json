@@ -1,0 +1,748 @@
+{
+  "$schema": "https://w3id.org/modavis/vao/0.6.0/schema/manifest.json",
+  "@context": [
+    "https://w3id.org/modavis/vao/0.6.0/context.jsonld"
+  ],
+  "assetGroups": [
+    {
+      "availability": "offline-required",
+      "cachePolicy": {
+        "evictable": false,
+        "priority": 100
+      },
+      "dependsOnGroupIds": [],
+      "id": "urn:uuid:3b248057-8a9b-572c-86b6-930fc3b44339",
+      "labels": {
+        "en": "Documentation"
+      },
+      "materializesProfileIds": [],
+      "qualityTier": "bootstrap",
+      "realizationIds": [
+        "urn:uuid:7e8a9b38-5e2f-535f-90e9-67733e4945ba",
+        "urn:uuid:077bba0d-d32a-577e-9bf0-b0c85a67e207",
+        "urn:uuid:cb4c7d98-81aa-5da8-9b2d-998fb99751ff",
+        "urn:uuid:5eb9c3fd-818e-57f6-9984-11cd44dc6d5a"
+      ],
+      "requiredCapabilities": [],
+      "selectionPolicy": "independent",
+      "selectionSetId": "Documentation",
+      "totalByteSize": 150243,
+      "type": "AssetGroup"
+    },
+    {
+      "availability": "remote-optional",
+      "cachePolicy": {
+        "evictable": true,
+        "priority": 50
+      },
+      "dependsOnGroupIds": [
+        "urn:uuid:3b248057-8a9b-572c-86b6-930fc3b44339"
+      ],
+      "id": "urn:uuid:88961807-7590-5501-a43d-0be041edded2",
+      "labels": {
+        "en": "Complete capability inputs and outputs"
+      },
+      "materializesProfileIds": [
+        "https://w3id.org/modavis/vao/profile/mmic/1.0.0"
+      ],
+      "qualityTier": "preservation",
+      "realizationIds": [
+        "urn:uuid:10d5205a-e771-5c03-bb1e-dddecdbe5a5f",
+        "urn:uuid:32b9ebf2-d639-5ea4-ade0-67da2c5a67b6",
+        "urn:uuid:46d52f80-8b90-584b-ad71-939fc16ae148",
+        "urn:uuid:a54a67f1-a3d9-5aa9-a51f-1ee357e0146a",
+        "urn:uuid:c7798276-3287-597c-9fd0-407aafc75e8d",
+        "urn:uuid:e6fa071f-4012-5158-9b20-0f9fc7a0645d"
+      ],
+      "requiredCapabilities": [],
+      "selectionPolicy": "independent",
+      "selectionSetId": "Complete capability inputs and outputs",
+      "totalByteSize": 17692,
+      "type": "AssetGroup"
+    }
+  ],
+  "conformsTo": [
+    "https://w3id.org/modavis/vao/profile/core/0.6.0",
+    "https://w3id.org/modavis/vao/profile/dynamic-delivery/0.6.0",
+    "https://w3id.org/modavis/vao/profile/scientific/0.6.0",
+    "https://w3id.org/modavis/vao/profile/mmic/1.0.0"
+  ],
+  "createdAt": "2026-10-10T00:00:00Z",
+  "description": {
+    "en": "CC0 synthetic structural test; no historical object, measured take or accuracy certification."
+  },
+  "discovery": {
+    "contributorAgentIds": [],
+    "creatorAgentIds": [
+      "urn:uuid:79470aca-1a84-5004-9c9c-53247a5c60a5"
+    ],
+    "fundingReferences": [],
+    "relatedIdentifiers": [],
+    "resourceType": "Dataset",
+    "subjects": []
+  },
+  "distributions": [],
+  "entities": [
+    {
+      "id": "urn:uuid:34051c28-dc25-55a3-b7b1-0bee5573b1a2",
+      "kind": "physical-carrier",
+      "labels": {
+        "en": "Synthetic physical-carrier"
+      },
+      "types": [
+        "https://w3id.org/modavis/vao/mmic#PhysicalCarrier"
+      ]
+    },
+    {
+      "id": "urn:uuid:c9890a91-fd30-5cb1-b20c-240e2373f886",
+      "kind": "digital-surrogate",
+      "labels": {
+        "en": "Synthetic digital-surrogate"
+      },
+      "types": [
+        "https://w3id.org/modavis/vao/mmic#DigitalCarrier"
+      ]
+    }
+  ],
+  "extensions": {
+    "https://w3id.org/modavis/vao/profile/mmic/1.0.0": {
+      "dependencyCatalogSHA256": "194c55a6acdfdce1cfe3043b9e1a725cb831837fae9460133f96dff825e2a129",
+      "levels": [
+        "documentation",
+        "decoding",
+        "comparison"
+      ],
+      "ontologyVersionIRI": "https://w3id.org/modavis/vao/profile/mmic/1.0.0/ontology",
+      "profileVersion": "1.0.0",
+      "semanticRealizationId": "urn:uuid:7e8a9b38-5e2f-535f-90e9-67733e4945ba",
+      "semanticSHA256": "134bd07f694628a31a37a925390ee1fc6f7829ac55528e9cda882f1aa38b702e",
+      "subjectEntityIds": [
+        "urn:uuid:34051c28-dc25-55a3-b7b1-0bee5573b1a2"
+      ]
+    }
+  },
+  "focusEntityIds": [
+    "urn:uuid:34051c28-dc25-55a3-b7b1-0bee5573b1a2"
+  ],
+  "formatVersion": "0.6.0",
+  "id": "urn:uuid:f9ca2b52-fbcf-5127-86f6-aba254bc168f",
+  "integrity": {
+    "algorithm": "sha256",
+    "carrierDescriptor": "META-INF/vao-carrier.json",
+    "manifestDigestLocation": "external-release-and-carrier-descriptors"
+  },
+  "logicalAssets": [
+    {
+      "aboutEntityIds": [
+        "urn:uuid:34051c28-dc25-55a3-b7b1-0bee5573b1a2"
+      ],
+      "id": "urn:uuid:a7d9af63-9fb0-5327-b9e0-91475c6bc84f",
+      "labels": {
+        "en": "reference.py"
+      },
+      "realizationIds": [
+        "urn:uuid:077bba0d-d32a-577e-9bf0-b0c85a67e207"
+      ],
+      "roles": [
+        "https://w3id.org/modavis/vao/vocab/asset-role/source-evidence"
+      ],
+      "type": "LogicalAsset"
+    },
+    {
+      "aboutEntityIds": [
+        "urn:uuid:34051c28-dc25-55a3-b7b1-0bee5573b1a2"
+      ],
+      "id": "urn:uuid:cab96eef-b1c5-5ddc-8813-07331a3f7945",
+      "labels": {
+        "en": "requirements-lock.txt"
+      },
+      "realizationIds": [
+        "urn:uuid:cb4c7d98-81aa-5da8-9b2d-998fb99751ff"
+      ],
+      "roles": [
+        "https://w3id.org/modavis/vao/vocab/asset-role/source-evidence"
+      ],
+      "type": "LogicalAsset"
+    },
+    {
+      "aboutEntityIds": [
+        "urn:uuid:34051c28-dc25-55a3-b7b1-0bee5573b1a2"
+      ],
+      "id": "urn:uuid:5b9b4434-b960-586f-bc02-763489c668f5",
+      "labels": {
+        "en": "observation.svg"
+      },
+      "realizationIds": [
+        "urn:uuid:46d52f80-8b90-584b-ad71-939fc16ae148"
+      ],
+      "roles": [
+        "https://w3id.org/modavis/vao/vocab/asset-role/source-evidence"
+      ],
+      "type": "LogicalAsset"
+    },
+    {
+      "aboutEntityIds": [
+        "urn:uuid:34051c28-dc25-55a3-b7b1-0bee5573b1a2"
+      ],
+      "id": "urn:uuid:9c6a6fb5-cdb9-5712-8a00-21e2d55fcf42",
+      "labels": {
+        "en": "evidence.txt"
+      },
+      "realizationIds": [
+        "urn:uuid:5eb9c3fd-818e-57f6-9984-11cd44dc6d5a"
+      ],
+      "roles": [
+        "https://w3id.org/modavis/vao/vocab/asset-role/source-evidence"
+      ],
+      "type": "LogicalAsset"
+    },
+    {
+      "aboutEntityIds": [
+        "urn:uuid:34051c28-dc25-55a3-b7b1-0bee5573b1a2"
+      ],
+      "id": "urn:uuid:be5fc8ea-8768-5f10-808c-227fff83f842",
+      "labels": {
+        "en": "native.json"
+      },
+      "realizationIds": [
+        "urn:uuid:10d5205a-e771-5c03-bb1e-dddecdbe5a5f"
+      ],
+      "roles": [
+        "https://w3id.org/modavis/vao/vocab/asset-role/source-evidence"
+      ],
+      "type": "LogicalAsset"
+    },
+    {
+      "aboutEntityIds": [
+        "urn:uuid:34051c28-dc25-55a3-b7b1-0bee5573b1a2"
+      ],
+      "id": "urn:uuid:fbf4d294-ad36-5e7f-b035-bdedfa54fb72",
+      "labels": {
+        "en": "export.mid"
+      },
+      "realizationIds": [
+        "urn:uuid:32b9ebf2-d639-5ea4-ade0-67da2c5a67b6"
+      ],
+      "roles": [
+        "https://w3id.org/modavis/vao/vocab/asset-role/source-evidence"
+      ],
+      "type": "LogicalAsset"
+    },
+    {
+      "aboutEntityIds": [
+        "urn:uuid:34051c28-dc25-55a3-b7b1-0bee5573b1a2"
+      ],
+      "id": "urn:uuid:d17b4360-0218-544d-b7cc-24fb9072d067",
+      "labels": {
+        "en": "simulation.wav"
+      },
+      "realizationIds": [
+        "urn:uuid:a54a67f1-a3d9-5aa9-a51f-1ee357e0146a"
+      ],
+      "roles": [
+        "https://w3id.org/modavis/vao/vocab/asset-role/source-evidence"
+      ],
+      "type": "LogicalAsset"
+    },
+    {
+      "aboutEntityIds": [
+        "urn:uuid:34051c28-dc25-55a3-b7b1-0bee5573b1a2"
+      ],
+      "id": "urn:uuid:022afcb7-6f1c-5c14-9176-b43b228804b2",
+      "labels": {
+        "en": "simulated-native.json"
+      },
+      "realizationIds": [
+        "urn:uuid:c7798276-3287-597c-9fd0-407aafc75e8d"
+      ],
+      "roles": [
+        "https://w3id.org/modavis/vao/vocab/asset-role/source-evidence"
+      ],
+      "type": "LogicalAsset"
+    },
+    {
+      "aboutEntityIds": [
+        "urn:uuid:34051c28-dc25-55a3-b7b1-0bee5573b1a2"
+      ],
+      "id": "urn:uuid:865ccc36-b44c-5f85-b0aa-b3b066502b8f",
+      "labels": {
+        "en": "alignment.json"
+      },
+      "realizationIds": [
+        "urn:uuid:e6fa071f-4012-5158-9b20-0f9fc7a0645d"
+      ],
+      "roles": [
+        "https://w3id.org/modavis/vao/vocab/asset-role/source-evidence"
+      ],
+      "type": "LogicalAsset"
+    },
+    {
+      "aboutEntityIds": [
+        "urn:uuid:34051c28-dc25-55a3-b7b1-0bee5573b1a2"
+      ],
+      "id": "urn:uuid:8856efba-db69-5a77-825f-b3ae24a4b031",
+      "labels": {
+        "en": "semantic.json"
+      },
+      "realizationIds": [
+        "urn:uuid:7e8a9b38-5e2f-535f-90e9-67733e4945ba"
+      ],
+      "roles": [
+        "https://w3id.org/modavis/vao/vocab/asset-role/source-evidence"
+      ],
+      "type": "LogicalAsset"
+    }
+  ],
+  "materializableProfiles": [
+    {
+      "groupIds": [
+        "urn:uuid:88961807-7590-5501-a43d-0be041edded2"
+      ],
+      "id": "https://w3id.org/modavis/vao/profile/mmic/1.0.0",
+      "requiredCapabilities": [
+        "https://w3id.org/modavis/vao/profile/mmic/1.0.0/capability/documentation",
+        "https://w3id.org/modavis/vao/profile/mmic/1.0.0/capability/decoding",
+        "https://w3id.org/modavis/vao/profile/mmic/1.0.0/capability/comparison"
+      ],
+      "specificationVersion": "1.0.0",
+      "version": "0.6.0"
+    }
+  ],
+  "modavisBinding": {
+    "mappingIRI": "https://w3id.org/modavis/vao/0.6.0/modavis-mapping",
+    "mappingVersion": "0.6.0",
+    "notes": "Existing released MODAVIS 0.1.0 binding; MMIC module is an independent unpublished VAO-owned dependency.",
+    "ontologyIRI": "https://w3id.org/modavis/ontology",
+    "ontologyStatus": "released",
+    "ontologyVersion": "0.1.0",
+    "ontologyVersionIRI": "https://w3id.org/modavis/ontology/0.1.0"
+  },
+  "modifiedAt": "2026-10-10T00:00:00Z",
+  "multimodal": {
+    "annotations": [],
+    "synchronizationMappings": [],
+    "timebases": [],
+    "tracks": []
+  },
+  "physicalSystem": {
+    "actuators": [],
+    "components": [],
+    "connections": [],
+    "ports": [],
+    "sensors": [],
+    "stateBindings": []
+  },
+  "primaryEntityId": "urn:uuid:34051c28-dc25-55a3-b7b1-0bee5573b1a2",
+  "profiles": [
+    {
+      "id": "https://w3id.org/modavis/vao/profile/core/0.6.0",
+      "requiredCapabilities": [
+        "https://w3id.org/modavis/vao/vocab/capability/core-graph",
+        "https://w3id.org/modavis/vao/vocab/capability/fixity"
+      ],
+      "version": "0.6.0"
+    },
+    {
+      "id": "https://w3id.org/modavis/vao/profile/dynamic-delivery/0.6.0",
+      "requiredCapabilities": [
+        "https://w3id.org/modavis/vao/vocab/capability/immutable-release",
+        "https://w3id.org/modavis/vao/vocab/capability/carrier-mapping"
+      ],
+      "version": "0.6.0"
+    },
+    {
+      "id": "https://w3id.org/modavis/vao/profile/scientific/0.6.0",
+      "requiredCapabilities": [
+        "https://w3id.org/modavis/vao/vocab/capability/typed-scientific-provenance"
+      ],
+      "version": "0.6.0"
+    }
+  ],
+  "realizations": [
+    {
+      "assetId": "urn:uuid:a7d9af63-9fb0-5327-b9e0-91475c6bc84f",
+      "byteSize": 71309,
+      "distributionIds": [],
+      "extensions": {
+        "https://w3id.org/modavis/vao/mmic#synthetic": false
+      },
+      "id": "urn:uuid:077bba0d-d32a-577e-9bf0-b0c85a67e207",
+      "mediaType": "text/x-python",
+      "provenanceIds": [
+        "urn:uuid:54f918e1-9943-5a3b-b4db-304e7d6550c4"
+      ],
+      "qualityTier": "preservation",
+      "representationStatus": "https://w3id.org/modavis/vao/vocab/representation-status/authored",
+      "rightsIds": [
+        "urn:uuid:e1bbae0c-cecc-51c9-ba6e-a4255bcb1d52"
+      ],
+      "sha256": "a4e4e59e5c2c73d5a5fc9b91c7118b791cd262c8d604534cb9e419b9414ae0a2",
+      "technicalMetadata": {
+        "kind": "software"
+      },
+      "type": "Realization",
+      "variantSetId": "reference.py"
+    },
+    {
+      "assetId": "urn:uuid:cab96eef-b1c5-5ddc-8813-07331a3f7945",
+      "byteSize": 59803,
+      "distributionIds": [],
+      "extensions": {
+        "https://w3id.org/modavis/vao/mmic#synthetic": false
+      },
+      "id": "urn:uuid:cb4c7d98-81aa-5da8-9b2d-998fb99751ff",
+      "mediaType": "text/plain",
+      "provenanceIds": [
+        "urn:uuid:54f918e1-9943-5a3b-b4db-304e7d6550c4"
+      ],
+      "qualityTier": "preservation",
+      "representationStatus": "https://w3id.org/modavis/vao/vocab/representation-status/authored",
+      "rightsIds": [
+        "urn:uuid:e1bbae0c-cecc-51c9-ba6e-a4255bcb1d52"
+      ],
+      "sha256": "cfc21919a7f6c3eda016e2d2b37c75298bf7760469bb6938833dd60255feb30b",
+      "technicalMetadata": {
+        "kind": "software"
+      },
+      "type": "Realization",
+      "variantSetId": "requirements-lock.txt"
+    },
+    {
+      "assetId": "urn:uuid:5b9b4434-b960-586f-bc02-763489c668f5",
+      "byteSize": 153,
+      "distributionIds": [],
+      "extensions": {
+        "https://w3id.org/modavis/vao/mmic#synthetic": true
+      },
+      "id": "urn:uuid:46d52f80-8b90-584b-ad71-939fc16ae148",
+      "mediaType": "image/svg+xml",
+      "provenanceIds": [
+        "urn:uuid:54f918e1-9943-5a3b-b4db-304e7d6550c4"
+      ],
+      "qualityTier": "preservation",
+      "representationStatus": "https://w3id.org/modavis/vao/vocab/representation-status/authored",
+      "rightsIds": [
+        "urn:uuid:d21d8a23-72f3-566e-bc0a-830ebe2bd8b6"
+      ],
+      "sha256": "b307c6fe2000488488ed36afe1059c33bdda24bcd23453a16d770c080f63ae6c",
+      "technicalMetadata": {
+        "kind": "data"
+      },
+      "type": "Realization",
+      "variantSetId": "observation.svg"
+    },
+    {
+      "assetId": "urn:uuid:9c6a6fb5-cdb9-5712-8a00-21e2d55fcf42",
+      "byteSize": 118,
+      "distributionIds": [],
+      "extensions": {
+        "https://w3id.org/modavis/vao/mmic#synthetic": true
+      },
+      "id": "urn:uuid:5eb9c3fd-818e-57f6-9984-11cd44dc6d5a",
+      "mediaType": "text/plain",
+      "provenanceIds": [
+        "urn:uuid:54f918e1-9943-5a3b-b4db-304e7d6550c4"
+      ],
+      "qualityTier": "preservation",
+      "representationStatus": "https://w3id.org/modavis/vao/vocab/representation-status/authored",
+      "rightsIds": [
+        "urn:uuid:d21d8a23-72f3-566e-bc0a-830ebe2bd8b6"
+      ],
+      "sha256": "c2d118ba7f96aeb5ab22e0c6e76f55e370ed5f002b3955d2acb4b8b0233b48c0",
+      "technicalMetadata": {
+        "kind": "data"
+      },
+      "type": "Realization",
+      "variantSetId": "evidence.txt"
+    },
+    {
+      "assetId": "urn:uuid:be5fc8ea-8768-5f10-808c-227fff83f842",
+      "byteSize": 635,
+      "distributionIds": [],
+      "extensions": {
+        "https://w3id.org/modavis/vao/mmic#synthetic": true
+      },
+      "id": "urn:uuid:10d5205a-e771-5c03-bb1e-dddecdbe5a5f",
+      "mediaType": "application/json",
+      "provenanceIds": [
+        "urn:uuid:54f918e1-9943-5a3b-b4db-304e7d6550c4"
+      ],
+      "qualityTier": "preservation",
+      "representationStatus": "https://w3id.org/modavis/vao/vocab/representation-status/authored",
+      "rightsIds": [
+        "urn:uuid:d21d8a23-72f3-566e-bc0a-830ebe2bd8b6"
+      ],
+      "sha256": "70416f52a5c6f915fdc5b727095ee9602e3cf509f495520d728b81ad0919abdb",
+      "technicalMetadata": {
+        "kind": "data"
+      },
+      "type": "Realization",
+      "variantSetId": "native.json"
+    },
+    {
+      "assetId": "urn:uuid:fbf4d294-ad36-5e7f-b035-bdedfa54fb72",
+      "byteSize": 57,
+      "distributionIds": [],
+      "extensions": {
+        "https://w3id.org/modavis/vao/mmic#synthetic": true
+      },
+      "id": "urn:uuid:32b9ebf2-d639-5ea4-ade0-67da2c5a67b6",
+      "mediaType": "audio/midi",
+      "provenanceIds": [
+        "urn:uuid:54f918e1-9943-5a3b-b4db-304e7d6550c4"
+      ],
+      "qualityTier": "preservation",
+      "representationStatus": "https://w3id.org/modavis/vao/vocab/representation-status/authored",
+      "rightsIds": [
+        "urn:uuid:d21d8a23-72f3-566e-bc0a-830ebe2bd8b6"
+      ],
+      "sha256": "a8463948efd2403b2030a86c8d26868149ec21fa5d433b2b06e9631f5820dd11",
+      "technicalMetadata": {
+        "kind": "data"
+      },
+      "type": "Realization",
+      "variantSetId": "export.mid"
+    },
+    {
+      "assetId": "urn:uuid:d17b4360-0218-544d-b7cc-24fb9072d067",
+      "byteSize": 16044,
+      "distributionIds": [],
+      "extensions": {
+        "https://w3id.org/modavis/vao/mmic#synthetic": true
+      },
+      "id": "urn:uuid:a54a67f1-a3d9-5aa9-a51f-1ee357e0146a",
+      "mediaType": "audio/wav",
+      "provenanceIds": [
+        "urn:uuid:54f918e1-9943-5a3b-b4db-304e7d6550c4"
+      ],
+      "qualityTier": "preservation",
+      "representationStatus": "https://w3id.org/modavis/vao/vocab/representation-status/authored",
+      "rightsIds": [
+        "urn:uuid:d21d8a23-72f3-566e-bc0a-830ebe2bd8b6"
+      ],
+      "sha256": "a87935f7a2a541f42970d0416fcd97d7c1ad0e051d748a5b1814bd5aea6e10ac",
+      "technicalMetadata": {
+        "kind": "data"
+      },
+      "type": "Realization",
+      "variantSetId": "simulation.wav"
+    },
+    {
+      "assetId": "urn:uuid:022afcb7-6f1c-5c14-9176-b43b228804b2",
+      "byteSize": 534,
+      "distributionIds": [],
+      "extensions": {
+        "https://w3id.org/modavis/vao/mmic#synthetic": true
+      },
+      "id": "urn:uuid:c7798276-3287-597c-9fd0-407aafc75e8d",
+      "mediaType": "application/json",
+      "provenanceIds": [
+        "urn:uuid:54f918e1-9943-5a3b-b4db-304e7d6550c4"
+      ],
+      "qualityTier": "preservation",
+      "representationStatus": "https://w3id.org/modavis/vao/vocab/representation-status/authored",
+      "rightsIds": [
+        "urn:uuid:d21d8a23-72f3-566e-bc0a-830ebe2bd8b6"
+      ],
+      "sha256": "5d9aa1553c8b35e5527cbbd4a3dec7f3b1d3f1ab6fd98a26a225bb94724530d1",
+      "technicalMetadata": {
+        "kind": "data"
+      },
+      "type": "Realization",
+      "variantSetId": "simulated-native.json"
+    },
+    {
+      "assetId": "urn:uuid:865ccc36-b44c-5f85-b0aa-b3b066502b8f",
+      "byteSize": 269,
+      "distributionIds": [],
+      "extensions": {
+        "https://w3id.org/modavis/vao/mmic#synthetic": true
+      },
+      "id": "urn:uuid:e6fa071f-4012-5158-9b20-0f9fc7a0645d",
+      "mediaType": "application/json",
+      "provenanceIds": [
+        "urn:uuid:54f918e1-9943-5a3b-b4db-304e7d6550c4"
+      ],
+      "qualityTier": "preservation",
+      "representationStatus": "https://w3id.org/modavis/vao/vocab/representation-status/authored",
+      "rightsIds": [
+        "urn:uuid:d21d8a23-72f3-566e-bc0a-830ebe2bd8b6"
+      ],
+      "sha256": "1bf4c977425bd61b4ad93cf456893ea406810acadbbdc68df42125e1a5c09f29",
+      "technicalMetadata": {
+        "kind": "data"
+      },
+      "type": "Realization",
+      "variantSetId": "alignment.json"
+    },
+    {
+      "assetId": "urn:uuid:8856efba-db69-5a77-825f-b3ae24a4b031",
+      "byteSize": 19013,
+      "distributionIds": [],
+      "extensions": {
+        "https://w3id.org/modavis/vao/mmic#synthetic": true
+      },
+      "id": "urn:uuid:7e8a9b38-5e2f-535f-90e9-67733e4945ba",
+      "mediaType": "application/json",
+      "provenanceIds": [
+        "urn:uuid:54f918e1-9943-5a3b-b4db-304e7d6550c4"
+      ],
+      "qualityTier": "preservation",
+      "representationStatus": "https://w3id.org/modavis/vao/vocab/representation-status/authored",
+      "rightsIds": [
+        "urn:uuid:d21d8a23-72f3-566e-bc0a-830ebe2bd8b6"
+      ],
+      "sha256": "134bd07f694628a31a37a925390ee1fc6f7829ac55528e9cda882f1aa38b702e",
+      "technicalMetadata": {
+        "kind": "data"
+      },
+      "type": "Realization",
+      "variantSetId": "semantic.json"
+    }
+  ],
+  "relations": [],
+  "release": {
+    "contentVersion": "1.0.0",
+    "id": "urn:uuid:9385923b-428b-5872-b63e-e4d23d22855e",
+    "revision": 1
+  },
+  "repositoryBindings": [],
+  "rights": [
+    {
+      "access": "open",
+      "appliesToIds": [
+        "urn:uuid:f9ca2b52-fbcf-5127-86f6-aba254bc168f",
+        "urn:uuid:5b9b4434-b960-586f-bc02-763489c668f5",
+        "urn:uuid:46d52f80-8b90-584b-ad71-939fc16ae148",
+        "urn:uuid:9c6a6fb5-cdb9-5712-8a00-21e2d55fcf42",
+        "urn:uuid:5eb9c3fd-818e-57f6-9984-11cd44dc6d5a",
+        "urn:uuid:be5fc8ea-8768-5f10-808c-227fff83f842",
+        "urn:uuid:10d5205a-e771-5c03-bb1e-dddecdbe5a5f",
+        "urn:uuid:fbf4d294-ad36-5e7f-b035-bdedfa54fb72",
+        "urn:uuid:32b9ebf2-d639-5ea4-ade0-67da2c5a67b6",
+        "urn:uuid:d17b4360-0218-544d-b7cc-24fb9072d067",
+        "urn:uuid:a54a67f1-a3d9-5aa9-a51f-1ee357e0146a",
+        "urn:uuid:022afcb7-6f1c-5c14-9176-b43b228804b2",
+        "urn:uuid:c7798276-3287-597c-9fd0-407aafc75e8d",
+        "urn:uuid:865ccc36-b44c-5f85-b0aa-b3b066502b8f",
+        "urn:uuid:e6fa071f-4012-5158-9b20-0f9fc7a0645d",
+        "urn:uuid:8856efba-db69-5a77-825f-b3ae24a4b031",
+        "urn:uuid:7e8a9b38-5e2f-535f-90e9-67733e4945ba"
+      ],
+      "id": "urn:uuid:d21d8a23-72f3-566e-bc0a-830ebe2bd8b6",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "statement": {
+        "en": "Synthetic fixture data dedicated under CC0."
+      }
+    },
+    {
+      "access": "open",
+      "appliesToIds": [
+        "urn:uuid:a7d9af63-9fb0-5327-b9e0-91475c6bc84f",
+        "urn:uuid:077bba0d-d32a-577e-9bf0-b0c85a67e207",
+        "urn:uuid:cab96eef-b1c5-5ddc-8813-07331a3f7945",
+        "urn:uuid:cb4c7d98-81aa-5da8-9b2d-998fb99751ff"
+      ],
+      "id": "urn:uuid:e1bbae0c-cecc-51c9-ba6e-a4255bcb1d52",
+      "license": "https://spdx.org/licenses/Apache-2.0",
+      "statement": {
+        "en": "Reference source and dependency declarations retain Apache-2.0."
+      }
+    }
+  ],
+  "runtime": {
+    "conformanceTraces": [],
+    "executionSemantics": {
+      "actionExecution": "execution-group-then-array-order",
+      "lateEventPolicy": "reject",
+      "maximumMicrosteps": 10000,
+      "maximumVoices": 1024,
+      "reentrancyPolicy": "queue",
+      "runToCompletion": true,
+      "simultaneousEventOrder": "priority-then-event-id",
+      "timeResolution": {
+        "unit": "http://qudt.org/vocab/unit/MilliSEC",
+        "value": 1
+      },
+      "timestampOrder": "ascending",
+      "transitionEvaluation": "snapshot",
+      "voiceAllocation": "lowest-free-then-oldest"
+    },
+    "randomSources": [],
+    "renderers": []
+  },
+  "scientific": {
+    "activities": [
+      {
+        "activityKind": "authoring",
+        "agentIds": [
+          "urn:uuid:79470aca-1a84-5004-9c9c-53247a5c60a5"
+        ],
+        "endedAt": "2026-10-10T00:00:00Z",
+        "id": "urn:uuid:54f918e1-9943-5a3b-b4db-304e7d6550c4",
+        "inputIds": [],
+        "outputIds": [
+          "urn:uuid:077bba0d-d32a-577e-9bf0-b0c85a67e207",
+          "urn:uuid:cb4c7d98-81aa-5da8-9b2d-998fb99751ff",
+          "urn:uuid:46d52f80-8b90-584b-ad71-939fc16ae148",
+          "urn:uuid:5eb9c3fd-818e-57f6-9984-11cd44dc6d5a",
+          "urn:uuid:10d5205a-e771-5c03-bb1e-dddecdbe5a5f",
+          "urn:uuid:32b9ebf2-d639-5ea4-ade0-67da2c5a67b6",
+          "urn:uuid:a54a67f1-a3d9-5aa9-a51f-1ee357e0146a",
+          "urn:uuid:c7798276-3287-597c-9fd0-407aafc75e8d",
+          "urn:uuid:e6fa071f-4012-5158-9b20-0f9fc7a0645d",
+          "urn:uuid:7e8a9b38-5e2f-535f-90e9-67733e4945ba"
+        ],
+        "parameterValues": {
+          "https://w3id.org/modavis/vao/mmic#synthetic": true
+        },
+        "protocolId": "urn:uuid:d38f6c35-e8bd-5fab-bfaa-0cdf55f8a693",
+        "softwareEnvironmentId": "urn:uuid:801f1e45-8db9-598a-b13f-1996187dfc46",
+        "startedAt": "2026-10-10T00:00:00Z"
+      }
+    ],
+    "agents": [
+      {
+        "agentKind": "software-agent",
+        "id": "urn:uuid:79470aca-1a84-5004-9c9c-53247a5c60a5",
+        "labels": {
+          "en": "Synthetic fixture constructor"
+        }
+      }
+    ],
+    "analyses": [],
+    "calibrations": [],
+    "claims": [],
+    "consents": [],
+    "observations": [],
+    "protocols": [
+      {
+        "id": "urn:uuid:d38f6c35-e8bd-5fab-bfaa-0cdf55f8a693",
+        "labels": {
+          "en": "Synthetic conformance construction"
+        },
+        "procedure": "Construct and replay declared synthetic MMIC traces; no historic calibration or actual fabrication claim.",
+        "version": "1.0.0"
+      }
+    ],
+    "reviews": [],
+    "softwareEnvironments": [
+      {
+        "id": "urn:uuid:801f1e45-8db9-598a-b13f-1996187dfc46",
+        "identity": {
+          "algorithm": "sha256",
+          "value": "b71639b4c99646124dde60402c41a100e15932876f7cb74ac150d00ba287bc79"
+        },
+        "identityDescription": "Exact distributed Tools/build_mmic_fixtures.py bytes.",
+        "identityScope": "source-file",
+        "name": "MMIC conformance fixture constructor",
+        "runtimeDescription": "CPython >=3.11 with hash-locked source dependencies.",
+        "version": "1.0.0"
+      }
+    ]
+  },
+  "title": {
+    "en": "Synthetic MMIC roll"
+  },
+  "type": "VirtualAcousticObject"
+}

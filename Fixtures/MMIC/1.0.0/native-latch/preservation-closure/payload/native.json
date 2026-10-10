@@ -1,0 +1,12 @@
+[
+  {
+    "id": "urn:uuid:ba678e61-3149-5a70-886b-efa406a08494",
+    "kind": "latch",
+    "onsetSeconds": 0.3,
+    "roleAssignmentId": "urn:uuid:69597779-53cd-5908-abd4-97624bf0dd25",
+    "sourceFeatureIds": [
+      "urn:uuid:85201d8d-7d43-5c09-bd8e-edb58d0ddfd4"
+    ],
+    "value": 127
+  }
+]

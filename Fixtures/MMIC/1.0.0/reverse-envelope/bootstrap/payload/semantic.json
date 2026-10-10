@@ -1,0 +1,412 @@
+{
+  "assignments": [
+    {
+      "evidenceIds": [
+        "urn:uuid:a06af778-a8d4-5db2-82a9-afcb52806cf8"
+      ],
+      "id": "urn:uuid:17c03c65-ae88-5084-8203-865039126d8c",
+      "modelId": "urn:uuid:bdd50b85-7b41-583a-af4d-83d67c6c1e4c",
+      "programmeId": "urn:uuid:074cafdf-4428-52af-a868-aeaf49a1e0ec",
+      "selected": true,
+      "stateId": "urn:uuid:c0d9e830-3dc1-5759-89a7-5f982e774812",
+      "status": "accepted"
+    }
+  ],
+  "carriers": [
+    {
+      "digitalEntityId": "urn:uuid:decf98f4-7f26-5bde-a6c0-13b5266949f1",
+      "encoding": "perforated-roll",
+      "evidenceIds": [
+        "urn:uuid:a06af778-a8d4-5db2-82a9-afcb52806cf8"
+      ],
+      "id": "urn:uuid:45f23242-874f-5788-a704-106c082f88a6",
+      "origin": "synthetic"
+    }
+  ],
+  "comparisons": [],
+  "corrections": [],
+  "designs": [],
+  "evidence": [
+    {
+      "agentId": "urn:uuid:de7675cf-8332-5e0d-9b87-9565aaa731ca",
+      "basis": "synthetic",
+      "id": "urn:uuid:a06af778-a8d4-5db2-82a9-afcb52806cf8",
+      "locator": "Complete synthetic fixture",
+      "reviewStatus": "reviewed",
+      "scope": "Structural checks only; not historical accuracy",
+      "sourceIRI": "https://example.org/vao/mmic/synthetic-fixture",
+      "sourceRealizationId": "urn:uuid:e2945115-a1b6-50c7-9f1d-b89a5d0ef51c"
+    }
+  ],
+  "fabrications": [],
+  "features": [
+    {
+      "evidenceIds": [
+        "urn:uuid:a06af778-a8d4-5db2-82a9-afcb52806cf8"
+      ],
+      "id": "urn:uuid:da1ef6c0-7ad4-5c9a-8bce-3f78d82c0015",
+      "kind": "perforation",
+      "location": {
+        "end": 85.0,
+        "kind": "interval",
+        "start": 90.0
+      },
+      "observationId": "urn:uuid:2c668653-ea19-5bc4-b0d3-6adc2c9f6ba7",
+      "programmeId": "urn:uuid:074cafdf-4428-52af-a868-aeaf49a1e0ec",
+      "samples": [
+        {
+          "position": 90.0,
+          "value": 20
+        },
+        {
+          "position": 85.0,
+          "value": 90
+        }
+      ],
+      "selector": [
+        [
+          10,
+          15
+        ],
+        [
+          10,
+          20
+        ]
+      ],
+      "stateId": "urn:uuid:c0d9e830-3dc1-5759-89a7-5f982e774812",
+      "trackId": "urn:uuid:fe90ef35-e955-5eed-a44b-9edbb61fec93"
+    },
+    {
+      "evidenceIds": [
+        "urn:uuid:a06af778-a8d4-5db2-82a9-afcb52806cf8"
+      ],
+      "id": "urn:uuid:2c6a117d-4e23-5f26-aebb-a9f9ec5a625f",
+      "kind": "print",
+      "location": {
+        "end": 80.0,
+        "kind": "point",
+        "start": 80.0
+      },
+      "observationId": "urn:uuid:2c668653-ea19-5bc4-b0d3-6adc2c9f6ba7",
+      "programmeId": "urn:uuid:074cafdf-4428-52af-a868-aeaf49a1e0ec",
+      "selector": [
+        [
+          11,
+          16
+        ],
+        [
+          10,
+          20
+        ]
+      ],
+      "stateId": "urn:uuid:c0d9e830-3dc1-5759-89a7-5f982e774812",
+      "trackId": "urn:uuid:9717bee3-f5cc-5a11-aa4c-0f2e5a841372"
+    }
+  ],
+  "id": "urn:uuid:edc914c1-8380-5756-b77b-2dd04558992c",
+  "interpretations": [
+    {
+      "assignmentId": "urn:uuid:17c03c65-ae88-5084-8203-865039126d8c",
+      "events": [
+        {
+          "id": "urn:uuid:1220559e-defa-5d49-8265-86e84091112f",
+          "kind": "envelope",
+          "onsetSeconds": 0.2999999999999998,
+          "roleAssignmentId": "urn:uuid:71a44107-f18c-5750-9d45-b2295545bf19",
+          "samples": [
+            {
+              "seconds": 0.2999999999999998,
+              "value": 20
+            },
+            {
+              "seconds": 0.4500000000000002,
+              "value": 90
+            }
+          ],
+          "sourceFeatureIds": [
+            "urn:uuid:da1ef6c0-7ad4-5c9a-8bce-3f78d82c0015"
+          ],
+          "unit": "http://qudt.org/vocab/unit/UNITLESS"
+        }
+      ],
+      "evidenceIds": [
+        "urn:uuid:a06af778-a8d4-5db2-82a9-afcb52806cf8"
+      ],
+      "excludedFeatureIds": [
+        "urn:uuid:2c6a117d-4e23-5f26-aebb-a9f9ec5a625f"
+      ],
+      "execution": {
+        "activityId": "urn:uuid:45829e48-c77b-57ac-8ba0-100929400fab",
+        "codeRealizationId": "urn:uuid:7e218b08-3be8-5148-b0d5-4842ed5079b4",
+        "environmentRealizationId": "urn:uuid:5096460c-1d9c-51c1-8427-a20197c3a356",
+        "modelSHA256": "d9a6b6a0eba4f1fa5d7240957bc65828b9fa29681bf67870542b43516186381b",
+        "reproducibility": "deterministic"
+      },
+      "exports": [
+        {
+          "bindingIds": [
+            "urn:uuid:19a5329f-5d7c-5350-ad49-acf7feed4a23"
+          ],
+          "losses": [
+            "Synthetic export duration/velocity; no measured acoustic response or historical calibration."
+          ],
+          "realizationId": "urn:uuid:ab10c8cd-d2cc-516d-981b-42a71823e72a"
+        }
+      ],
+      "id": "urn:uuid:e22e74f9-0667-5662-af8f-b7319fe9c31f",
+      "modelId": "urn:uuid:bdd50b85-7b41-583a-af4d-83d67c6c1e4c",
+      "modelSHA256": "d9a6b6a0eba4f1fa5d7240957bc65828b9fa29681bf67870542b43516186381b",
+      "nativeRealizationId": "urn:uuid:0610ea70-2070-5bfb-b2a7-b477afd9203e",
+      "sourceKind": "carrier-derived",
+      "sourceRealizationIds": [
+        "urn:uuid:7d48f623-2937-5379-96c4-5c133308b40b"
+      ]
+    }
+  ],
+  "levels": [
+    "documentation",
+    "decoding"
+  ],
+  "models": [
+    {
+      "canonicalization": "RFC8785",
+      "evidenceIds": [
+        "urn:uuid:a06af778-a8d4-5db2-82a9-afcb52806cf8"
+      ],
+      "id": "urn:uuid:bdd50b85-7b41-583a-af4d-83d67c6c1e4c",
+      "spec": {
+        "artifactPins": [
+          {
+            "realizationId": "urn:uuid:7e218b08-3be8-5148-b0d5-4842ed5079b4",
+            "sha256": "a4e4e59e5c2c73d5a5fc9b91c7118b791cd262c8d604534cb9e419b9414ae0a2"
+          },
+          {
+            "realizationId": "urn:uuid:5096460c-1d9c-51c1-8427-a20197c3a356",
+            "sha256": "cfc21919a7f6c3eda016e2d2b37c75298bf7760469bb6938833dd60255feb30b"
+          }
+        ],
+        "constraints": {
+          "material": "synthetic sheet",
+          "maximumTarget": 72,
+          "minimumClearance": 0.01,
+          "minimumRepeatSeconds": 0.05,
+          "minimumTarget": 48,
+          "tool": "synthetic layout",
+          "unsupportedPolicy": "reject"
+        },
+        "exportBindings": [
+          {
+            "channel": 0,
+            "controller": 64,
+            "id": "urn:uuid:19a5329f-5d7c-5350-ad49-acf7feed4a23",
+            "initialValue": 0,
+            "message": "control-change",
+            "offValue": 0,
+            "onValue": 127,
+            "protocol": "smf-ppqn",
+            "resetPolicy": "event-release",
+            "roleId": "urn:uuid:2c3937e6-5aa4-5834-a5c1-ddcf3a4c7afe",
+            "rounding": "nearest-ties-even",
+            "tempoMicroseconds": 500000,
+            "ticksPerBeat": 480
+          }
+        ],
+        "geometry": {
+          "bounds": [
+            0,
+            100
+          ],
+          "direction": "reverse",
+          "kind": "linear",
+          "orientation": "Declared increasing coordinate on observed face",
+          "origin": "Synthetic registration origin",
+          "status": "assumed",
+          "unit": "http://qudt.org/vocab/unit/MilliM"
+        },
+        "historicalApplicability": "none; synthetic conformance construction",
+        "initialState": {
+          "latches": "zero"
+        },
+        "reader": {
+          "delaySeconds": 0,
+          "domain": [
+            0,
+            100
+          ],
+          "interpolation": "none",
+          "response": "Synthetic transfer; no acoustic response claim",
+          "segmented": false,
+          "trajectory": []
+        },
+        "roles": [
+          {
+            "bindingIds": [
+              "urn:uuid:19a5329f-5d7c-5350-ad49-acf7feed4a23"
+            ],
+            "id": "urn:uuid:2c3937e6-5aa4-5834-a5c1-ddcf3a4c7afe",
+            "initialValue": 0,
+            "quantityUnit": "http://qudt.org/vocab/unit/UNITLESS",
+            "readerOffset": 0,
+            "readerOffsetUnit": "http://qudt.org/vocab/unit/MilliM",
+            "responseAssumption": "Synthetic response; feature engagement and acoustic duration are distinct.",
+            "role": "performance-control",
+            "signalKind": "envelope",
+            "target": "https://w3id.org/modavis/vao/mmic#Sustain",
+            "trackIndex": 0
+          },
+          {
+            "bindingIds": [],
+            "id": "urn:uuid:77d5bef0-b9d2-5b5a-b2b6-5de328bdc4df",
+            "readerOffset": 0,
+            "readerOffsetUnit": "http://qudt.org/vocab/unit/MilliM",
+            "responseAssumption": "Synthetic response; feature engagement and acoustic duration are distinct.",
+            "role": "unknown",
+            "signalKind": "unresolved",
+            "trackIndex": 1
+          }
+        ],
+        "runtime": {
+          "algorithm": "mmic-piecewise-reference-1",
+          "codeRealizationId": "urn:uuid:7e218b08-3be8-5148-b0d5-4842ed5079b4",
+          "deterministic": true,
+          "environmentRealizationId": "urn:uuid:5096460c-1d9c-51c1-8427-a20197c3a356"
+        },
+        "timing": {
+          "anchors": [
+            {
+              "position": 0,
+              "seconds": 3,
+              "uncertaintySeconds": 0.001
+            },
+            {
+              "position": 100,
+              "seconds": 0,
+              "uncertaintySeconds": 0.001
+            }
+          ],
+          "basis": "Synthetic clock only",
+          "calibrationStatus": "assumed",
+          "extrapolation": "forbidden",
+          "interpolation": "linear",
+          "method": "piecewise-linear",
+          "timeUnit": "http://qudt.org/vocab/unit/SEC",
+          "toleranceSeconds": 1e-09,
+          "unit": "http://qudt.org/vocab/unit/MilliM"
+        }
+      },
+      "specSHA256": "d9a6b6a0eba4f1fa5d7240957bc65828b9fa29681bf67870542b43516186381b",
+      "version": "synthetic-1"
+    }
+  ],
+  "observations": [
+    {
+      "activityId": "urn:uuid:45829e48-c77b-57ac-8ba0-100929400fab",
+      "coverage": {
+        "scope": "Whole source view",
+        "status": "complete"
+      },
+      "evidenceIds": [
+        "urn:uuid:a06af778-a8d4-5db2-82a9-afcb52806cf8"
+      ],
+      "id": "urn:uuid:2c668653-ea19-5bc4-b0d3-6adc2c9f6ba7",
+      "sourceBounds": [
+        [
+          0,
+          100
+        ],
+        [
+          0,
+          100
+        ]
+      ],
+      "sourceRealizationId": "urn:uuid:7d48f623-2937-5379-96c4-5c133308b40b",
+      "stateId": "urn:uuid:c0d9e830-3dc1-5759-89a7-5f982e774812"
+    }
+  ],
+  "parts": [],
+  "playbacks": [],
+  "programmes": [
+    {
+      "evidenceIds": [
+        "urn:uuid:a06af778-a8d4-5db2-82a9-afcb52806cf8"
+      ],
+      "extent": [
+        0,
+        100
+      ],
+      "id": "urn:uuid:074cafdf-4428-52af-a868-aeaf49a1e0ec",
+      "selection": {
+        "kind": "whole",
+        "label": "Synthetic programme A"
+      },
+      "stateId": "urn:uuid:c0d9e830-3dc1-5759-89a7-5f982e774812"
+    }
+  ],
+  "roleAssignments": [
+    {
+      "assignmentId": "urn:uuid:17c03c65-ae88-5084-8203-865039126d8c",
+      "evidenceIds": [
+        "urn:uuid:a06af778-a8d4-5db2-82a9-afcb52806cf8"
+      ],
+      "id": "urn:uuid:71a44107-f18c-5750-9d45-b2295545bf19",
+      "modelRoleId": "urn:uuid:2c3937e6-5aa4-5834-a5c1-ddcf3a4c7afe",
+      "status": "accepted",
+      "trackId": "urn:uuid:fe90ef35-e955-5eed-a44b-9edbb61fec93"
+    },
+    {
+      "assignmentId": "urn:uuid:17c03c65-ae88-5084-8203-865039126d8c",
+      "evidenceIds": [
+        "urn:uuid:a06af778-a8d4-5db2-82a9-afcb52806cf8"
+      ],
+      "id": "urn:uuid:711323c9-4f31-595d-a204-0badbfafc63f",
+      "modelRoleId": "urn:uuid:77d5bef0-b9d2-5b5a-b2b6-5de328bdc4df",
+      "status": "undetermined",
+      "trackId": "urn:uuid:9717bee3-f5cc-5a11-aa4c-0f2e5a841372"
+    }
+  ],
+  "schemaVersion": "1.0.0",
+  "states": [
+    {
+      "carrierId": "urn:uuid:45f23242-874f-5788-a704-106c082f88a6",
+      "coverage": {
+        "scope": "Whole synthetic carrier",
+        "status": "complete"
+      },
+      "evidenceIds": [
+        "urn:uuid:a06af778-a8d4-5db2-82a9-afcb52806cf8"
+      ],
+      "geometry": {
+        "bounds": [
+          0,
+          100
+        ],
+        "direction": "reverse",
+        "kind": "linear",
+        "orientation": "Declared increasing coordinate on observed face",
+        "origin": "Synthetic registration origin",
+        "status": "assumed",
+        "unit": "http://qudt.org/vocab/unit/MilliM"
+      },
+      "id": "urn:uuid:c0d9e830-3dc1-5759-89a7-5f982e774812"
+    }
+  ],
+  "synthetic": true,
+  "tracks": [
+    {
+      "evidenceIds": [
+        "urn:uuid:a06af778-a8d4-5db2-82a9-afcb52806cf8"
+      ],
+      "id": "urn:uuid:fe90ef35-e955-5eed-a44b-9edbb61fec93",
+      "index": 0,
+      "modelId": "urn:uuid:bdd50b85-7b41-583a-af4d-83d67c6c1e4c"
+    },
+    {
+      "evidenceIds": [
+        "urn:uuid:a06af778-a8d4-5db2-82a9-afcb52806cf8"
+      ],
+      "id": "urn:uuid:9717bee3-f5cc-5a11-aa4c-0f2e5a841372",
+      "index": 1,
+      "modelId": "urn:uuid:bdd50b85-7b41-583a-af4d-83d67c6c1e4c"
+    }
+  ]
+}

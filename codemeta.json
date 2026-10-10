@@ -2,17 +2,18 @@
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "CreativeWork",
   "name": "Virtual Acoustic Object (VAO) Standard",
-  "description": "Preservation-oriented standard for semantic, scientific, multimodal, physical, playable, rights, and exact-byte descriptions of acoustic objects.",
-  "version": "0.5.0",
-  "url": "https://w3id.org/modavis/vao/0.5.0/",
-  "identifier": "https://doi.org/10.5281/zenodo.22214248",
-  "dateModified": "2026-08-31",
+  "description": "Preservation-oriented standard for semantic, scientific, multimodal, physical, playable, rights and exact-byte descriptions of acoustic objects, mechanical music information carriers and associated digital designs. VAO 0.6.0 integrates MMIC 1.0.0 and preserves the 0.5.0 contract.",
+  "version": "0.6.0",
+  "url": "https://modavis-project.github.io/vao-standard/",
+  "identifier": "https://doi.org/10.5281/zenodo.22122773",
+  "dateModified": "2026-10-10",
   "developmentStatus": "https://www.repostatus.org/#active",
   "codeRepository": "https://github.com/modavis-project/vao-standard",
   "issueTracker": "https://github.com/modavis-project/vao-standard/issues",
   "license": [
     "https://spdx.org/licenses/CC-BY-4.0",
-    "https://spdx.org/licenses/Apache-2.0"
+    "https://spdx.org/licenses/Apache-2.0",
+    "https://spdx.org/licenses/CC0-1.0"
   ],
   "author": {
     "@type": "Person",
@@ -40,13 +41,19 @@
       }
     ]
   },
-  "programmingLanguage": "Python 3",
+  "programmingLanguage": [
+    "Python 3",
+    "JavaScript"
+  ],
   "keywords": [
     "virtual acoustic object",
     "musical instruments",
     "digital preservation",
     "multimodal research data",
     "acoustics",
-    "provenance"
+    "provenance",
+    "mechanical music information carriers",
+    "MMIC",
+    "MIDI"
   ]
 }

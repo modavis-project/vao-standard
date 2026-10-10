@@ -1,0 +1,12 @@
+[
+  {
+    "durationSeconds": 0.15000000000000002,
+    "id": "urn:uuid:6e2c9d61-f7c1-58f3-8d8b-fb5f29fb1e41",
+    "kind": "gate",
+    "onsetSeconds": 0.3,
+    "roleAssignmentId": "urn:uuid:cebb97c2-c10b-56fa-b595-0713485009c7",
+    "sourceFeatureIds": [
+      "urn:uuid:3a46fa9d-5937-5365-ae21-7a46638fafd1"
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "bounds": [
+    0,
+    100
+  ],
+  "direction": "forward",
+  "kind": "linear",
+  "orientation": "Declared increasing coordinate on observed face",
+  "origin": "Synthetic registration origin",
+  "status": "estimated",
+  "unit": "http://qudt.org/vocab/unit/MilliM"
+}

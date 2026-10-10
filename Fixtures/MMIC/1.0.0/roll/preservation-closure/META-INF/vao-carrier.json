@@ -1,0 +1,56 @@
+{
+  "$schema": "https://w3id.org/modavis/vao/0.6.0/schema/carrier.json",
+  "carrierMode": "preservation-closure",
+  "completeGroupIds": [
+    "urn:uuid:3b248057-8a9b-572c-86b6-930fc3b44339",
+    "urn:uuid:88961807-7590-5501-a43d-0be041edded2"
+  ],
+  "embeddedRealizations": [
+    {
+      "path": "payload/reference.py",
+      "realizationId": "urn:uuid:077bba0d-d32a-577e-9bf0-b0c85a67e207"
+    },
+    {
+      "path": "payload/native.json",
+      "realizationId": "urn:uuid:10d5205a-e771-5c03-bb1e-dddecdbe5a5f"
+    },
+    {
+      "path": "payload/export.mid",
+      "realizationId": "urn:uuid:32b9ebf2-d639-5ea4-ade0-67da2c5a67b6"
+    },
+    {
+      "path": "payload/observation.svg",
+      "realizationId": "urn:uuid:46d52f80-8b90-584b-ad71-939fc16ae148"
+    },
+    {
+      "path": "payload/evidence.txt",
+      "realizationId": "urn:uuid:5eb9c3fd-818e-57f6-9984-11cd44dc6d5a"
+    },
+    {
+      "path": "payload/semantic.json",
+      "realizationId": "urn:uuid:7e8a9b38-5e2f-535f-90e9-67733e4945ba"
+    },
+    {
+      "path": "payload/simulation.wav",
+      "realizationId": "urn:uuid:a54a67f1-a3d9-5aa9-a51f-1ee357e0146a"
+    },
+    {
+      "path": "payload/simulated-native.json",
+      "realizationId": "urn:uuid:c7798276-3287-597c-9fd0-407aafc75e8d"
+    },
+    {
+      "path": "payload/requirements-lock.txt",
+      "realizationId": "urn:uuid:cb4c7d98-81aa-5da8-9b2d-998fb99751ff"
+    },
+    {
+      "path": "payload/alignment.json",
+      "realizationId": "urn:uuid:e6fa071f-4012-5158-9b20-0f9fc7a0645d"
+    }
+  ],
+  "formatVersion": "0.6.0",
+  "id": "urn:uuid:15135445-d41d-5603-96b4-783bf9b67aea",
+  "manifestByteSize": 24629,
+  "manifestSHA256": "f858dd2ba5a7665eb7437b9f2c9fa54580ce157dd0777831d5bc62362af9c160",
+  "releaseId": "urn:uuid:9385923b-428b-5872-b63e-e4d23d22855e",
+  "type": "VAOCarrier"
+}

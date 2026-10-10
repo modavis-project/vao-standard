@@ -1,0 +1,20 @@
+{
+  "anchors": [
+    {
+      "left": 0,
+      "right": 0.03
+    },
+    {
+      "left": 3,
+      "right": 3.03
+    }
+  ],
+  "domain": [
+    0,
+    3
+  ],
+  "gapPolicy": "none",
+  "toleranceSeconds": 1e-09,
+  "unmatchedLeftEventIds": [],
+  "unmatchedRightEventIds": []
+}

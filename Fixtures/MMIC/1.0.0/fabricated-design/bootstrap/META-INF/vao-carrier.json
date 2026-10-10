@@ -1,0 +1,31 @@
+{
+  "$schema": "https://w3id.org/modavis/vao/0.6.0/schema/carrier.json",
+  "carrierMode": "bootstrap",
+  "completeGroupIds": [
+    "urn:uuid:cbe1e9e0-8651-5d91-a4ed-f2a42e366ddc"
+  ],
+  "embeddedRealizations": [
+    {
+      "path": "payload/semantic.json",
+      "realizationId": "urn:uuid:f85e72f2-8e61-5fbe-b784-ce781fd67f3a"
+    },
+    {
+      "path": "payload/reference.py",
+      "realizationId": "urn:uuid:c76cc5e4-fa46-5946-8a5b-9c989d5a14fd"
+    },
+    {
+      "path": "payload/requirements-lock.txt",
+      "realizationId": "urn:uuid:ad3ea38e-4e32-58bf-896b-56895ecdc55f"
+    },
+    {
+      "path": "payload/evidence.txt",
+      "realizationId": "urn:uuid:5dc62bdc-943f-5a4c-8b98-d862bed32d34"
+    }
+  ],
+  "formatVersion": "0.6.0",
+  "id": "urn:uuid:557ea8aa-3196-51ba-aac3-12b489a6ab44",
+  "manifestByteSize": 23287,
+  "manifestSHA256": "2e5616ed061ad8e7a9ebeaa86facf5b64710f6b750db4b20b3bef13414a62a97",
+  "releaseId": "urn:uuid:10b073d9-1edd-5224-add5-920adbee867e",
+  "type": "VAOCarrier"
+}

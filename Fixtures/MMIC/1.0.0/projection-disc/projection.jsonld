@@ -1,0 +1,1883 @@
+{
+  "@context": {
+    "@protected": true,
+    "@vocab": "https://w3id.org/modavis/vao/mmic#",
+    "activityId": "https://w3id.org/modavis/vao/mmic#activityId",
+    "agentId": "https://w3id.org/modavis/vao/mmic#agentId",
+    "algorithm": "https://w3id.org/modavis/vao/mmic#algorithm",
+    "alignment": "https://w3id.org/modavis/vao/mmic#alignment",
+    "alignmentRealizationId": "https://w3id.org/modavis/vao/mmic#alignmentRealizationId",
+    "anchors": "https://w3id.org/modavis/vao/mmic#anchors",
+    "artifactPins": "https://w3id.org/modavis/vao/mmic#artifactPins",
+    "assignmentId": "https://w3id.org/modavis/vao/mmic#assignmentId",
+    "assignments": "https://w3id.org/modavis/vao/mmic#assignments",
+    "axial": "https://w3id.org/modavis/vao/mmic#axial",
+    "axialBounds": "https://w3id.org/modavis/vao/mmic#axialBounds",
+    "axialEnd": "https://w3id.org/modavis/vao/mmic#axialEnd",
+    "axialStart": "https://w3id.org/modavis/vao/mmic#axialStart",
+    "axialUnit": "https://w3id.org/modavis/vao/mmic#axialUnit",
+    "basis": "https://w3id.org/modavis/vao/mmic#basis",
+    "bindingIds": "https://w3id.org/modavis/vao/mmic#bindingIds",
+    "bounds": "https://w3id.org/modavis/vao/mmic#bounds",
+    "calibrationStatus": "https://w3id.org/modavis/vao/mmic#calibrationStatus",
+    "canonicalization": "https://w3id.org/modavis/vao/mmic#canonicalization",
+    "carrierId": "https://w3id.org/modavis/vao/mmic#carrierId",
+    "carriers": "https://w3id.org/modavis/vao/mmic#carriers",
+    "changeKind": "https://w3id.org/modavis/vao/mmic#changeKind",
+    "channel": "https://w3id.org/modavis/vao/mmic#channel",
+    "codeRealizationId": "https://w3id.org/modavis/vao/mmic#codeRealizationId",
+    "comparisons": "https://w3id.org/modavis/vao/mmic#comparisons",
+    "conditions": "https://w3id.org/modavis/vao/mmic#conditions",
+    "constraints": "https://w3id.org/modavis/vao/mmic#constraints",
+    "controller": "https://w3id.org/modavis/vao/mmic#controller",
+    "corrections": "https://w3id.org/modavis/vao/mmic#corrections",
+    "coverage": "https://w3id.org/modavis/vao/mmic#coverage",
+    "delaySeconds": "https://w3id.org/modavis/vao/mmic#delaySeconds",
+    "designId": "https://w3id.org/modavis/vao/mmic#designId",
+    "designs": "https://w3id.org/modavis/vao/mmic#designs",
+    "deterministic": "https://w3id.org/modavis/vao/mmic#deterministic",
+    "digitalEntityId": "https://w3id.org/modavis/vao/mmic#digitalEntityId",
+    "direction": "https://w3id.org/modavis/vao/mmic#direction",
+    "domain": "https://w3id.org/modavis/vao/mmic#domain",
+    "durationPolicy": "https://w3id.org/modavis/vao/mmic#durationPolicy",
+    "durationSeconds": "https://w3id.org/modavis/vao/mmic#durationSeconds",
+    "encoding": "https://w3id.org/modavis/vao/mmic#encoding",
+    "end": "https://w3id.org/modavis/vao/mmic#end",
+    "endTurn": "https://w3id.org/modavis/vao/mmic#endTurn",
+    "environmentRealizationId": "https://w3id.org/modavis/vao/mmic#environmentRealizationId",
+    "events": "https://w3id.org/modavis/vao/mmic#events",
+    "evidence": "https://w3id.org/modavis/vao/mmic#evidence",
+    "evidenceIds": "https://w3id.org/modavis/vao/mmic#evidenceIds",
+    "excludedFeatureIds": "https://w3id.org/modavis/vao/mmic#excludedFeatureIds",
+    "execution": "https://w3id.org/modavis/vao/mmic#execution",
+    "exportBindings": "https://w3id.org/modavis/vao/mmic#exportBindings",
+    "exports": "https://w3id.org/modavis/vao/mmic#exports",
+    "extensions": "https://w3id.org/modavis/vao/mmic#extensions",
+    "extent": "https://w3id.org/modavis/vao/mmic#extent",
+    "externalIdentifiers": "https://w3id.org/modavis/vao/mmic#externalIdentifiers",
+    "extrapolation": "https://w3id.org/modavis/vao/mmic#extrapolation",
+    "fabricationStatus": "https://w3id.org/modavis/vao/mmic#fabricationStatus",
+    "fabrications": "https://w3id.org/modavis/vao/mmic#fabrications",
+    "face": "https://w3id.org/modavis/vao/mmic#face",
+    "features": "https://w3id.org/modavis/vao/mmic#features",
+    "fragmentBounds": "https://w3id.org/modavis/vao/mmic#fragmentBounds",
+    "gapPolicy": "https://w3id.org/modavis/vao/mmic#gapPolicy",
+    "geometry": "https://w3id.org/modavis/vao/mmic#geometry",
+    "historicalApplicability": "https://w3id.org/modavis/vao/mmic#historicalApplicability",
+    "id": "https://w3id.org/modavis/vao/mmic#id",
+    "index": "https://w3id.org/modavis/vao/mmic#index",
+    "initialState": "https://w3id.org/modavis/vao/mmic#initialState",
+    "initialValue": "https://w3id.org/modavis/vao/mmic#initialValue",
+    "inspectionRealizationId": "https://w3id.org/modavis/vao/mmic#inspectionRealizationId",
+    "instrumentId": "https://w3id.org/modavis/vao/mmic#instrumentId",
+    "interpolation": "https://w3id.org/modavis/vao/mmic#interpolation",
+    "interpretations": "https://w3id.org/modavis/vao/mmic#interpretations",
+    "interventionActivityId": "https://w3id.org/modavis/vao/mmic#interventionActivityId",
+    "issuer": "https://w3id.org/modavis/vao/mmic#issuer",
+    "joins": "https://w3id.org/modavis/vao/mmic#joins",
+    "kind": "https://w3id.org/modavis/vao/mmic#kind",
+    "label": "https://w3id.org/modavis/vao/mmic#label",
+    "layoutRealizationId": "https://w3id.org/modavis/vao/mmic#layoutRealizationId",
+    "left": "https://w3id.org/modavis/vao/mmic#left",
+    "leftEventId": "https://w3id.org/modavis/vao/mmic#leftEventId",
+    "leftInterpretationId": "https://w3id.org/modavis/vao/mmic#leftInterpretationId",
+    "levels": "https://w3id.org/modavis/vao/mmic#levels",
+    "location": "https://w3id.org/modavis/vao/mmic#location",
+    "locator": "https://w3id.org/modavis/vao/mmic#locator",
+    "losses": "https://w3id.org/modavis/vao/mmic#losses",
+    "matchedCoverage": "https://w3id.org/modavis/vao/mmic#matchedCoverage",
+    "material": "https://w3id.org/modavis/vao/mmic#material",
+    "maxResidualSeconds": "https://w3id.org/modavis/vao/mmic#maxResidualSeconds",
+    "maximumTarget": "https://w3id.org/modavis/vao/mmic#maximumTarget",
+    "measuredGeometry": "https://w3id.org/modavis/vao/mmic#measuredGeometry",
+    "message": "https://w3id.org/modavis/vao/mmic#message",
+    "method": "https://w3id.org/modavis/vao/mmic#method",
+    "metrics": "https://w3id.org/modavis/vao/mmic#metrics",
+    "minimumClearance": "https://w3id.org/modavis/vao/mmic#minimumClearance",
+    "minimumRepeatSeconds": "https://w3id.org/modavis/vao/mmic#minimumRepeatSeconds",
+    "minimumTarget": "https://w3id.org/modavis/vao/mmic#minimumTarget",
+    "missingRegions": "https://w3id.org/modavis/vao/mmic#missingRegions",
+    "mmic": "https://w3id.org/modavis/vao/mmic#",
+    "modelId": "https://w3id.org/modavis/vao/mmic#modelId",
+    "modelRoleId": "https://w3id.org/modavis/vao/mmic#modelRoleId",
+    "modelSHA256": "https://w3id.org/modavis/vao/mmic#modelSHA256",
+    "models": "https://w3id.org/modavis/vao/mmic#models",
+    "nativeRealizationId": "https://w3id.org/modavis/vao/mmic#nativeRealizationId",
+    "observationId": "https://w3id.org/modavis/vao/mmic#observationId",
+    "observations": "https://w3id.org/modavis/vao/mmic#observations",
+    "offValue": "https://w3id.org/modavis/vao/mmic#offValue",
+    "onValue": "https://w3id.org/modavis/vao/mmic#onValue",
+    "onsetSeconds": "https://w3id.org/modavis/vao/mmic#onsetSeconds",
+    "operatorAgentId": "https://w3id.org/modavis/vao/mmic#operatorAgentId",
+    "orientation": "https://w3id.org/modavis/vao/mmic#orientation",
+    "origin": "https://w3id.org/modavis/vao/mmic#origin",
+    "pairs": "https://w3id.org/modavis/vao/mmic#pairs",
+    "partIds": "https://w3id.org/modavis/vao/mmic#partIds",
+    "parts": "https://w3id.org/modavis/vao/mmic#parts",
+    "period": "https://w3id.org/modavis/vao/mmic#period",
+    "pitch": "https://w3id.org/modavis/vao/mmic#pitch",
+    "playbackId": "https://w3id.org/modavis/vao/mmic#playbackId",
+    "playbacks": "https://w3id.org/modavis/vao/mmic#playbacks",
+    "position": "https://w3id.org/modavis/vao/mmic#position",
+    "predecessorId": "https://w3id.org/modavis/vao/mmic#predecessorId",
+    "previousInterpretationId": "https://w3id.org/modavis/vao/mmic#previousInterpretationId",
+    "previousValue": "https://w3id.org/modavis/vao/mmic#previousValue",
+    "programmeId": "https://w3id.org/modavis/vao/mmic#programmeId",
+    "programmes": "https://w3id.org/modavis/vao/mmic#programmes",
+    "protocol": "https://w3id.org/modavis/vao/mmic#protocol",
+    "purpose": "https://w3id.org/modavis/vao/mmic#purpose",
+    "quantityUnit": "https://w3id.org/modavis/vao/mmic#quantityUnit",
+    "reader": "https://w3id.org/modavis/vao/mmic#reader",
+    "readerOffset": "https://w3id.org/modavis/vao/mmic#readerOffset",
+    "readerOffsetUnit": "https://w3id.org/modavis/vao/mmic#readerOffsetUnit",
+    "realizationId": "https://w3id.org/modavis/vao/mmic#realizationId",
+    "reason": "https://w3id.org/modavis/vao/mmic#reason",
+    "recordingKind": "https://w3id.org/modavis/vao/mmic#recordingKind",
+    "recordingRealizationId": "https://w3id.org/modavis/vao/mmic#recordingRealizationId",
+    "redactions": "https://w3id.org/modavis/vao/mmic#redactions",
+    "referenceStatus": "https://w3id.org/modavis/vao/mmic#referenceStatus",
+    "replacementInterpretationId": "https://w3id.org/modavis/vao/mmic#replacementInterpretationId",
+    "replacementTargetId": "https://w3id.org/modavis/vao/mmic#replacementTargetId",
+    "replacementValue": "https://w3id.org/modavis/vao/mmic#replacementValue",
+    "reportRealizationId": "https://w3id.org/modavis/vao/mmic#reportRealizationId",
+    "reproducibility": "https://w3id.org/modavis/vao/mmic#reproducibility",
+    "resetPolicy": "https://w3id.org/modavis/vao/mmic#resetPolicy",
+    "response": "https://w3id.org/modavis/vao/mmic#response",
+    "responseAssumption": "https://w3id.org/modavis/vao/mmic#responseAssumption",
+    "reviewStatus": "https://w3id.org/modavis/vao/mmic#reviewStatus",
+    "right": "https://w3id.org/modavis/vao/mmic#right",
+    "rightEventId": "https://w3id.org/modavis/vao/mmic#rightEventId",
+    "rightInterpretationId": "https://w3id.org/modavis/vao/mmic#rightInterpretationId",
+    "role": "https://w3id.org/modavis/vao/mmic#role",
+    "roleAssignmentId": "https://w3id.org/modavis/vao/mmic#roleAssignmentId",
+    "roleAssignments": "https://w3id.org/modavis/vao/mmic#roleAssignments",
+    "roleId": "https://w3id.org/modavis/vao/mmic#roleId",
+    "roles": "https://w3id.org/modavis/vao/mmic#roles",
+    "rounding": "https://w3id.org/modavis/vao/mmic#rounding",
+    "runtime": "https://w3id.org/modavis/vao/mmic#runtime",
+    "samples": "https://w3id.org/modavis/vao/mmic#samples",
+    "schemaVersion": "https://w3id.org/modavis/vao/mmic#schemaVersion",
+    "scheme": "https://w3id.org/modavis/vao/mmic#scheme",
+    "scope": "https://w3id.org/modavis/vao/mmic#scope",
+    "seconds": "https://w3id.org/modavis/vao/mmic#seconds",
+    "segmented": "https://w3id.org/modavis/vao/mmic#segmented",
+    "selected": "https://w3id.org/modavis/vao/mmic#selected",
+    "selection": "https://w3id.org/modavis/vao/mmic#selection",
+    "selector": "https://w3id.org/modavis/vao/mmic#selector",
+    "sequence": "https://w3id.org/modavis/vao/mmic#sequence",
+    "sha256": "https://w3id.org/modavis/vao/mmic#sha256",
+    "signalKind": "https://w3id.org/modavis/vao/mmic#signalKind",
+    "sourceBounds": "https://w3id.org/modavis/vao/mmic#sourceBounds",
+    "sourceFeatureIds": "https://w3id.org/modavis/vao/mmic#sourceFeatureIds",
+    "sourceIRI": "https://w3id.org/modavis/vao/mmic#sourceIRI",
+    "sourceKind": "https://w3id.org/modavis/vao/mmic#sourceKind",
+    "sourceRealizationId": "https://w3id.org/modavis/vao/mmic#sourceRealizationId",
+    "sourceRealizationIds": "https://w3id.org/modavis/vao/mmic#sourceRealizationIds",
+    "spec": "https://w3id.org/modavis/vao/mmic#spec",
+    "specSHA256": "https://w3id.org/modavis/vao/mmic#specSHA256",
+    "start": "https://w3id.org/modavis/vao/mmic#start",
+    "startTurn": "https://w3id.org/modavis/vao/mmic#startTurn",
+    "stateId": "https://w3id.org/modavis/vao/mmic#stateId",
+    "states": "https://w3id.org/modavis/vao/mmic#states",
+    "status": "https://w3id.org/modavis/vao/mmic#status",
+    "synthetic": "https://w3id.org/modavis/vao/mmic#synthetic",
+    "target": "https://w3id.org/modavis/vao/mmic#target",
+    "targetId": "https://w3id.org/modavis/vao/mmic#targetId",
+    "tempoMicroseconds": "https://w3id.org/modavis/vao/mmic#tempoMicroseconds",
+    "ticksPerBeat": "https://w3id.org/modavis/vao/mmic#ticksPerBeat",
+    "timeUnit": "https://w3id.org/modavis/vao/mmic#timeUnit",
+    "timing": "https://w3id.org/modavis/vao/mmic#timing",
+    "toleranceSeconds": "https://w3id.org/modavis/vao/mmic#toleranceSeconds",
+    "tool": "https://w3id.org/modavis/vao/mmic#tool",
+    "trackId": "https://w3id.org/modavis/vao/mmic#trackId",
+    "trackIndex": "https://w3id.org/modavis/vao/mmic#trackIndex",
+    "tracks": "https://w3id.org/modavis/vao/mmic#tracks",
+    "trajectory": "https://w3id.org/modavis/vao/mmic#trajectory",
+    "uncertaintySeconds": "https://w3id.org/modavis/vao/mmic#uncertaintySeconds",
+    "unit": "https://w3id.org/modavis/vao/mmic#unit",
+    "unmatchedLeftEventIds": "https://w3id.org/modavis/vao/mmic#unmatchedLeftEventIds",
+    "unmatchedRightEventIds": "https://w3id.org/modavis/vao/mmic#unmatchedRightEventIds",
+    "unsupportedPolicy": "https://w3id.org/modavis/vao/mmic#unsupportedPolicy",
+    "value": "https://w3id.org/modavis/vao/mmic#value",
+    "velocity": "https://w3id.org/modavis/vao/mmic#velocity",
+    "version": "https://w3id.org/modavis/vao/mmic#version",
+    "wrapsSeam": "https://w3id.org/modavis/vao/mmic#wrapsSeam"
+  },
+  "@graph": [
+    {
+      "@id": "_:mmic1",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:9870808c-7eff-5d21-aa57-62ce69b4ec4a"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic10",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:0ae92579-2657-5dd2-9a74-cf0208f94af6"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic100",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:0ae92579-2657-5dd2-9a74-cf0208f94af6"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic101",
+      "@type": "Array",
+      "index/0": "assignmentId",
+      "index/1": "evidenceIds",
+      "index/2": "id",
+      "index/3": "modelRoleId",
+      "index/4": "status",
+      "index/5": "trackId",
+      "length": 6
+    },
+    {
+      "@id": "_:mmic102",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:0ae92579-2657-5dd2-9a74-cf0208f94af6"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic103",
+      "@type": "Array",
+      "index/0": "assignmentId",
+      "index/1": "evidenceIds",
+      "index/2": "id",
+      "index/3": "modelRoleId",
+      "index/4": "status",
+      "index/5": "trackId",
+      "length": 6
+    },
+    {
+      "@id": "_:mmic104",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:5ae60233-ef64-565b-9588-53ed029ba225"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic105",
+      "@type": "Object",
+      "keys": {
+        "@id": "_:mmic106"
+      },
+      "scope": "Whole synthetic carrier",
+      "status": "complete"
+    },
+    {
+      "@id": "_:mmic106",
+      "@type": "Array",
+      "index/0": "scope",
+      "index/1": "status",
+      "length": 2
+    },
+    {
+      "@id": "_:mmic107",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:0ae92579-2657-5dd2-9a74-cf0208f94af6"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic108",
+      "@type": "Object",
+      "bounds": {
+        "@id": "_:mmic109"
+      },
+      "direction": "forward",
+      "keys": {
+        "@id": "_:mmic110"
+      },
+      "kind": "cyclic",
+      "orientation": "Declared increasing coordinate on observed face",
+      "origin": "Synthetic registration origin",
+      "period": 360,
+      "status": "assumed",
+      "unit": "http://qudt.org/vocab/unit/DEG"
+    },
+    {
+      "@id": "_:mmic109",
+      "@type": "Array",
+      "index/0": 0,
+      "index/1": 1080,
+      "length": 2
+    },
+    {
+      "@id": "_:mmic11",
+      "@type": "Array",
+      "index/0": "agentId",
+      "index/1": "basis",
+      "index/2": "id",
+      "index/3": "locator",
+      "index/4": "reviewStatus",
+      "index/5": "scope",
+      "index/6": "sourceIRI",
+      "index/7": "sourceRealizationId",
+      "length": 8
+    },
+    {
+      "@id": "_:mmic110",
+      "@type": "Array",
+      "index/0": "bounds",
+      "index/1": "direction",
+      "index/2": "kind",
+      "index/3": "orientation",
+      "index/4": "origin",
+      "index/5": "period",
+      "index/6": "status",
+      "index/7": "unit",
+      "length": 8
+    },
+    {
+      "@id": "_:mmic111",
+      "@type": "Array",
+      "index/0": "carrierId",
+      "index/1": "coverage",
+      "index/2": "evidenceIds",
+      "index/3": "geometry",
+      "index/4": "id",
+      "length": 5
+    },
+    {
+      "@id": "_:mmic112",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:2eaa4726-4311-5475-b5b9-6c49f370637c"
+      },
+      "index/1": {
+        "@id": "urn:uuid:399c0e7e-9130-5ee1-9023-94208c6a289b"
+      },
+      "length": 2
+    },
+    {
+      "@id": "_:mmic113",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:0ae92579-2657-5dd2-9a74-cf0208f94af6"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic114",
+      "@type": "Array",
+      "index/0": "evidenceIds",
+      "index/1": "id",
+      "index/2": "index",
+      "index/3": "modelId",
+      "length": 4
+    },
+    {
+      "@id": "_:mmic115",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:0ae92579-2657-5dd2-9a74-cf0208f94af6"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic116",
+      "@type": "Array",
+      "index/0": "evidenceIds",
+      "index/1": "id",
+      "index/2": "index",
+      "index/3": "modelId",
+      "length": 4
+    },
+    {
+      "@id": "_:mmic117",
+      "@type": "Array",
+      "index/0": "assignments",
+      "index/1": "carriers",
+      "index/10": "levels",
+      "index/11": "models",
+      "index/12": "observations",
+      "index/13": "parts",
+      "index/14": "playbacks",
+      "index/15": "programmes",
+      "index/16": "roleAssignments",
+      "index/17": "schemaVersion",
+      "index/18": "states",
+      "index/19": "synthetic",
+      "index/2": "comparisons",
+      "index/20": "tracks",
+      "index/3": "corrections",
+      "index/4": "designs",
+      "index/5": "evidence",
+      "index/6": "fabrications",
+      "index/7": "features",
+      "index/8": "id",
+      "index/9": "interpretations",
+      "length": 21
+    },
+    {
+      "@id": "_:mmic12",
+      "@type": "Array",
+      "length": 0
+    },
+    {
+      "@id": "_:mmic13",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:f0e33fee-0652-566c-9c46-66edd8d3889e"
+      },
+      "index/1": {
+        "@id": "urn:uuid:cf5365fa-0037-5eb7-b7c4-f50576d62375"
+      },
+      "length": 2
+    },
+    {
+      "@id": "_:mmic14",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:0ae92579-2657-5dd2-9a74-cf0208f94af6"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic15",
+      "@type": [
+        "GeometryLocation",
+        "Object"
+      ],
+      "end": 345.6,
+      "endTurn": 0,
+      "keys": {
+        "@id": "_:mmic16"
+      },
+      "kind": "point",
+      "start": 345.6,
+      "startTurn": 0,
+      "wrapsSeam": false
+    },
+    {
+      "@id": "_:mmic16",
+      "@type": "Array",
+      "index/0": "end",
+      "index/1": "endTurn",
+      "index/2": "kind",
+      "index/3": "start",
+      "index/4": "startTurn",
+      "index/5": "wrapsSeam",
+      "length": 6
+    },
+    {
+      "@id": "_:mmic17",
+      "@type": "Array",
+      "index/0": {
+        "@id": "_:mmic18"
+      },
+      "index/1": {
+        "@id": "_:mmic19"
+      },
+      "length": 2
+    },
+    {
+      "@id": "_:mmic18",
+      "@type": "Array",
+      "index/0": 10,
+      "index/1": 15,
+      "length": 2
+    },
+    {
+      "@id": "_:mmic19",
+      "@type": "Array",
+      "index/0": 10,
+      "index/1": 20,
+      "length": 2
+    },
+    {
+      "@id": "_:mmic2",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:0ae92579-2657-5dd2-9a74-cf0208f94af6"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic20",
+      "@type": "Array",
+      "index/0": "evidenceIds",
+      "index/1": "id",
+      "index/2": "kind",
+      "index/3": "location",
+      "index/4": "observationId",
+      "index/5": "programmeId",
+      "index/6": "selector",
+      "index/7": "stateId",
+      "index/8": "trackId",
+      "length": 9
+    },
+    {
+      "@id": "_:mmic21",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:0ae92579-2657-5dd2-9a74-cf0208f94af6"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic22",
+      "@type": [
+        "GeometryLocation",
+        "Object"
+      ],
+      "end": 93.60000000000002,
+      "endTurn": 1,
+      "keys": {
+        "@id": "_:mmic23"
+      },
+      "kind": "point",
+      "start": 93.60000000000002,
+      "startTurn": 1,
+      "wrapsSeam": false
+    },
+    {
+      "@id": "_:mmic23",
+      "@type": "Array",
+      "index/0": "end",
+      "index/1": "endTurn",
+      "index/2": "kind",
+      "index/3": "start",
+      "index/4": "startTurn",
+      "index/5": "wrapsSeam",
+      "length": 6
+    },
+    {
+      "@id": "_:mmic24",
+      "@type": "Array",
+      "index/0": {
+        "@id": "_:mmic25"
+      },
+      "index/1": {
+        "@id": "_:mmic26"
+      },
+      "length": 2
+    },
+    {
+      "@id": "_:mmic25",
+      "@type": "Array",
+      "index/0": 11,
+      "index/1": 16,
+      "length": 2
+    },
+    {
+      "@id": "_:mmic26",
+      "@type": "Array",
+      "index/0": 10,
+      "index/1": 20,
+      "length": 2
+    },
+    {
+      "@id": "_:mmic27",
+      "@type": "Array",
+      "index/0": "evidenceIds",
+      "index/1": "id",
+      "index/2": "kind",
+      "index/3": "location",
+      "index/4": "observationId",
+      "index/5": "programmeId",
+      "index/6": "selector",
+      "index/7": "stateId",
+      "index/8": "trackId",
+      "length": 9
+    },
+    {
+      "@id": "_:mmic28",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:42cdadcd-d9bf-5346-9344-e58da7a16cf6"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic29",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:6d0eda1c-90e1-59e7-8583-7d858c2264a1"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic3",
+      "@type": "Array",
+      "index/0": "evidenceIds",
+      "index/1": "id",
+      "index/2": "modelId",
+      "index/3": "programmeId",
+      "index/4": "selected",
+      "index/5": "stateId",
+      "index/6": "status",
+      "length": 7
+    },
+    {
+      "@id": "_:mmic30",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:f0e33fee-0652-566c-9c46-66edd8d3889e"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic31",
+      "@type": "Array",
+      "index/0": "id",
+      "index/1": "kind",
+      "index/2": "onsetSeconds",
+      "index/3": "roleAssignmentId",
+      "index/4": "sourceFeatureIds",
+      "length": 5
+    },
+    {
+      "@id": "_:mmic32",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:0ae92579-2657-5dd2-9a74-cf0208f94af6"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic33",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:cf5365fa-0037-5eb7-b7c4-f50576d62375"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic34",
+      "@type": "Object",
+      "activityId": {
+        "@id": "urn:uuid:8a1fd8ac-06a6-5732-9639-0f290d5a37dc"
+      },
+      "codeRealizationId": {
+        "@id": "urn:uuid:b108d93e-d783-59b4-8e18-21e0701d064d"
+      },
+      "environmentRealizationId": {
+        "@id": "urn:uuid:ffa99cac-dc31-5f2d-a57a-c5e406298d17"
+      },
+      "keys": {
+        "@id": "_:mmic35"
+      },
+      "modelSHA256": "f7cc616b49730c5ca8289d95f36c71768cce2ea01943b0db2bb9334a46d0b8ec",
+      "reproducibility": "deterministic"
+    },
+    {
+      "@id": "_:mmic35",
+      "@type": "Array",
+      "index/0": "activityId",
+      "index/1": "codeRealizationId",
+      "index/2": "environmentRealizationId",
+      "index/3": "modelSHA256",
+      "index/4": "reproducibility",
+      "length": 5
+    },
+    {
+      "@id": "_:mmic36",
+      "@type": "Array",
+      "index/0": {
+        "@id": "_:mmic37"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic37",
+      "@type": "Object",
+      "bindingIds": {
+        "@id": "_:mmic38"
+      },
+      "keys": {
+        "@id": "_:mmic40"
+      },
+      "losses": {
+        "@id": "_:mmic39"
+      },
+      "realizationId": {
+        "@id": "urn:uuid:8d6e6abd-59cb-5d27-bd04-e7e60acb52e8"
+      }
+    },
+    {
+      "@id": "_:mmic38",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:c5caf072-b64f-5e97-ad7d-d2585c2c6e1c"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic39",
+      "@type": "Array",
+      "index/0": "Synthetic export duration/velocity; no measured acoustic response or historical calibration.",
+      "length": 1
+    },
+    {
+      "@id": "_:mmic4",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:8b4cb836-57cf-58b9-847a-d08e9f204aba"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic40",
+      "@type": "Array",
+      "index/0": "bindingIds",
+      "index/1": "losses",
+      "index/2": "realizationId",
+      "length": 3
+    },
+    {
+      "@id": "_:mmic41",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:4f37c21c-51be-557e-8546-9e239863cee6"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic42",
+      "@type": "Array",
+      "index/0": "assignmentId",
+      "index/1": "events",
+      "index/10": "sourceKind",
+      "index/11": "sourceRealizationIds",
+      "index/2": "evidenceIds",
+      "index/3": "excludedFeatureIds",
+      "index/4": "execution",
+      "index/5": "exports",
+      "index/6": "id",
+      "index/7": "modelId",
+      "index/8": "modelSHA256",
+      "index/9": "nativeRealizationId",
+      "length": 12
+    },
+    {
+      "@id": "_:mmic43",
+      "@type": "Array",
+      "index/0": "documentation",
+      "index/1": "decoding",
+      "length": 2
+    },
+    {
+      "@id": "_:mmic44",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:c2de7119-8d2f-5f6b-b6ee-a615d86a0e91"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic45",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:0ae92579-2657-5dd2-9a74-cf0208f94af6"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic46",
+      "@type": "Object",
+      "artifactPins": {
+        "@id": "_:mmic47"
+      },
+      "constraints": {
+        "@id": "_:mmic52"
+      },
+      "exportBindings": {
+        "@id": "_:mmic54"
+      },
+      "geometry": {
+        "@id": "_:mmic58"
+      },
+      "historicalApplicability": "none; synthetic conformance construction",
+      "initialState": {
+        "@id": "_:mmic61"
+      },
+      "keys": {
+        "@id": "_:mmic81"
+      },
+      "reader": {
+        "@id": "_:mmic63"
+      },
+      "roles": {
+        "@id": "_:mmic67"
+      },
+      "runtime": {
+        "@id": "_:mmic72"
+      },
+      "timing": {
+        "@id": "_:mmic74"
+      }
+    },
+    {
+      "@id": "_:mmic47",
+      "@type": "Array",
+      "index/0": {
+        "@id": "_:mmic48"
+      },
+      "index/1": {
+        "@id": "_:mmic50"
+      },
+      "length": 2
+    },
+    {
+      "@id": "_:mmic48",
+      "@type": "Object",
+      "keys": {
+        "@id": "_:mmic49"
+      },
+      "realizationId": {
+        "@id": "urn:uuid:b108d93e-d783-59b4-8e18-21e0701d064d"
+      },
+      "sha256": "a4e4e59e5c2c73d5a5fc9b91c7118b791cd262c8d604534cb9e419b9414ae0a2"
+    },
+    {
+      "@id": "_:mmic49",
+      "@type": "Array",
+      "index/0": "realizationId",
+      "index/1": "sha256",
+      "length": 2
+    },
+    {
+      "@id": "_:mmic5",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:0ae92579-2657-5dd2-9a74-cf0208f94af6"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic50",
+      "@type": "Object",
+      "keys": {
+        "@id": "_:mmic51"
+      },
+      "realizationId": {
+        "@id": "urn:uuid:ffa99cac-dc31-5f2d-a57a-c5e406298d17"
+      },
+      "sha256": "cfc21919a7f6c3eda016e2d2b37c75298bf7760469bb6938833dd60255feb30b"
+    },
+    {
+      "@id": "_:mmic51",
+      "@type": "Array",
+      "index/0": "realizationId",
+      "index/1": "sha256",
+      "length": 2
+    },
+    {
+      "@id": "_:mmic52",
+      "@type": "Object",
+      "keys": {
+        "@id": "_:mmic53"
+      },
+      "material": "synthetic sheet",
+      "maximumTarget": 72,
+      "minimumClearance": 0.01,
+      "minimumRepeatSeconds": 0.05,
+      "minimumTarget": 48,
+      "tool": "synthetic layout",
+      "unsupportedPolicy": "reject"
+    },
+    {
+      "@id": "_:mmic53",
+      "@type": "Array",
+      "index/0": "material",
+      "index/1": "maximumTarget",
+      "index/2": "minimumClearance",
+      "index/3": "minimumRepeatSeconds",
+      "index/4": "minimumTarget",
+      "index/5": "tool",
+      "index/6": "unsupportedPolicy",
+      "length": 7
+    },
+    {
+      "@id": "_:mmic54",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:c5caf072-b64f-5e97-ad7d-d2585c2c6e1c"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic55",
+      "@type": "Object",
+      "keys": {
+        "@id": "_:mmic56"
+      },
+      "kind": "fixed",
+      "seconds": 0.2
+    },
+    {
+      "@id": "_:mmic56",
+      "@type": "Array",
+      "index/0": "kind",
+      "index/1": "seconds",
+      "length": 2
+    },
+    {
+      "@id": "_:mmic57",
+      "@type": "Array",
+      "index/0": "channel",
+      "index/1": "durationPolicy",
+      "index/10": "velocity",
+      "index/2": "id",
+      "index/3": "message",
+      "index/4": "pitch",
+      "index/5": "protocol",
+      "index/6": "roleId",
+      "index/7": "rounding",
+      "index/8": "tempoMicroseconds",
+      "index/9": "ticksPerBeat",
+      "length": 11
+    },
+    {
+      "@id": "_:mmic58",
+      "@type": "Object",
+      "bounds": {
+        "@id": "_:mmic59"
+      },
+      "direction": "forward",
+      "keys": {
+        "@id": "_:mmic60"
+      },
+      "kind": "cyclic",
+      "orientation": "Declared increasing coordinate on observed face",
+      "origin": "Synthetic registration origin",
+      "period": 360,
+      "status": "assumed",
+      "unit": "http://qudt.org/vocab/unit/DEG"
+    },
+    {
+      "@id": "_:mmic59",
+      "@type": "Array",
+      "index/0": 0,
+      "index/1": 1080,
+      "length": 2
+    },
+    {
+      "@id": "_:mmic6",
+      "@type": "Array",
+      "index/0": "digitalEntityId",
+      "index/1": "encoding",
+      "index/2": "evidenceIds",
+      "index/3": "id",
+      "index/4": "origin",
+      "length": 5
+    },
+    {
+      "@id": "_:mmic60",
+      "@type": "Array",
+      "index/0": "bounds",
+      "index/1": "direction",
+      "index/2": "kind",
+      "index/3": "orientation",
+      "index/4": "origin",
+      "index/5": "period",
+      "index/6": "status",
+      "index/7": "unit",
+      "length": 8
+    },
+    {
+      "@id": "_:mmic61",
+      "@type": "Object",
+      "keys": {
+        "@id": "_:mmic62"
+      },
+      "latches": "zero"
+    },
+    {
+      "@id": "_:mmic62",
+      "@type": "Array",
+      "index/0": "latches",
+      "length": 1
+    },
+    {
+      "@id": "_:mmic63",
+      "@type": "Object",
+      "delaySeconds": 0,
+      "domain": {
+        "@id": "_:mmic64"
+      },
+      "interpolation": "none",
+      "keys": {
+        "@id": "_:mmic66"
+      },
+      "response": "Synthetic transfer; no acoustic response claim",
+      "segmented": false,
+      "trajectory": {
+        "@id": "_:mmic65"
+      }
+    },
+    {
+      "@id": "_:mmic64",
+      "@type": "Array",
+      "index/0": 0,
+      "index/1": 1080,
+      "length": 2
+    },
+    {
+      "@id": "_:mmic65",
+      "@type": "Array",
+      "length": 0
+    },
+    {
+      "@id": "_:mmic66",
+      "@type": "Array",
+      "index/0": "delaySeconds",
+      "index/1": "domain",
+      "index/2": "interpolation",
+      "index/3": "response",
+      "index/4": "segmented",
+      "index/5": "trajectory",
+      "length": 6
+    },
+    {
+      "@id": "_:mmic67",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:7d09700f-30c7-51cf-b092-d8d89125783b"
+      },
+      "index/1": {
+        "@id": "urn:uuid:afbd14f3-35ed-52c5-9b5f-4494b3e57fc8"
+      },
+      "length": 2
+    },
+    {
+      "@id": "_:mmic68",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:c5caf072-b64f-5e97-ad7d-d2585c2c6e1c"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic69",
+      "@type": "Array",
+      "index/0": "bindingIds",
+      "index/1": "id",
+      "index/10": "trackIndex",
+      "index/2": "initialValue",
+      "index/3": "quantityUnit",
+      "index/4": "readerOffset",
+      "index/5": "readerOffsetUnit",
+      "index/6": "responseAssumption",
+      "index/7": "role",
+      "index/8": "signalKind",
+      "index/9": "target",
+      "length": 11
+    },
+    {
+      "@id": "_:mmic7",
+      "@type": "Array",
+      "length": 0
+    },
+    {
+      "@id": "_:mmic70",
+      "@type": "Array",
+      "length": 0
+    },
+    {
+      "@id": "_:mmic71",
+      "@type": "Array",
+      "index/0": "bindingIds",
+      "index/1": "id",
+      "index/2": "readerOffset",
+      "index/3": "readerOffsetUnit",
+      "index/4": "responseAssumption",
+      "index/5": "role",
+      "index/6": "signalKind",
+      "index/7": "trackIndex",
+      "length": 8
+    },
+    {
+      "@id": "_:mmic72",
+      "@type": "Object",
+      "algorithm": "mmic-piecewise-reference-1",
+      "codeRealizationId": {
+        "@id": "urn:uuid:b108d93e-d783-59b4-8e18-21e0701d064d"
+      },
+      "deterministic": true,
+      "environmentRealizationId": {
+        "@id": "urn:uuid:ffa99cac-dc31-5f2d-a57a-c5e406298d17"
+      },
+      "keys": {
+        "@id": "_:mmic73"
+      }
+    },
+    {
+      "@id": "_:mmic73",
+      "@type": "Array",
+      "index/0": "algorithm",
+      "index/1": "codeRealizationId",
+      "index/2": "deterministic",
+      "index/3": "environmentRealizationId",
+      "length": 4
+    },
+    {
+      "@id": "_:mmic74",
+      "@type": "Object",
+      "anchors": {
+        "@id": "_:mmic75"
+      },
+      "basis": "Synthetic clock only",
+      "calibrationStatus": "assumed",
+      "extrapolation": "forbidden",
+      "interpolation": "linear",
+      "keys": {
+        "@id": "_:mmic80"
+      },
+      "method": "piecewise-linear",
+      "timeUnit": "http://qudt.org/vocab/unit/SEC",
+      "toleranceSeconds": 1e-09,
+      "unit": "http://qudt.org/vocab/unit/DEG"
+    },
+    {
+      "@id": "_:mmic75",
+      "@type": "Array",
+      "index/0": {
+        "@id": "_:mmic76"
+      },
+      "index/1": {
+        "@id": "_:mmic78"
+      },
+      "length": 2
+    },
+    {
+      "@id": "_:mmic76",
+      "@type": "Object",
+      "keys": {
+        "@id": "_:mmic77"
+      },
+      "position": 0,
+      "seconds": 0,
+      "uncertaintySeconds": 0.001
+    },
+    {
+      "@id": "_:mmic77",
+      "@type": "Array",
+      "index/0": "position",
+      "index/1": "seconds",
+      "index/2": "uncertaintySeconds",
+      "length": 3
+    },
+    {
+      "@id": "_:mmic78",
+      "@type": "Object",
+      "keys": {
+        "@id": "_:mmic79"
+      },
+      "position": 1080,
+      "seconds": 3,
+      "uncertaintySeconds": 0.001
+    },
+    {
+      "@id": "_:mmic79",
+      "@type": "Array",
+      "index/0": "position",
+      "index/1": "seconds",
+      "index/2": "uncertaintySeconds",
+      "length": 3
+    },
+    {
+      "@id": "_:mmic8",
+      "@type": "Array",
+      "length": 0
+    },
+    {
+      "@id": "_:mmic80",
+      "@type": "Array",
+      "index/0": "anchors",
+      "index/1": "basis",
+      "index/2": "calibrationStatus",
+      "index/3": "extrapolation",
+      "index/4": "interpolation",
+      "index/5": "method",
+      "index/6": "timeUnit",
+      "index/7": "toleranceSeconds",
+      "index/8": "unit",
+      "length": 9
+    },
+    {
+      "@id": "_:mmic81",
+      "@type": "Array",
+      "index/0": "artifactPins",
+      "index/1": "constraints",
+      "index/2": "exportBindings",
+      "index/3": "geometry",
+      "index/4": "historicalApplicability",
+      "index/5": "initialState",
+      "index/6": "reader",
+      "index/7": "roles",
+      "index/8": "runtime",
+      "index/9": "timing",
+      "length": 10
+    },
+    {
+      "@id": "_:mmic82",
+      "@type": "Array",
+      "index/0": "canonicalization",
+      "index/1": "evidenceIds",
+      "index/2": "id",
+      "index/3": "spec",
+      "index/4": "specSHA256",
+      "index/5": "version",
+      "length": 6
+    },
+    {
+      "@id": "_:mmic83",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:c30afac9-4689-5abd-b1b9-04f1fbf39d2a"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic84",
+      "@type": "Object",
+      "keys": {
+        "@id": "_:mmic85"
+      },
+      "scope": "Whole source view",
+      "status": "complete"
+    },
+    {
+      "@id": "_:mmic85",
+      "@type": "Array",
+      "index/0": "scope",
+      "index/1": "status",
+      "length": 2
+    },
+    {
+      "@id": "_:mmic86",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:0ae92579-2657-5dd2-9a74-cf0208f94af6"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic87",
+      "@type": "Array",
+      "index/0": {
+        "@id": "_:mmic88"
+      },
+      "index/1": {
+        "@id": "_:mmic89"
+      },
+      "length": 2
+    },
+    {
+      "@id": "_:mmic88",
+      "@type": "Array",
+      "index/0": 0,
+      "index/1": 100,
+      "length": 2
+    },
+    {
+      "@id": "_:mmic89",
+      "@type": "Array",
+      "index/0": 0,
+      "index/1": 100,
+      "length": 2
+    },
+    {
+      "@id": "_:mmic9",
+      "@type": "Array",
+      "length": 0
+    },
+    {
+      "@id": "_:mmic90",
+      "@type": "Array",
+      "index/0": "activityId",
+      "index/1": "coverage",
+      "index/2": "evidenceIds",
+      "index/3": "id",
+      "index/4": "sourceBounds",
+      "index/5": "sourceRealizationId",
+      "index/6": "stateId",
+      "length": 7
+    },
+    {
+      "@id": "_:mmic91",
+      "@type": "Array",
+      "length": 0
+    },
+    {
+      "@id": "_:mmic92",
+      "@type": "Array",
+      "length": 0
+    },
+    {
+      "@id": "_:mmic93",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:aa7cb818-b73f-5a1b-ba08-df8b05c16e1c"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic94",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:0ae92579-2657-5dd2-9a74-cf0208f94af6"
+      },
+      "length": 1
+    },
+    {
+      "@id": "_:mmic95",
+      "@type": "Array",
+      "index/0": 0,
+      "index/1": 1080,
+      "length": 2
+    },
+    {
+      "@id": "_:mmic96",
+      "@type": "Object",
+      "keys": {
+        "@id": "_:mmic97"
+      },
+      "kind": "whole",
+      "label": "Synthetic programme A"
+    },
+    {
+      "@id": "_:mmic97",
+      "@type": "Array",
+      "index/0": "kind",
+      "index/1": "label",
+      "length": 2
+    },
+    {
+      "@id": "_:mmic98",
+      "@type": "Array",
+      "index/0": "evidenceIds",
+      "index/1": "extent",
+      "index/2": "id",
+      "index/3": "selection",
+      "index/4": "stateId",
+      "length": 5
+    },
+    {
+      "@id": "_:mmic99",
+      "@type": "Array",
+      "index/0": {
+        "@id": "urn:uuid:e756617c-0bc9-55a1-95b1-0e654038893a"
+      },
+      "index/1": {
+        "@id": "urn:uuid:492ed6bb-fe61-5b11-84ba-ed4fbea2cf6d"
+      },
+      "length": 2
+    },
+    {
+      "@id": "urn:uuid:0ae92579-2657-5dd2-9a74-cf0208f94af6",
+      "@type": [
+        "EvidenceClaim",
+        "Object"
+      ],
+      "agentId": {
+        "@id": "urn:uuid:5c7facc3-3bf1-5fcb-9de5-134861d8c8ab"
+      },
+      "basis": "synthetic",
+      "id": "urn:uuid:0ae92579-2657-5dd2-9a74-cf0208f94af6",
+      "keys": {
+        "@id": "_:mmic11"
+      },
+      "locator": "Complete synthetic fixture",
+      "reviewStatus": "reviewed",
+      "scope": "Structural checks only; not historical accuracy",
+      "sourceIRI": {
+        "@id": "https://example.org/vao/mmic/synthetic-fixture"
+      },
+      "sourceRealizationId": {
+        "@id": "urn:uuid:bc9860da-8721-585b-ac09-79473db878d9"
+      }
+    },
+    {
+      "@id": "urn:uuid:26199c47-4ef7-54f4-b65d-5ab182239fb0",
+      "@type": [
+        "DomainDocument",
+        "Object"
+      ],
+      "assignments": {
+        "@id": "_:mmic1"
+      },
+      "carriers": {
+        "@id": "_:mmic4"
+      },
+      "comparisons": {
+        "@id": "_:mmic7"
+      },
+      "corrections": {
+        "@id": "_:mmic8"
+      },
+      "designs": {
+        "@id": "_:mmic9"
+      },
+      "evidence": {
+        "@id": "_:mmic10"
+      },
+      "fabrications": {
+        "@id": "_:mmic12"
+      },
+      "features": {
+        "@id": "_:mmic13"
+      },
+      "id": "urn:uuid:26199c47-4ef7-54f4-b65d-5ab182239fb0",
+      "interpretations": {
+        "@id": "_:mmic28"
+      },
+      "keys": {
+        "@id": "_:mmic117"
+      },
+      "levels": {
+        "@id": "_:mmic43"
+      },
+      "models": {
+        "@id": "_:mmic44"
+      },
+      "observations": {
+        "@id": "_:mmic83"
+      },
+      "parts": {
+        "@id": "_:mmic91"
+      },
+      "playbacks": {
+        "@id": "_:mmic92"
+      },
+      "programmes": {
+        "@id": "_:mmic93"
+      },
+      "roleAssignments": {
+        "@id": "_:mmic99"
+      },
+      "schemaVersion": "1.0.0",
+      "states": {
+        "@id": "_:mmic104"
+      },
+      "synthetic": true,
+      "tracks": {
+        "@id": "_:mmic112"
+      }
+    },
+    {
+      "@id": "urn:uuid:2eaa4726-4311-5475-b5b9-6c49f370637c",
+      "@type": [
+        "Object",
+        "Track"
+      ],
+      "evidenceIds": {
+        "@id": "_:mmic113"
+      },
+      "id": "urn:uuid:2eaa4726-4311-5475-b5b9-6c49f370637c",
+      "index": 0,
+      "keys": {
+        "@id": "_:mmic114"
+      },
+      "modelId": {
+        "@id": "urn:uuid:c2de7119-8d2f-5f6b-b6ee-a615d86a0e91"
+      }
+    },
+    {
+      "@id": "urn:uuid:399c0e7e-9130-5ee1-9023-94208c6a289b",
+      "@type": [
+        "Object",
+        "Track"
+      ],
+      "evidenceIds": {
+        "@id": "_:mmic115"
+      },
+      "id": "urn:uuid:399c0e7e-9130-5ee1-9023-94208c6a289b",
+      "index": 1,
+      "keys": {
+        "@id": "_:mmic116"
+      },
+      "modelId": {
+        "@id": "urn:uuid:c2de7119-8d2f-5f6b-b6ee-a615d86a0e91"
+      }
+    },
+    {
+      "@id": "urn:uuid:42cdadcd-d9bf-5346-9344-e58da7a16cf6",
+      "@type": [
+        "Interpretation",
+        "Object"
+      ],
+      "assignmentId": {
+        "@id": "urn:uuid:9870808c-7eff-5d21-aa57-62ce69b4ec4a"
+      },
+      "events": {
+        "@id": "_:mmic29"
+      },
+      "evidenceIds": {
+        "@id": "_:mmic32"
+      },
+      "excludedFeatureIds": {
+        "@id": "_:mmic33"
+      },
+      "execution": {
+        "@id": "_:mmic34"
+      },
+      "exports": {
+        "@id": "_:mmic36"
+      },
+      "id": "urn:uuid:42cdadcd-d9bf-5346-9344-e58da7a16cf6",
+      "keys": {
+        "@id": "_:mmic42"
+      },
+      "modelId": {
+        "@id": "urn:uuid:c2de7119-8d2f-5f6b-b6ee-a615d86a0e91"
+      },
+      "modelSHA256": "f7cc616b49730c5ca8289d95f36c71768cce2ea01943b0db2bb9334a46d0b8ec",
+      "nativeRealizationId": {
+        "@id": "urn:uuid:fdfb2eed-7c05-5d4e-ba4f-43413175931d"
+      },
+      "sourceKind": "carrier-derived",
+      "sourceRealizationIds": {
+        "@id": "_:mmic41"
+      }
+    },
+    {
+      "@id": "urn:uuid:492ed6bb-fe61-5b11-84ba-ed4fbea2cf6d",
+      "@type": [
+        "Object",
+        "RoleAssignment"
+      ],
+      "assignmentId": {
+        "@id": "urn:uuid:9870808c-7eff-5d21-aa57-62ce69b4ec4a"
+      },
+      "evidenceIds": {
+        "@id": "_:mmic102"
+      },
+      "id": "urn:uuid:492ed6bb-fe61-5b11-84ba-ed4fbea2cf6d",
+      "keys": {
+        "@id": "_:mmic103"
+      },
+      "modelRoleId": {
+        "@id": "urn:uuid:afbd14f3-35ed-52c5-9b5f-4494b3e57fc8"
+      },
+      "status": "undetermined",
+      "trackId": {
+        "@id": "urn:uuid:399c0e7e-9130-5ee1-9023-94208c6a289b"
+      }
+    },
+    {
+      "@id": "urn:uuid:5ae60233-ef64-565b-9588-53ed029ba225",
+      "@type": [
+        "CarrierState",
+        "Object"
+      ],
+      "carrierId": {
+        "@id": "urn:uuid:8b4cb836-57cf-58b9-847a-d08e9f204aba"
+      },
+      "coverage": {
+        "@id": "_:mmic105"
+      },
+      "evidenceIds": {
+        "@id": "_:mmic107"
+      },
+      "geometry": {
+        "@id": "_:mmic108"
+      },
+      "id": "urn:uuid:5ae60233-ef64-565b-9588-53ed029ba225",
+      "keys": {
+        "@id": "_:mmic111"
+      }
+    },
+    {
+      "@id": "urn:uuid:6d0eda1c-90e1-59e7-8583-7d858c2264a1",
+      "@type": [
+        "NativeSignal",
+        "Object"
+      ],
+      "id": "urn:uuid:6d0eda1c-90e1-59e7-8583-7d858c2264a1",
+      "keys": {
+        "@id": "_:mmic31"
+      },
+      "kind": "impulse",
+      "onsetSeconds": 0.9600000000000002,
+      "roleAssignmentId": {
+        "@id": "urn:uuid:e756617c-0bc9-55a1-95b1-0e654038893a"
+      },
+      "sourceFeatureIds": {
+        "@id": "_:mmic30"
+      }
+    },
+    {
+      "@id": "urn:uuid:7d09700f-30c7-51cf-b092-d8d89125783b",
+      "@type": "Object",
+      "bindingIds": {
+        "@id": "_:mmic68"
+      },
+      "id": "urn:uuid:7d09700f-30c7-51cf-b092-d8d89125783b",
+      "initialValue": 0,
+      "keys": {
+        "@id": "_:mmic69"
+      },
+      "quantityUnit": "http://qudt.org/vocab/unit/UNITLESS",
+      "readerOffset": 0,
+      "readerOffsetUnit": "http://qudt.org/vocab/unit/DEG",
+      "responseAssumption": "Synthetic response; feature engagement and acoustic duration are distinct.",
+      "role": "note",
+      "signalKind": "impulse",
+      "target": "https://example.org/mmic/synthetic-target/pitch60",
+      "trackIndex": 0
+    },
+    {
+      "@id": "urn:uuid:8b4cb836-57cf-58b9-847a-d08e9f204aba",
+      "@type": [
+        "Object",
+        "PhysicalCarrier"
+      ],
+      "digitalEntityId": {
+        "@id": "urn:uuid:f32ac261-c0fd-57bb-ac76-6c057c26e7f5"
+      },
+      "encoding": "projection-disc",
+      "evidenceIds": {
+        "@id": "_:mmic5"
+      },
+      "id": "urn:uuid:8b4cb836-57cf-58b9-847a-d08e9f204aba",
+      "keys": {
+        "@id": "_:mmic6"
+      },
+      "origin": "synthetic"
+    },
+    {
+      "@id": "urn:uuid:9870808c-7eff-5d21-aa57-62ce69b4ec4a",
+      "@type": [
+        "ModelAssignment",
+        "Object"
+      ],
+      "evidenceIds": {
+        "@id": "_:mmic2"
+      },
+      "id": "urn:uuid:9870808c-7eff-5d21-aa57-62ce69b4ec4a",
+      "keys": {
+        "@id": "_:mmic3"
+      },
+      "modelId": {
+        "@id": "urn:uuid:c2de7119-8d2f-5f6b-b6ee-a615d86a0e91"
+      },
+      "programmeId": {
+        "@id": "urn:uuid:aa7cb818-b73f-5a1b-ba08-df8b05c16e1c"
+      },
+      "selected": true,
+      "stateId": {
+        "@id": "urn:uuid:5ae60233-ef64-565b-9588-53ed029ba225"
+      },
+      "status": "accepted"
+    },
+    {
+      "@id": "urn:uuid:aa7cb818-b73f-5a1b-ba08-df8b05c16e1c",
+      "@type": [
+        "EncodedProgramme",
+        "Object"
+      ],
+      "evidenceIds": {
+        "@id": "_:mmic94"
+      },
+      "extent": {
+        "@id": "_:mmic95"
+      },
+      "id": "urn:uuid:aa7cb818-b73f-5a1b-ba08-df8b05c16e1c",
+      "keys": {
+        "@id": "_:mmic98"
+      },
+      "selection": {
+        "@id": "_:mmic96"
+      },
+      "stateId": {
+        "@id": "urn:uuid:5ae60233-ef64-565b-9588-53ed029ba225"
+      }
+    },
+    {
+      "@id": "urn:uuid:afbd14f3-35ed-52c5-9b5f-4494b3e57fc8",
+      "@type": "Object",
+      "bindingIds": {
+        "@id": "_:mmic70"
+      },
+      "id": "urn:uuid:afbd14f3-35ed-52c5-9b5f-4494b3e57fc8",
+      "keys": {
+        "@id": "_:mmic71"
+      },
+      "readerOffset": 0,
+      "readerOffsetUnit": "http://qudt.org/vocab/unit/DEG",
+      "responseAssumption": "Synthetic response; feature engagement and acoustic duration are distinct.",
+      "role": "unknown",
+      "signalKind": "unresolved",
+      "trackIndex": 1
+    },
+    {
+      "@id": "urn:uuid:c2de7119-8d2f-5f6b-b6ee-a615d86a0e91",
+      "@type": [
+        "Object",
+        "ReadingModel"
+      ],
+      "canonicalization": "RFC8785",
+      "evidenceIds": {
+        "@id": "_:mmic45"
+      },
+      "id": "urn:uuid:c2de7119-8d2f-5f6b-b6ee-a615d86a0e91",
+      "keys": {
+        "@id": "_:mmic82"
+      },
+      "spec": {
+        "@id": "_:mmic46"
+      },
+      "specSHA256": "f7cc616b49730c5ca8289d95f36c71768cce2ea01943b0db2bb9334a46d0b8ec",
+      "version": "synthetic-1"
+    },
+    {
+      "@id": "urn:uuid:c30afac9-4689-5abd-b1b9-04f1fbf39d2a",
+      "@type": [
+        "Object",
+        "Observation"
+      ],
+      "activityId": {
+        "@id": "urn:uuid:8a1fd8ac-06a6-5732-9639-0f290d5a37dc"
+      },
+      "coverage": {
+        "@id": "_:mmic84"
+      },
+      "evidenceIds": {
+        "@id": "_:mmic86"
+      },
+      "id": "urn:uuid:c30afac9-4689-5abd-b1b9-04f1fbf39d2a",
+      "keys": {
+        "@id": "_:mmic90"
+      },
+      "sourceBounds": {
+        "@id": "_:mmic87"
+      },
+      "sourceRealizationId": {
+        "@id": "urn:uuid:4f37c21c-51be-557e-8546-9e239863cee6"
+      },
+      "stateId": {
+        "@id": "urn:uuid:5ae60233-ef64-565b-9588-53ed029ba225"
+      }
+    },
+    {
+      "@id": "urn:uuid:c5caf072-b64f-5e97-ad7d-d2585c2c6e1c",
+      "@type": [
+        "MidiExportBinding",
+        "Object"
+      ],
+      "channel": 0,
+      "durationPolicy": {
+        "@id": "_:mmic55"
+      },
+      "id": "urn:uuid:c5caf072-b64f-5e97-ad7d-d2585c2c6e1c",
+      "keys": {
+        "@id": "_:mmic57"
+      },
+      "message": "note",
+      "pitch": 60,
+      "protocol": "smf-ppqn",
+      "roleId": {
+        "@id": "urn:uuid:7d09700f-30c7-51cf-b092-d8d89125783b"
+      },
+      "rounding": "nearest-ties-even",
+      "tempoMicroseconds": 500000,
+      "ticksPerBeat": 480,
+      "velocity": 80
+    },
+    {
+      "@id": "urn:uuid:cf5365fa-0037-5eb7-b7c4-f50576d62375",
+      "@type": [
+        "Object",
+        "ObservedFeature"
+      ],
+      "evidenceIds": {
+        "@id": "_:mmic21"
+      },
+      "id": "urn:uuid:cf5365fa-0037-5eb7-b7c4-f50576d62375",
+      "keys": {
+        "@id": "_:mmic27"
+      },
+      "kind": "print",
+      "location": {
+        "@id": "_:mmic22"
+      },
+      "observationId": {
+        "@id": "urn:uuid:c30afac9-4689-5abd-b1b9-04f1fbf39d2a"
+      },
+      "programmeId": {
+        "@id": "urn:uuid:aa7cb818-b73f-5a1b-ba08-df8b05c16e1c"
+      },
+      "selector": {
+        "@id": "_:mmic24"
+      },
+      "stateId": {
+        "@id": "urn:uuid:5ae60233-ef64-565b-9588-53ed029ba225"
+      },
+      "trackId": {
+        "@id": "urn:uuid:399c0e7e-9130-5ee1-9023-94208c6a289b"
+      }
+    },
+    {
+      "@id": "urn:uuid:e756617c-0bc9-55a1-95b1-0e654038893a",
+      "@type": [
+        "Object",
+        "RoleAssignment"
+      ],
+      "assignmentId": {
+        "@id": "urn:uuid:9870808c-7eff-5d21-aa57-62ce69b4ec4a"
+      },
+      "evidenceIds": {
+        "@id": "_:mmic100"
+      },
+      "id": "urn:uuid:e756617c-0bc9-55a1-95b1-0e654038893a",
+      "keys": {
+        "@id": "_:mmic101"
+      },
+      "modelRoleId": {
+        "@id": "urn:uuid:7d09700f-30c7-51cf-b092-d8d89125783b"
+      },
+      "status": "accepted",
+      "trackId": {
+        "@id": "urn:uuid:2eaa4726-4311-5475-b5b9-6c49f370637c"
+      }
+    },
+    {
+      "@id": "urn:uuid:f0e33fee-0652-566c-9c46-66edd8d3889e",
+      "@type": [
+        "Object",
+        "ObservedFeature"
+      ],
+      "evidenceIds": {
+        "@id": "_:mmic14"
+      },
+      "id": "urn:uuid:f0e33fee-0652-566c-9c46-66edd8d3889e",
+      "keys": {
+        "@id": "_:mmic20"
+      },
+      "kind": "projection",
+      "location": {
+        "@id": "_:mmic15"
+      },
+      "observationId": {
+        "@id": "urn:uuid:c30afac9-4689-5abd-b1b9-04f1fbf39d2a"
+      },
+      "programmeId": {
+        "@id": "urn:uuid:aa7cb818-b73f-5a1b-ba08-df8b05c16e1c"
+      },
+      "selector": {
+        "@id": "_:mmic17"
+      },
+      "stateId": {
+        "@id": "urn:uuid:5ae60233-ef64-565b-9588-53ed029ba225"
+      },
+      "trackId": {
+        "@id": "urn:uuid:2eaa4726-4311-5475-b5b9-6c49f370637c"
+      }
+    }
+  ]
+}

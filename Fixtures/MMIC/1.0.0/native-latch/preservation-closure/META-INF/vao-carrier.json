@@ -1,0 +1,44 @@
+{
+  "$schema": "https://w3id.org/modavis/vao/0.6.0/schema/carrier.json",
+  "carrierMode": "preservation-closure",
+  "completeGroupIds": [
+    "urn:uuid:3fed1c93-2342-562a-92cb-544d4e7ad894",
+    "urn:uuid:900c58fb-1d81-5803-9047-1b7d8ada61a5"
+  ],
+  "embeddedRealizations": [
+    {
+      "path": "payload/observation.svg",
+      "realizationId": "urn:uuid:1800cbad-9b27-5401-9aab-f83f8fd95224"
+    },
+    {
+      "path": "payload/requirements-lock.txt",
+      "realizationId": "urn:uuid:1b72a9e3-7e3c-5d9f-8b1b-48b7f5c1aeb6"
+    },
+    {
+      "path": "payload/semantic.json",
+      "realizationId": "urn:uuid:3d846795-2999-5714-a9b5-0d03c44d76aa"
+    },
+    {
+      "path": "payload/evidence.txt",
+      "realizationId": "urn:uuid:3f740a4c-d3f5-57f6-a60b-bd0681051a0c"
+    },
+    {
+      "path": "payload/native.json",
+      "realizationId": "urn:uuid:4a2dc879-d06e-5819-a0f7-b9e3fc80e550"
+    },
+    {
+      "path": "payload/export.mid",
+      "realizationId": "urn:uuid:542de23a-281b-5d0f-bc90-f2ea995f31f5"
+    },
+    {
+      "path": "payload/reference.py",
+      "realizationId": "urn:uuid:6ed30ca6-9056-5e9c-8019-9f48f273aa90"
+    }
+  ],
+  "formatVersion": "0.6.0",
+  "id": "urn:uuid:11d6fb2d-5f55-5024-9e67-ab1f396a4901",
+  "manifestByteSize": 19969,
+  "manifestSHA256": "9454751a840e32cbcec74995f7734582af49a0fb20091c137ac583f5c4aef290",
+  "releaseId": "urn:uuid:b0b6216b-db62-526b-814a-4ad6a75f5b0b",
+  "type": "VAOCarrier"
+}

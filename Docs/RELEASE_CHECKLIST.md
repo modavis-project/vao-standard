@@ -1,50 +1,44 @@
-# VAO 0.5.0 publication record
+# VAO 0.6.0 publication controls
 
-This document records the controls applied to the VAO 0.5.0 release.
+## Local gates
 
-## Release controls
+Prepare the exact release tree using the hash-locked dependencies and Node.js 18
+or newer. Run `python Tools/check_release.py`, `git diff --check` and verify a clean
+source after the signed commit. The full gate covers retained 0.4/0.5 contracts,
+MMIC levels and operational checks, projection parity, resource/access boundaries,
+migration, metadata/licensing and deterministic fixture/site/wheel behavior.
 
-| Control | Result |
-| --- | --- |
-| Normative specification, schemas, profiles, and generated reference | verified |
-| Conformance, security, fixture, RDF/SHACL, and reproducibility tests | passed |
-| Deterministic source archive and publication site | verified |
-| Citation, licensing, governance, and repository metadata | reviewed |
-| Public-text and release-metadata scan | passed |
-| Signed release commit and annotated `v0.5.0` tag | required by publication workflow |
-| GitHub release assets and Pages deployment | built from the signed tag |
-| Zenodo archive | byte-identical to the GitHub release archive |
-| W3ID versioned routes | resolved against the immutable tag |
+Source exports must include only reviewed public files. Check nested carrier and
+wheel contents, rights and archive metadata. Release artifacts must reproduce from
+the clean source, with matching SHA-256 after distribution readback.
 
-## Local release gate
+## GitHub
 
-The release is validated from a clean checkout with the hash-locked dependency set:
+The publication workflow accepts only the signed annotated tag `v0.6.0` and verifies
+the release commit against the responsible editor's authorized SSH key. It repeats
+the complete gate on the source, builds deterministic assets and the current site,
+checks repository visibility and publishes the GitHub release after successful site
+publication. The 0.4/0.5 raw artifact paths remain present and unchanged.
 
-```sh
-python3 -m venv .venv
-. .venv/bin/activate
-python -m pip install --require-hashes -r requirements-lock.txt
-python Tools/check_release.py
-git status --short
-git diff --check
-```
+## Zenodo
 
-The gate covers schema validity, maintained fixtures, conformance and security rules, deterministic carriers, RDF/SHACL, metadata, licensing, the installed tools wheel, dependency locks, source-text hygiene, and the publication surface.
+Create a new version of the existing VAO concept `10.5281/zenodo.22122773`, whose
+0.5.0 record is `22214248`. Set version 0.6.0 and date 2026-10-10, preserve the
+responsible editor and release-series identity, and record the version-specific DOI
+in citation and repository metadata. Upload the exact reviewed release artifacts,
+verify each remote checksum and full readback, and publish the verified version.
+Do not replace or modify older published version files.
 
-`Tools/build_release.py` accepts only a clean repository for release builds. It refuses existing output targets and non-regular tracked inputs, writes fixed stored ZIP entries, and produces a SHA-256 checksum. Identical tracked bytes therefore produce identical archives independently of ZIP compression libraries.
+## Resolver routing
 
-## GitHub publication
+Version 0.6.0 routing remains pending. No W3ID request or resolver deployment is part
+of this release. Canonical identifiers are stable, and the released local catalog
+supplies normative dependencies for offline validation. Preserve older routes and
+use the immutable GitHub tag and Zenodo version as direct access points.
 
-The publication workflow accepts only the signed annotated tag `v0.5.0`. It verifies the tag and release commit against the editor's allowed SSH signing key, repeats the release gate, builds the deterministic source archive and site, and confirms that the repository is public.
+## Scientific scope
 
-The workflow prepares the GitHub release, deploys the verified Pages artifact, and publishes the release only after deployment succeeds. The released archive and checksum are available from the `v0.5.0` release page.
-
-## Zenodo publication
-
-VAO 0.5.0 is the second version of Zenodo concept record `10.5281/zenodo.22122773`. Its version DOI is `10.5281/zenodo.22214248`.
-
-The Zenodo record contains the exact archive downloaded from the GitHub release. Metadata identifies version 0.5.0, the release date, the responsible editor, the W3ID namespace, the GitHub release, the MODAVIS Ontology Network dependency, and the mixed CC BY 4.0 / Apache-2.0 rights statement defined by `REUSE.toml`.
-
-## Persistent identifiers
-
-Versioned W3ID routes resolve schemas, context, vocabulary, SHACL shapes, profiles, the MODAVIS mapping, and the specification to files from `v0.5.0`. VAO documents serialize versioned identifiers; the unversioned namespace remains a discovery route.
+Profile conformance does not certify historical accuracy, physical playability or
+empirical performance. Advertised execution must remain within the implemented
+reference capabilities. Unsupported capabilities, unknown evidence and unavailable
+assets must retain their qualified report status.

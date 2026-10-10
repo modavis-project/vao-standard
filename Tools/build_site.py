@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: Apache-2.0
-"""Build the deterministic VAO 0.5.0 publication site."""
+"""Build the deterministic VAO 0.6.0 publication site."""
 
 from __future__ import annotations
 
@@ -15,19 +15,19 @@ from urllib.parse import quote, urlsplit
 
 
 ROOT = Path(__file__).resolve().parent.parent
-VERSION = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
-PUBLICATION_DATE = "2026-08-31"
-DOI = "10.5281/zenodo.22214248"
+VERSION = "0.6.0"
+PUBLICATION_DATE = "2026-10-10"
+DOI = "10.5281/zenodo.22122773"
 DEFAULT_BASE_URL = "https://modavis-project.github.io/vao-standard/"
 DEFAULT_BASE_PATH = "/vao-standard/"
 
 PRIMARY_DOCUMENTS = {
-    "Docs/VAO_STANDARD_0.5.0.md": "standard/index.html",
-    "Docs/VAO_CONFORMANCE_0.5.0.md": "conformance/index.html",
-    "Docs/VAO_PROFILE_INDEX_0.5.0.md": "profiles/index.html",
+    "Docs/VAO_STANDARD_0.6.0.md": "standard/index.html",
+    "Docs/VAO_CONFORMANCE_0.6.0.md": "conformance/index.html",
+    "Docs/VAO_PROFILE_INDEX_0.6.0.md": "profiles/index.html",
     "Docs/IMPLEMENTER_GUIDE.md": "implement/index.html",
     "Docs/SECURITY_CONSIDERATIONS.md": "security/index.html",
-    "Docs/VAO_0.5.0_CHANGELOG.md": "changes/index.html",
+    "Docs/VAO_0.6.0_CHANGELOG.md": "changes/index.html",
     "CITATION.cff": "citation/index.html",
 }
 
@@ -68,6 +68,19 @@ def versioned_artifacts(version: str) -> dict[str, str]:
 ARTIFACTS = {
     **versioned_artifacts("0.4.0"),
     **versioned_artifacts("0.5.0"),
+    **versioned_artifacts("0.6.0"),
+    **{
+        f"Profiles/MMIC/1.0.0/{name}": f"profiles/mmic/1.0.0/{name}"
+        for name in (
+            "mmic.schema.json",
+            "mechanical-music.ttl",
+            "optional-alignments.ttl",
+            "context.jsonld",
+            "shapes.ttl",
+            "dependencies.json",
+            "registry.json",
+        )
+    },
 }
 
 NAVIGATION = (
@@ -99,7 +112,12 @@ def document_map() -> dict[Path, PurePosixPath]:
         path = ROOT / source
         if path.exists() and path not in mapping:
             mapping[path] = PurePosixPath("documents", slugify(path.stem), "index.html")
-    for directory in (ROOT / "Docs", ROOT / "Schemas", ROOT / "knowledge"):
+    for directory in (
+        ROOT / "Docs",
+        ROOT / "Schemas",
+        ROOT / "knowledge",
+        ROOT / "Profiles",
+    ):
         for path in sorted(directory.rglob("*.md")):
             if path in mapping:
                 continue
@@ -346,7 +364,7 @@ def page_shell(
         {
             "@context": "https://schema.org",
             "@type": "TechArticle",
-            "name": "Virtual Acoustic Object (VAO) Standard 0.5.0",
+            "name": "Virtual Acoustic Object (VAO) Standard 0.6.0",
             "version": VERSION,
             "datePublished": PUBLICATION_DATE,
             "identifier": f"https://doi.org/{DOI}",
@@ -370,7 +388,7 @@ def page_shell(
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{html.escape(description, quote=True)}">
-  <meta name="citation_title" content="Virtual Acoustic Object (VAO) Standard 0.5.0">
+  <meta name="citation_title" content="Virtual Acoustic Object (VAO) Standard 0.6.0">
   <meta name="citation_author" content="Ukolov, Dominik">
   <meta name="citation_publication_date" content="{PUBLICATION_DATE}">
   <meta name="citation_doi" content="{DOI}">
@@ -395,7 +413,7 @@ def page_shell(
   </header>
   <main id="content">{content}</main>
   <footer class="site-footer">
-    <div><strong>VAO Standard 0.5.0</strong><br>Published 31 August 2026</div>
+    <div><strong>VAO Standard 0.6.0</strong><br>Published 10 October 2026</div>
     <div>Edited by Dominik Ukolov<br><a href="https://doi.org/{DOI}" rel="external">doi:{DOI}</a></div>
     <div><a href="{base_path}citation/">Citation</a><br><a href="{base_path}documents/license/">Licensing</a></div>
   </footer>
@@ -427,7 +445,7 @@ def document_page(
         body = (
             '<div class="document"><header class="document-heading">'
             '<p class="eyebrow">Citation</p><h1>Citation metadata</h1>'
-            "<p>Machine-readable citation metadata for the VAO 0.5.0 release.</p>"
+            "<p>Machine-readable citation metadata for the VAO 0.6.0 release.</p>"
             f"</header><pre><code>{html.escape(source.read_text(encoding='utf-8'))}</code></pre></div>"
         )
         headings: list[tuple[int, str, str]] = []
@@ -445,7 +463,7 @@ def document_page(
     )
     return page_shell(
         title=page_title(source),
-        description=f"{page_title(source)} — Virtual Acoustic Object Standard 0.5.0.",
+        description=f"{page_title(source)} — Virtual Acoustic Object Standard 0.6.0.",
         content=content,
         base_url=base_url,
         base_path=base_path,
@@ -474,12 +492,12 @@ def homepage(base_url: str, base_path: str, publication_state: str) -> str:
     {review_note}
   </div>
   <dl class="edition-record">
-    <div><dt>Edition</dt><dd>0.5.0</dd></div>
+    <div><dt>Edition</dt><dd>0.6.0 · MMIC 1.0.0</dd></div>
     <div><dt>Status</dt><dd>Final specification</dd></div>
-    <div><dt>Published</dt><dd>31 August 2026</dd></div>
+    <div><dt>Published</dt><dd>10 October 2026</dd></div>
     <div><dt>Identifier</dt><dd><a href="https://doi.org/{DOI}" rel="external">doi:{DOI}</a></dd></div>
     <div><dt>Editor</dt><dd>Dominik Ukolov</dd></div>
-    <div><dt>License</dt><dd>CC BY 4.0 / Apache-2.0</dd></div>
+    <div><dt>License</dt><dd>CC BY 4.0 / Apache-2.0 / CC0-1.0</dd></div>
   </dl>
 </section>
 <section class="introduction ruled-section" aria-labelledby="purpose">
@@ -487,6 +505,7 @@ def homepage(base_url: str, base_path: str, publication_state: str) -> str:
   <div><h2 id="purpose">Purpose</h2></div>
   <div class="prose-large">
     <p>VAO packages semantic identity, scientific evidence, multimodal media, physical topology, interaction behaviour, rights, and exact file bytes in a verifiable release model.</p>
+    <p>Version 0.6.0 adds mechanical music information carriers and digital designs, with documentary, decoding, comparison and generation contracts. Native signals, explicit MIDI bindings, model identity, geometry, timing and fabrication evidence remain distinct.</p>
     <p>It is designed for research, documentation, preservation, and reproducible implementation. Machine conformance establishes structural and semantic consistency; it does not substitute for scholarly evaluation of an observation, model, or claim.</p>
   </div>
 </section>
@@ -506,25 +525,25 @@ def homepage(base_url: str, base_path: str, publication_state: str) -> str:
   <div class="link-index">
     <a href="{base_path}standard/"><span>Normative text</span><small>Requirements and data model</small></a>
     <a href="{base_path}conformance/"><span>Conformance</span><small>Roles, validation order, and claims</small></a>
-    <a href="{base_path}profiles/"><span>Profiles</span><small>Core, scientific, spatial, acoustic, and playable contracts</small></a>
+    <a href="{base_path}profiles/"><span>Profiles</span><small>Core, scientific, spatial, acoustic, playable and MMIC contracts</small></a>
     <a href="{base_path}artifacts/"><span>Artifacts</span><small>Schemas, context, vocabulary, mapping, and SHACL</small></a>
     <a href="{base_path}security/"><span>Security</span><small>Requirements for untrusted carriers and remote materialization</small></a>
-    <a href="{base_path}changes/"><span>Changes</span><small>The 0.5.0 release record</small></a>
+    <a href="{base_path}changes/"><span>Changes</span><small>The 0.6.0 release record</small></a>
   </div>
 </section>
 <section class="ruled-section relation" aria-labelledby="modavis">
   <p class="section-number">04</p>
   <div><h2 id="modavis">Relation to MODAVIS</h2></div>
   <div class="prose-large">
-    <p>VAO is the exchange and preservation standard. The MODAVIS Ontology Network supplies a broader conceptual vocabulary for multimodal digital research objects. VAO 0.5.0 includes a version-specific RDF mapping to MODAVIS 0.1.0; the mapping is downstream and does not make the ontology a conformance dependency.</p>
-    <p><a href="{base_path}0.5.0/modavis-mapping.ttl">Open the normative mapping</a> · <a href="https://modavis-project.github.io/modavis-ontology-network/" rel="external">MODAVIS Ontology Network</a></p>
+    <p>VAO is the exchange and preservation standard. The MODAVIS Ontology Network supplies a broader conceptual vocabulary for multimodal digital research objects. VAO 0.6.0 includes a version-specific RDF mapping to MODAVIS 0.1.0; the mapping is downstream and does not make the ontology a conformance dependency.</p>
+    <p><a href="{base_path}0.6.0/modavis-mapping.ttl">Open the normative mapping</a> · <a href="https://modavis-project.github.io/modavis-ontology-network/" rel="external">MODAVIS Ontology Network</a></p>
   </div>
 </section>
 """
     return page_shell(
-        title="Virtual Acoustic Object Standard 0.5.0",
+        title="Virtual Acoustic Object Standard 0.6.0",
         description=(
-            "The final Virtual Acoustic Object Standard 0.5.0 specification, "
+            "The Virtual Acoustic Object Standard 0.6.0 specification with MMIC 1.0.0, "
             "schemas, profiles, implementation guidance, and release artifacts."
         ),
         content=content,
@@ -552,10 +571,14 @@ def artifacts_page(base_url: str, base_path: str) -> str:
     rows = []
     for source, target in ARTIFACTS.items():
         filename = PurePosixPath(target).name
-        artifact_version = PurePosixPath(target).parts[0]
+        artifact_version = (
+            "MMIC 1.0.0"
+            if source.startswith("Profiles/MMIC/")
+            else PurePosixPath(target).parts[0]
+        )
         digest = sha256(ROOT / source)
         rows.append(
-            f'<tr><td><a href="{base_path}{target}">{names[filename]}</a></td>'
+            f'<tr><td><a href="{base_path}{target}">{names.get(filename, filename)}</a></td>'
             f"<td><code>{artifact_version}</code></td><td><code>{filename}</code></td>"
             f"<td><code>{digest}</code></td></tr>"
         )
@@ -567,12 +590,13 @@ def artifacts_page(base_url: str, base_path: str) -> str:
   <div class="table-scroll"><table><thead><tr><th>Resource</th><th>Version</th><th>File</th><th>SHA-256</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div>
   <h2 id="authority">Authority</h2>
   <p>JSON Schema is the authoritative machine-validation layer. JSON-LD, RDF, and SHACL provide a semantic projection and do not preserve the source manifest bytes. The specification bundle records the normative source set and its fixity.</p>
-  <p>Canonical identifier: <a href="https://w3id.org/modavis/vao/0.5.0/" rel="external">w3id.org/modavis/vao/0.5.0/</a></p>
+  <p>Version 0.6.0 resolver routing is pending. The release includes all normative resources and an offline dependency catalog.</p>
+  <p>Canonical identifier: <a href="https://w3id.org/modavis/vao/0.6.0/" rel="external">w3id.org/modavis/vao/0.6.0/</a></p>
 </article>
 """
     return page_shell(
         title="Versioned artifacts",
-        description="Normative schemas and linked-data artifacts for VAO 0.5.0 and retained VAO 0.4.0 artifacts.",
+        description="Normative schemas and linked-data artifacts for VAO 0.6.0 and retained VAO 0.4.0/0.5.0 artifacts.",
         content=content,
         base_url=base_url,
         base_path=base_path,
@@ -600,7 +624,7 @@ def documents_index(
     )
     return page_shell(
         title="Document index",
-        description="Complete documentation index for VAO 0.5.0.",
+        description="Complete documentation index for VAO 0.6.0.",
         content=content,
         base_url=base_url,
         base_path=base_path,

@@ -29,19 +29,21 @@ class MetadataTests(unittest.TestCase):
             {
                 "https://spdx.org/licenses/Apache-2.0",
                 "https://spdx.org/licenses/CC-BY-4.0",
+                "https://spdx.org/licenses/CC0-1.0",
             },
             set(codemeta["license"]),
         )
         self.assertEqual("other-open", zenodo["license"])
-        self.assertEqual("0.5.0", zenodo["version"])
-        self.assertEqual("2026-08-31", zenodo["publication_date"])
+        self.assertEqual("0.6.0", zenodo["version"])
+        self.assertEqual("2026-10-10", zenodo["publication_date"])
         self.assertIn("CC BY 4.0", zenodo["description"])
         self.assertIn("Apache-2.0", zenodo["description"])
         citation = yaml.safe_load((ROOT / "CITATION.cff").read_text(encoding="utf-8"))
         self.assertEqual("1.2.0", citation["cff-version"])
-        self.assertEqual("0.5.0", citation["version"])
-        self.assertEqual("2026-08-31", str(citation["date-released"]))
-        self.assertEqual("10.5281/zenodo.22214248", citation["doi"])
+        self.assertEqual("0.6.0", citation["version"])
+        self.assertEqual("2026-10-10", str(citation["date-released"]))
+        self.assertEqual("https://doi.org/" + citation["doi"], codemeta["identifier"])
+        self.assertRegex(citation["doi"], r"^10\.5281/zenodo\.[0-9]+$")
         self.assertEqual("CC-BY-4.0", citation["license"])
         self.assertEqual(
             "https://orcid.org/0000-0002-7904-3892", citation["authors"][0]["orcid"]

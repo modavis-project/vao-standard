@@ -13,10 +13,20 @@ import sys
 ROOT = Path(__file__).resolve().parent.parent
 
 
+def check_python_sources() -> None:
+    print("\n== compile reference tools and tests ==", flush=True)
+    # Compile in memory so a Git-free export is checked without generated files.
+    for directory in (ROOT / "Tools", ROOT / "tests"):
+        for source in sorted(directory.rglob("*.py")):
+            compile(source.read_bytes(), str(source), "exec", dont_inherit=True)
+
+
 def run(label: str, arguments: list[str]) -> None:
     print(f"\n== {label} ==", flush=True)
     environment = dict(os.environ)
     environment["PYTHONDONTWRITEBYTECODE"] = "1"
+    # An unpacked source inside another checkout must not inherit that repository.
+    environment["GIT_CEILING_DIRECTORIES"] = str(ROOT.parent)
     completed = subprocess.run(arguments, cwd=ROOT, env=environment, check=False)
     if completed.returncode:
         raise SystemExit(f"FAILED ({completed.returncode}): {label}")
@@ -41,21 +51,45 @@ def main() -> int:
         "Tools/vao05_rdf.py",
         "Tools/vao05_runtime.py",
         "Tools/vao_resources.py",
+        "Tools/vao06.py",
+        "Tools/vao06_runtime.py",
+        "Tools/vao06_rdf.py",
+        "Tools/vao06_interop.py",
+        "Tools/vao.py",
+        "Tools/mmic.py",
+        "Tools/mmic_rdf.py",
+        "Tools/mmic_worker.py",
+        "Tools/migrate_vao05.py",
+        "Tools/build_mmic_schema.py",
+        "Tools/build_mmic_resources.py",
+        "Tools/build_mmic_fixtures.py",
+        "Tools/update_release_bundle06.py",
+        "Tools/generate_schema_reference06.py",
         "tests",
     ]
-    run(
-        "compile reference tools and tests",
-        [python, "-m", "compileall", "-q", "Tools", "tests"],
-    )
+    check_python_sources()
     run(
         "undefined names and unused imports",
-        [python, "-m", "ruff", "check", "--select", "F", "Tools", "tests"],
+        [
+            python,
+            "-m",
+            "ruff",
+            "check",
+            "--no-cache",
+            "--select",
+            "F",
+            "Tools",
+            "tests",
+        ],
     )
     run(
         "reference-code formatting",
-        [python, "-m", "ruff", "format", "--check", *formatted_sources],
+        [python, "-m", "ruff", "format", "--no-cache", "--check", *formatted_sources],
     )
-    run("REUSE 3.3 licensing compliance", [python, "-m", "reuse", "lint"])
+    run(
+        "REUSE 3.3 licensing compliance",
+        [python, "-m", "reuse", "--root", str(ROOT), "lint"],
+    )
     run(
         "generated schema reference",
         [python, "Tools/generate_schema_reference.py", "--check"],
@@ -63,6 +97,23 @@ def main() -> int:
     run(
         "normative specification bundle fixity",
         [python, "Tools/update_release_bundle.py", "--check"],
+    )
+    run(
+        "current generated schema reference",
+        [python, "Tools/generate_schema_reference06.py", "--check"],
+    )
+    run(
+        "current normative bundle fixity",
+        [python, "Tools/update_release_bundle06.py", "--check"],
+    )
+    run("MMIC generated schema", [python, "Tools/build_mmic_schema.py", "--check"])
+    run(
+        "MMIC local catalog and vocabulary",
+        [python, "Tools/build_mmic_resources.py", "--check"],
+    )
+    run(
+        "MMIC deterministic fixtures",
+        [python, "Tools/build_mmic_fixtures.py", "--check"],
     )
     run(
         "deterministic publication site",
@@ -226,7 +277,7 @@ def main() -> int:
         ],
     )
     print(
-        "\nRELEASE GATE PASSED: final VAO 0.4.0 and VAO 0.5.0 content are internally consistent."
+        "\nRELEASE GATE PASSED: VAO 0.6.0/MMIC 1.0.0 and retained VAO 0.4/0.5 content are internally consistent."
     )
     return 0
 

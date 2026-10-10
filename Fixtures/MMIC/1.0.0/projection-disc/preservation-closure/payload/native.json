@@ -1,0 +1,11 @@
+[
+  {
+    "id": "urn:uuid:6d0eda1c-90e1-59e7-8583-7d858c2264a1",
+    "kind": "impulse",
+    "onsetSeconds": 0.9600000000000002,
+    "roleAssignmentId": "urn:uuid:e756617c-0bc9-55a1-95b1-0e654038893a",
+    "sourceFeatureIds": [
+      "urn:uuid:f0e33fee-0652-566c-9c46-66edd8d3889e"
+    ]
+  }
+]

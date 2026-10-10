@@ -1,4 +1,4 @@
-# VAO 0.5.0 implementer guide
+# VAO 0.6.0 implementer guide
 
 This guide is informative. Normative requirements are in the standard, schemas, conformance document, and claimed profiles.
 
@@ -6,9 +6,13 @@ This guide is informative. Normative requirements are in the standard, schemas, 
 
 Start with the smallest honest role: validator, reader, writer, carrier writer, extractor, materializer, linked-data projector, repository projector, deterministic runtime, or profile processor. Publish exact role/profile/capability IRIs and resource limits.
 
+For MMIC processing, choose documentation, decoding, comparison or generation explicitly. Report core and domain results separately, and publish the exact profile specification version and supported execution subset. Start with [MMIC 1.0.0](VAO_MMIC_PROFILE_1.0.0.md), its [conformance map](MMIC_CONFORMANCE_1.0.0.md) and the [synthetic roll](../Fixtures/MMIC/1.0.0/roll/preservation-closure).
+
 A metadata catalogue may need only Core reading and fixity. A preservation system may need carrier validation/extraction and closure. An instrument simulator may additionally need Playable and deterministic runtime.
 
 ## 2. Build a manifest
+
+The following 0.5 examples remain unchanged compatibility references. For a new MMIC 0.6 release, use the versioned MMIC fixtures above.
 
 Use the [minimal workspace](../Fixtures/VAO05/workspaces/minimal) for structure, the [Kinoorgel descriptor](../Fixtures/VAO05/descriptors/kinoorgel-multimodal-scientific.example.json) for multimodal/scientific/playable/runtime registries, and the [Cuntz–Positiv descriptor](../Fixtures/VAO05/descriptors/cuntz-positiv-acoustic.example.json) for a positive spatial/acoustic contract. Fixture values are conformance data, not scientific reference results.
 

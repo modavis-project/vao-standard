@@ -12,7 +12,7 @@ If an apparent erratum changes conformance, it requires a new version even when 
 
 ## Three distinct versions
 
-- `formatVersion` identifies the serialized VAO contract (`0.5.0` for the current release; finalized 0.4.0 remains valid under its own schema).
+- `formatVersion` identifies the serialized VAO contract (`0.6.0` for the current release; 0.4.0 and 0.5.0 remain valid under their own schemas).
 - `release.contentVersion` identifies the publisher's acoustic-object release.
 - repository candidate labels such as `0.5.0-rc.1` identify pre-publication review of the specification and never appear as `formatVersion`.
 
@@ -35,3 +35,12 @@ Deprecation is documented in changelog and migration guidance for at least one s
 ## Candidate and release process
 
 Candidates use repository labels/tags such as `0.5.0-rc.1` and remain unpublished drafts until approval. A final release requires clean conformance, immutable artifact digests, citation/license review, registry preparation, responsible-editor approval, and a signed/tagged release according to the recorded publication process.
+
+## Independent application profile versions
+
+A profile's `specificationVersion` is independent of the enclosing VAO format
+version. MMIC 1.0.0 is implemented inside a VAO 0.6.0 envelope. The profile registry,
+manifest declaration, domain document and dependency catalog must identify the
+same exact specification. A profile revision does not silently reinterpret an
+older immutable declaration. Versioned identifiers remain normative even while
+resolver routing is pending; released local artifacts supply offline access.

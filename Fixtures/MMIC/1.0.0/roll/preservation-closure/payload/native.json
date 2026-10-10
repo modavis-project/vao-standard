@@ -1,0 +1,22 @@
+[
+  {
+    "durationSeconds": 0.15000000000000002,
+    "id": "urn:uuid:07cc56b6-c302-5e08-aeff-04810cb91cf3",
+    "kind": "gate",
+    "onsetSeconds": 0.3,
+    "roleAssignmentId": "urn:uuid:4b1f56f4-0f81-52bf-920f-d759918d5eae",
+    "sourceFeatureIds": [
+      "urn:uuid:2f281cd9-9d3d-5e33-a149-38ba7893fc93"
+    ]
+  },
+  {
+    "durationSeconds": 0.15000000000000002,
+    "id": "urn:uuid:c22846cd-a0d8-579a-9e01-c3fdbedbc2d6",
+    "kind": "gate",
+    "onsetSeconds": 0.6,
+    "roleAssignmentId": "urn:uuid:01380a9b-2488-5bb3-97e9-7fe144fc4f04",
+    "sourceFeatureIds": [
+      "urn:uuid:4a8b44b6-6b23-56b3-ba00-8b40c9229a3d"
+    ]
+  }
+]

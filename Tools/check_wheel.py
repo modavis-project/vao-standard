@@ -25,6 +25,15 @@ MODULES = (
     "vao05_runtime.py",
     "vao_resources.py",
     "vaom.py",
+    "vao06.py",
+    "vao06_interop.py",
+    "vao06_rdf.py",
+    "vao06_runtime.py",
+    "vao.py",
+    "mmic.py",
+    "mmic_rdf.py",
+    "mmic_worker.py",
+    "migrate_vao05.py",
 )
 SCHEMA_SUFFIXES = (".json", ".jsonld", ".ttl")
 
@@ -32,6 +41,7 @@ SCHEMA_SUFFIXES = (".json", ".jsonld", ".ttl")
 def copy_build_inputs(destination: Path) -> None:
     for name in ("pyproject.toml", "README.md", "AUTHORS.md", "LICENSE", "NOTICE"):
         shutil.copy2(ROOT / name, destination / name)
+    shutil.copytree(ROOT / "LICENSES", destination / "LICENSES")
     tools = destination / "Tools"
     tools.mkdir()
     for name in MODULES:
@@ -43,6 +53,12 @@ def copy_build_inputs(destination: Path) -> None:
             SCHEMA_SUFFIXES
         ):
             shutil.copy2(path, schemas / path.name)
+
+    profile = destination / "Profiles/MMIC/1.0.0"
+    profile.mkdir(parents=True)
+    for path in (ROOT / "Profiles/MMIC/1.0.0").iterdir():
+        if path.is_file():
+            shutil.copy2(path, profile / path.name)
 
 
 def build_wheel(source: Path, output: Path) -> Path:
@@ -77,6 +93,11 @@ def verify_contents(wheel: Path) -> None:
         for path in (ROOT / "Schemas").iterdir()
         if path.name == "README.md" or path.name.endswith(SCHEMA_SUFFIXES)
     )
+    required.update(
+        f"vao_standard_mmic/{p.name}"
+        for p in (ROOT / "Profiles/MMIC/1.0.0").iterdir()
+        if p.is_file()
+    )
     missing = sorted(required - names)
     if missing:
         raise SystemExit("Wheel omits required resources: " + ", ".join(missing))
@@ -87,6 +108,11 @@ def verify_contents(wheel: Path) -> None:
         entry_point_text = archive.read(entry_points[0]).decode("utf-8")
     if "vao04 = vao04:main" not in entry_point_text:
         raise SystemExit("Wheel omits the vao04 console entry point.")
+    if (
+        "vao06 = vao06:main" not in entry_point_text
+        or "vao = vao:main" not in entry_point_text
+    ):
+        raise SystemExit("Wheel omits current/version-dispatch entry points")
     if "vao05 = vao05:main" not in entry_point_text:
         raise SystemExit("Wheel omits the vao05 console entry point.")
 
@@ -110,6 +136,11 @@ import vao05
 import vao05_interop
 import vao05_rdf
 import vao_resources
+import vao06
+import vao06_rdf
+import mmic
+import mmic_rdf
+import vao
 
 root = Path(sys.argv[1])
 installed = Path(sys.argv[2]).resolve()
@@ -127,6 +158,16 @@ if Path(vao05_rdf.__file__).resolve().parent != installed:
     raise SystemExit("smoke test imported vao05_rdf outside the extracted wheel")
 if vao_resources.schema_directory().resolve().parent != installed:
     raise SystemExit("smoke test did not resolve the wheel's schema resources")
+for module in (vao06, vao06_rdf, mmic, mmic_rdf, vao):
+    if Path(module.__file__).resolve().parent != installed:
+        raise SystemExit("current module imported outside the extracted wheel")
+if mmic.resource_directory().resolve().parent != installed:
+    raise SystemExit("MMIC catalog was not loaded from the installed wheel")
+mmic.check_resources()
+for mode, status in (("preservation-closure", "valid"), ("bootstrap", "unmaterialized")):
+    report = vao.validate(root / "Fixtures/MMIC/1.0.0/roll" / mode)
+    if not report["coreValid"] or report["mmic"]["status"] != status or not report["mmic"]["worker"]["isolatedInterpreter"]:
+        raise SystemExit(f"installed MMIC worker/resource validation failed: {report}")
 for relative in (
     "Fixtures/VAO04/descriptors/kinoorgel-multimodal-scientific.example.json",
     "Fixtures/VAO04/descriptors/cuntz-positiv-acoustic.example.json",

@@ -1,0 +1,235 @@
+{
+  "assignments": [
+    {
+      "evidenceIds": [
+        "urn:uuid:72514b6b-bdc4-511b-8108-261b557f4623"
+      ],
+      "id": "urn:uuid:fe9a466d-eea2-52ab-9615-d217345bb395",
+      "modelId": "urn:uuid:92f8eac2-8d4d-564c-8775-13d3950360fe",
+      "selected": true,
+      "status": "accepted"
+    }
+  ],
+  "carriers": [],
+  "comparisons": [],
+  "corrections": [],
+  "designs": [
+    {
+      "evidenceIds": [
+        "urn:uuid:72514b6b-bdc4-511b-8108-261b557f4623"
+      ],
+      "execution": {
+        "activityId": "urn:uuid:25a4b280-781f-54fb-b582-5a64b08c090d",
+        "codeRealizationId": "urn:uuid:d54fe221-4823-5420-8790-c2d8a6cf7697",
+        "environmentRealizationId": "urn:uuid:605215aa-728b-52ab-a260-e54713c29270",
+        "modelSHA256": "04fe99dd032f34a4fcd450ac746c1ea6854a84acf811c89ea0e8348c053b3acc",
+        "reproducibility": "deterministic"
+      },
+      "fabricationStatus": "design-only",
+      "id": "urn:uuid:9cdf09e7-38ce-59be-9451-8f3b4f54597c",
+      "layoutRealizationId": "urn:uuid:f02a2bb8-a86f-5760-8b43-b88f190a36cf",
+      "modelId": "urn:uuid:92f8eac2-8d4d-564c-8775-13d3950360fe",
+      "purpose": "Synthetic layout to test source/model/design lineage",
+      "reportRealizationId": "urn:uuid:311dae19-0cf8-5265-900c-8649cd2c587b",
+      "sourceRealizationId": "urn:uuid:fc2e5f91-9ae4-57ce-b890-d93ddc3a9ed9"
+    }
+  ],
+  "evidence": [
+    {
+      "agentId": "urn:uuid:c8bb68ed-de90-5235-ac52-73794448f251",
+      "basis": "synthetic",
+      "id": "urn:uuid:72514b6b-bdc4-511b-8108-261b557f4623",
+      "locator": "Complete synthetic fixture",
+      "reviewStatus": "reviewed",
+      "scope": "Structural checks only; not historical accuracy",
+      "sourceIRI": "https://example.org/vao/mmic/synthetic-fixture",
+      "sourceRealizationId": "urn:uuid:df019290-cec8-517c-95bc-fdab7ed08aa5"
+    }
+  ],
+  "fabrications": [],
+  "features": [],
+  "id": "urn:uuid:8ce8c758-3406-5f24-b937-5948b4165a79",
+  "interpretations": [],
+  "levels": [
+    "documentation",
+    "generation"
+  ],
+  "models": [
+    {
+      "canonicalization": "RFC8785",
+      "evidenceIds": [
+        "urn:uuid:72514b6b-bdc4-511b-8108-261b557f4623"
+      ],
+      "id": "urn:uuid:92f8eac2-8d4d-564c-8775-13d3950360fe",
+      "spec": {
+        "artifactPins": [
+          {
+            "realizationId": "urn:uuid:d54fe221-4823-5420-8790-c2d8a6cf7697",
+            "sha256": "a4e4e59e5c2c73d5a5fc9b91c7118b791cd262c8d604534cb9e419b9414ae0a2"
+          },
+          {
+            "realizationId": "urn:uuid:605215aa-728b-52ab-a260-e54713c29270",
+            "sha256": "cfc21919a7f6c3eda016e2d2b37c75298bf7760469bb6938833dd60255feb30b"
+          }
+        ],
+        "constraints": {
+          "material": "synthetic sheet",
+          "maximumTarget": 72,
+          "minimumClearance": 0.01,
+          "minimumRepeatSeconds": 0.05,
+          "minimumTarget": 48,
+          "tool": "synthetic layout",
+          "unsupportedPolicy": "reject"
+        },
+        "exportBindings": [
+          {
+            "channel": 0,
+            "durationPolicy": {
+              "kind": "engagement"
+            },
+            "id": "urn:uuid:07471c65-6fdd-5db3-b9fe-6f9b030b2e26",
+            "message": "note",
+            "pitch": 60,
+            "protocol": "smf-ppqn",
+            "roleId": "urn:uuid:693e346f-7df3-5a3e-935c-12451252d824",
+            "rounding": "nearest-ties-even",
+            "tempoMicroseconds": 500000,
+            "ticksPerBeat": 480,
+            "velocity": 80
+          }
+        ],
+        "geometry": {
+          "bounds": [
+            0,
+            100
+          ],
+          "direction": "forward",
+          "kind": "linear",
+          "orientation": "Declared increasing coordinate on observed face",
+          "origin": "Synthetic registration origin",
+          "status": "assumed",
+          "unit": "http://qudt.org/vocab/unit/MilliM"
+        },
+        "historicalApplicability": "none; synthetic conformance construction",
+        "initialState": {
+          "latches": "zero"
+        },
+        "reader": {
+          "delaySeconds": 0,
+          "domain": [
+            0,
+            100
+          ],
+          "interpolation": "none",
+          "response": "Synthetic transfer; no acoustic response claim",
+          "segmented": false,
+          "trajectory": []
+        },
+        "roles": [
+          {
+            "bindingIds": [
+              "urn:uuid:07471c65-6fdd-5db3-b9fe-6f9b030b2e26"
+            ],
+            "id": "urn:uuid:693e346f-7df3-5a3e-935c-12451252d824",
+            "initialValue": 0,
+            "quantityUnit": "http://qudt.org/vocab/unit/UNITLESS",
+            "readerOffset": 0,
+            "readerOffsetUnit": "http://qudt.org/vocab/unit/MilliM",
+            "responseAssumption": "Synthetic response; feature engagement and acoustic duration are distinct.",
+            "role": "note",
+            "signalKind": "gate",
+            "target": "https://example.org/mmic/synthetic-target/pitch60",
+            "trackIndex": 0
+          },
+          {
+            "bindingIds": [],
+            "id": "urn:uuid:aca5899c-c8df-59e0-9b5e-f5dea1759b6f",
+            "readerOffset": 0,
+            "readerOffsetUnit": "http://qudt.org/vocab/unit/MilliM",
+            "responseAssumption": "Synthetic response; feature engagement and acoustic duration are distinct.",
+            "role": "unknown",
+            "signalKind": "unresolved",
+            "trackIndex": 1
+          }
+        ],
+        "runtime": {
+          "algorithm": "mmic-piecewise-reference-1",
+          "codeRealizationId": "urn:uuid:d54fe221-4823-5420-8790-c2d8a6cf7697",
+          "deterministic": true,
+          "environmentRealizationId": "urn:uuid:605215aa-728b-52ab-a260-e54713c29270"
+        },
+        "timing": {
+          "anchors": [
+            {
+              "position": 0,
+              "seconds": 0,
+              "uncertaintySeconds": 0.001
+            },
+            {
+              "position": 100,
+              "seconds": 3,
+              "uncertaintySeconds": 0.001
+            }
+          ],
+          "basis": "Synthetic clock only",
+          "calibrationStatus": "assumed",
+          "extrapolation": "forbidden",
+          "interpolation": "linear",
+          "method": "piecewise-linear",
+          "timeUnit": "http://qudt.org/vocab/unit/SEC",
+          "toleranceSeconds": 1e-09,
+          "unit": "http://qudt.org/vocab/unit/MilliM"
+        }
+      },
+      "specSHA256": "04fe99dd032f34a4fcd450ac746c1ea6854a84acf811c89ea0e8348c053b3acc",
+      "version": "synthetic-1"
+    }
+  ],
+  "observations": [],
+  "parts": [],
+  "playbacks": [],
+  "programmes": [],
+  "roleAssignments": [
+    {
+      "assignmentId": "urn:uuid:fe9a466d-eea2-52ab-9615-d217345bb395",
+      "evidenceIds": [
+        "urn:uuid:72514b6b-bdc4-511b-8108-261b557f4623"
+      ],
+      "id": "urn:uuid:fafb4227-7b29-5d3c-b813-1d9ae8fcbf31",
+      "modelRoleId": "urn:uuid:693e346f-7df3-5a3e-935c-12451252d824",
+      "status": "accepted",
+      "trackId": "urn:uuid:7da3f470-ce36-5120-8d6c-cf8d0057842d"
+    },
+    {
+      "assignmentId": "urn:uuid:fe9a466d-eea2-52ab-9615-d217345bb395",
+      "evidenceIds": [
+        "urn:uuid:72514b6b-bdc4-511b-8108-261b557f4623"
+      ],
+      "id": "urn:uuid:d8e50ac8-ba5e-5af4-8e24-bbcb0a06dde7",
+      "modelRoleId": "urn:uuid:aca5899c-c8df-59e0-9b5e-f5dea1759b6f",
+      "status": "undetermined",
+      "trackId": "urn:uuid:0e818832-3942-5e3d-9ef8-b31c3ed8b829"
+    }
+  ],
+  "schemaVersion": "1.0.0",
+  "states": [],
+  "synthetic": true,
+  "tracks": [
+    {
+      "evidenceIds": [
+        "urn:uuid:72514b6b-bdc4-511b-8108-261b557f4623"
+      ],
+      "id": "urn:uuid:7da3f470-ce36-5120-8d6c-cf8d0057842d",
+      "index": 0,
+      "modelId": "urn:uuid:92f8eac2-8d4d-564c-8775-13d3950360fe"
+    },
+    {
+      "evidenceIds": [
+        "urn:uuid:72514b6b-bdc4-511b-8108-261b557f4623"
+      ],
+      "id": "urn:uuid:0e818832-3942-5e3d-9ef8-b31c3ed8b829",
+      "index": 1,
+      "modelId": "urn:uuid:92f8eac2-8d4d-564c-8775-13d3950360fe"
+    }
+  ]
+}

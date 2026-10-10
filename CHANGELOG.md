@@ -2,6 +2,16 @@
 
 All notable public changes will be recorded here. The project follows semantic versioning for the specification bundle as described in [VERSIONING.md](Docs/VERSIONING.md).
 
+## [0.6.0] - 2026-10-10
+
+- Added the independently versioned MMIC 1.0.0 profile and VAO-owned mechanical-music vocabulary, with documentation, decoding, comparison and generation contracts.
+- Added exact profile specification versions, local dependency/capability closure and separate core/domain conformance results.
+- Added complete model identity, native signal/MIDI byte checks, geometry and timing consistency, qualified alignment, immutable corrections and design/fabrication lineage.
+- Added lossless ordered JSON/RDF/JSON-LD projection, SHACL, bounded offline processing, synthetic fixtures, a JavaScript reference consumer and byte-preserving 0.5 migration.
+- Retained the versioned 0.4/0.5 specifications, schemas, readers and fixtures unchanged. Advanced current release metadata, site generation and signed publication automation to 0.6.0; 0.6.0 W3ID routing remains pending.
+
+See the [complete 0.5.0-to-0.6.0 changes](Docs/VAO_0.6.0_CHANGELOG.md), [MMIC profile](Docs/VAO_MMIC_PROFILE_1.0.0.md) and [migration contract](Docs/MIGRATION_0.5_TO_0.6.0.md).
+
 ## [0.5.0] - 2026-08-31
 
 - Added identified cross-carrier distributions and release-descriptor fixity so a small bootstrap can retrieve exact members from a preservation carrier.

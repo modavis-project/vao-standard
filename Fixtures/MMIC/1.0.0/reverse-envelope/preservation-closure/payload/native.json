@@ -1,0 +1,22 @@
+[
+  {
+    "id": "urn:uuid:1220559e-defa-5d49-8265-86e84091112f",
+    "kind": "envelope",
+    "onsetSeconds": 0.2999999999999998,
+    "roleAssignmentId": "urn:uuid:71a44107-f18c-5750-9d45-b2295545bf19",
+    "samples": [
+      {
+        "seconds": 0.2999999999999998,
+        "value": 20
+      },
+      {
+        "seconds": 0.4500000000000002,
+        "value": 90
+      }
+    ],
+    "sourceFeatureIds": [
+      "urn:uuid:da1ef6c0-7ad4-5c9a-8bce-3f78d82c0015"
+    ],
+    "unit": "http://qudt.org/vocab/unit/UNITLESS"
+  }
+]
