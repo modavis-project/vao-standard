@@ -15,12 +15,12 @@
       "realizationId": "urn:uuid:1bf14886-8d06-5fde-b128-e23f35d08a37"
     },
     {
-      "path": "payload/semantic.json",
-      "realizationId": "urn:uuid:1ee7a03b-cb73-50ac-974f-eca5ca9d723c"
+      "path": "payload/requirements-lock.txt",
+      "realizationId": "urn:uuid:4291fb69-c385-553d-b1e4-c8d2c973008a"
     },
     {
-      "path": "payload/requirements-lock.txt",
-      "realizationId": "urn:uuid:7464bd43-1fc6-5a02-a7e2-fd751382d7fe"
+      "path": "payload/semantic.json",
+      "realizationId": "urn:uuid:73fd2a5a-1571-52b8-947e-1fda965dbb02"
     },
     {
       "path": "payload/observation.svg",
@@ -38,7 +38,7 @@
   "formatVersion": "0.6.0",
   "id": "urn:uuid:145497b8-5fd5-587c-a0f1-7ee39a3885b5",
   "manifestByteSize": 19972,
-  "manifestSHA256": "7ad6775ee21d68df927b76b703be7dc32407c243f9dd90a54ef194ee2d8d9251",
+  "manifestSHA256": "f938414ff6eb9e0da0c81fdf6586c0f311d084af725e3fde7648d76a53f1e589",
   "releaseId": "urn:uuid:fad8de0f-9690-5d8e-84d7-c15759183f65",
   "type": "VAOCarrier"
 }

@@ -7,7 +7,7 @@
   "embeddedRealizations": [
     {
       "path": "payload/semantic.json",
-      "realizationId": "urn:uuid:b04d1ade-0951-56be-87d2-3003ff6ff3e6"
+      "realizationId": "urn:uuid:af460881-fd0b-53cc-9997-600aef085725"
     },
     {
       "path": "payload/reference.py",
@@ -15,7 +15,7 @@
     },
     {
       "path": "payload/requirements-lock.txt",
-      "realizationId": "urn:uuid:061c367c-4380-5093-a013-c2c18ae97fb6"
+      "realizationId": "urn:uuid:6d4b80d2-4ed3-5e44-a96e-1fed2e7e2b1e"
     },
     {
       "path": "payload/evidence.txt",
@@ -25,7 +25,7 @@
   "formatVersion": "0.6.0",
   "id": "urn:uuid:c55b2b04-a9c0-521b-b445-dbd787112877",
   "manifestByteSize": 19976,
-  "manifestSHA256": "652c395ac7f769cf190387c8e0184a8327f5b43193faa28da391f4d4fb73017c",
+  "manifestSHA256": "359121fff0816030e1ca7992bbe8d504ae645ced2d54e1a53c4a78d9b1856802",
   "releaseId": "urn:uuid:4eddcb8b-385b-576f-8015-8c23e93e083c",
   "type": "VAOCarrier"
 }

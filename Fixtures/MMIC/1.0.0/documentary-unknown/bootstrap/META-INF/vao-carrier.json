@@ -15,7 +15,7 @@
     },
     {
       "path": "payload/requirements-lock.txt",
-      "realizationId": "urn:uuid:f383f380-074d-56af-a60b-b1bcdc0445f0"
+      "realizationId": "urn:uuid:f7a02fc3-2167-5e72-a24c-3c139e89f563"
     },
     {
       "path": "payload/evidence.txt",
@@ -25,7 +25,7 @@
   "formatVersion": "0.6.0",
   "id": "urn:uuid:06dce188-5b33-5b84-ad0d-ca4c94c2a367",
   "manifestByteSize": 16861,
-  "manifestSHA256": "a90e499ada2c463d0f91651ff9454f3a537255a2f65a246d4a69201b0f5827da",
+  "manifestSHA256": "832ef2f03ab7c20f855be7f1fed44f4631daedd380cff8128ceca784bf97fa77",
   "releaseId": "urn:uuid:e3982723-97ae-5426-aa75-e67348b74146",
   "type": "VAOCarrier"
 }

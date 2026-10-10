@@ -27,6 +27,31 @@ import vao04_rdf  # noqa: E402
 
 
 class ReleaseTests(unittest.TestCase):
+    def assert_historical_reference_environment(self, recorded: dict) -> None:
+        expected = vao04.reference_software_environment(
+            "urn:vao:software:vao04-reference"
+        )
+        lock = next(
+            item
+            for item in expected["dependencies"]
+            if item["name"] == "requirements-lock.txt"
+        )
+        self.assertEqual(
+            {
+                "algorithm": "sha256",
+                "value": hashlib.sha256(
+                    (ROOT / "requirements-lock.txt").read_bytes()
+                ).hexdigest(),
+            },
+            lock["identity"],
+        )
+        # Retained fixtures describe the environment deposited with v0.5.0,
+        # whereas new declarations must hash the current patched environment.
+        lock["identity"]["value"] = (
+            "cfc21919a7f6c3eda016e2d2b37c75298bf7760469bb6938833dd60255feb30b"
+        )
+        self.assertEqual(expected, recorded)
+
     def test_all_04_schemas_are_valid_draft_2020_12(self) -> None:
         schemas = sorted((ROOT / "Schemas").glob("*0.4.0.schema.json"))
         self.assertEqual(6, len(schemas))
@@ -63,9 +88,8 @@ class ReleaseTests(unittest.TestCase):
         self.assertTrue(report["valid"], report["errors"])
         self.assertEqual("0.4.0", report["formatVersion"])
         manifest = json.loads(fixture.read_text(encoding="utf-8"))
-        self.assertEqual(
-            vao04.reference_software_environment("urn:vao:software:vao04-reference"),
-            manifest["scientific"]["softwareEnvironments"][0],
+        self.assert_historical_reference_environment(
+            manifest["scientific"]["softwareEnvironments"][0]
         )
 
     def test_companion_descriptors_and_publication_set(self) -> None:
@@ -324,9 +348,8 @@ class ReleaseTests(unittest.TestCase):
         self.assertTrue(manifest["acoustics"]["measurements"])
         self.assertTrue(manifest["acoustics"]["metricSets"])
         self.assertTrue(manifest["acoustics"]["responseSets"])
-        self.assertEqual(
-            vao04.reference_software_environment("urn:vao:software:vao04-reference"),
-            manifest["scientific"]["softwareEnvironments"][0],
+        self.assert_historical_reference_environment(
+            manifest["scientific"]["softwareEnvironments"][0]
         )
 
     def test_minimal_workspace_and_carrier(self) -> None:
@@ -342,9 +365,8 @@ class ReleaseTests(unittest.TestCase):
                 encoding="utf-8"
             )
         )
-        self.assertEqual(
-            vao04.reference_software_environment("urn:vao:software:vao04-reference"),
-            manifest["scientific"]["softwareEnvironments"][0],
+        self.assert_historical_reference_environment(
+            manifest["scientific"]["softwareEnvironments"][0]
         )
 
     def test_reference_writer_is_byte_deterministic(self) -> None:

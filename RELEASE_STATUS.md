@@ -4,6 +4,7 @@
 - MMIC profile specification version: **1.0.0**
 - Specification status: **final**
 - Publication date: **2026-10-10**
+- Version DOI: **[10.5281/zenodo.23287792](https://doi.org/10.5281/zenodo.23287792)**
 - Concept DOI: **[10.5281/zenodo.22122773](https://doi.org/10.5281/zenodo.22122773)**
 - Release tag: **[`v0.6.0`](https://github.com/modavis-project/vao-standard/releases/tag/v0.6.0)**
 - Version 0.6.0 W3ID routing: **pending**

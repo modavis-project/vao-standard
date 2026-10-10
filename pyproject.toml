@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=77"]
+requires = ["setuptools>=83"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -31,7 +31,7 @@ dev = [
 
 [project.urls]
 Repository = "https://github.com/modavis-project/vao-standard"
-Specification = "https://w3id.org/modavis/vao/0.5.0/"
+Specification = "https://github.com/modavis-project/vao-standard/blob/v0.6.0/Docs/VAO_STANDARD_0.6.0.md"
 
 [project.scripts]
 vao04 = "vao04:main"

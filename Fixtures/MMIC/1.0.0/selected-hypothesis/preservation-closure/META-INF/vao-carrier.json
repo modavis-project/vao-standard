@@ -7,10 +7,6 @@
   ],
   "embeddedRealizations": [
     {
-      "path": "payload/requirements-lock.txt",
-      "realizationId": "urn:uuid:061c367c-4380-5093-a013-c2c18ae97fb6"
-    },
-    {
       "path": "payload/observation.svg",
       "realizationId": "urn:uuid:229d82c0-5baf-590a-9506-73c13dd67c92"
     },
@@ -23,12 +19,16 @@
       "realizationId": "urn:uuid:6aa99703-8539-5f6f-a870-55b0148cada2"
     },
     {
+      "path": "payload/requirements-lock.txt",
+      "realizationId": "urn:uuid:6d4b80d2-4ed3-5e44-a96e-1fed2e7e2b1e"
+    },
+    {
       "path": "payload/reference.py",
       "realizationId": "urn:uuid:8382c6e3-c3f2-5cff-a1d5-dc0d9d932489"
     },
     {
       "path": "payload/semantic.json",
-      "realizationId": "urn:uuid:b04d1ade-0951-56be-87d2-3003ff6ff3e6"
+      "realizationId": "urn:uuid:af460881-fd0b-53cc-9997-600aef085725"
     },
     {
       "path": "payload/evidence.txt",
@@ -38,7 +38,7 @@
   "formatVersion": "0.6.0",
   "id": "urn:uuid:acbf25e6-57d2-5a4e-8e5a-042d1ba871d9",
   "manifestByteSize": 19976,
-  "manifestSHA256": "652c395ac7f769cf190387c8e0184a8327f5b43193faa28da391f4d4fb73017c",
+  "manifestSHA256": "359121fff0816030e1ca7992bbe8d504ae645ced2d54e1a53c4a78d9b1856802",
   "releaseId": "urn:uuid:4eddcb8b-385b-576f-8015-8c23e93e083c",
   "type": "VAOCarrier"
 }

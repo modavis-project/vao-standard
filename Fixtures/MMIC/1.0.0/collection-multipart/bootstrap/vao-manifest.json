@@ -20,13 +20,13 @@
       "realizationIds": [
         "urn:uuid:55d74659-1ed7-5884-b5ad-8f614a83417b",
         "urn:uuid:483a7a4d-c835-5c1d-83f2-45c80cdb98f0",
-        "urn:uuid:59728713-e175-5b90-bfaf-98a9c859b662",
+        "urn:uuid:d3e3141b-2fd4-57cb-a0e9-3af89d83c637",
         "urn:uuid:40c65fe9-d6b4-5a23-8d74-a7751bc197e5"
       ],
       "requiredCapabilities": [],
       "selectionPolicy": "independent",
       "selectionSetId": "Documentation",
-      "totalByteSize": 137141,
+      "totalByteSize": 137140,
       "type": "AssetGroup"
     },
     {
@@ -171,7 +171,7 @@
         "en": "requirements-lock.txt"
       },
       "realizationIds": [
-        "urn:uuid:59728713-e175-5b90-bfaf-98a9c859b662"
+        "urn:uuid:d3e3141b-2fd4-57cb-a0e9-3af89d83c637"
       ],
       "roles": [
         "https://w3id.org/modavis/vao/vocab/asset-role/source-evidence"
@@ -317,12 +317,12 @@
     },
     {
       "assetId": "urn:uuid:e130b634-9bb0-5987-b87c-f474e732a884",
-      "byteSize": 59803,
+      "byteSize": 59802,
       "distributionIds": [],
       "extensions": {
         "https://w3id.org/modavis/vao/mmic#synthetic": false
       },
-      "id": "urn:uuid:59728713-e175-5b90-bfaf-98a9c859b662",
+      "id": "urn:uuid:d3e3141b-2fd4-57cb-a0e9-3af89d83c637",
       "mediaType": "text/plain",
       "provenanceIds": [
         "urn:uuid:877a79b4-3014-53c1-9fa6-a3e315fee381"
@@ -332,7 +332,7 @@
       "rightsIds": [
         "urn:uuid:c290274e-b0f4-5c4b-ab00-67513ceb535a"
       ],
-      "sha256": "cfc21919a7f6c3eda016e2d2b37c75298bf7760469bb6938833dd60255feb30b",
+      "sha256": "68aa306492b3ed1688e02a639ca18cc1855c49874e5f98cb5ada76c0227faa2a",
       "technicalMetadata": {
         "kind": "software"
       },
@@ -443,7 +443,7 @@
         "urn:uuid:30bb6e8b-c93a-569c-a33a-2f4fcf6d1800",
         "urn:uuid:483a7a4d-c835-5c1d-83f2-45c80cdb98f0",
         "urn:uuid:e130b634-9bb0-5987-b87c-f474e732a884",
-        "urn:uuid:59728713-e175-5b90-bfaf-98a9c859b662"
+        "urn:uuid:d3e3141b-2fd4-57cb-a0e9-3af89d83c637"
       ],
       "id": "urn:uuid:c290274e-b0f4-5c4b-ab00-67513ceb535a",
       "license": "https://spdx.org/licenses/Apache-2.0",
@@ -485,7 +485,7 @@
         "inputIds": [],
         "outputIds": [
           "urn:uuid:483a7a4d-c835-5c1d-83f2-45c80cdb98f0",
-          "urn:uuid:59728713-e175-5b90-bfaf-98a9c859b662",
+          "urn:uuid:d3e3141b-2fd4-57cb-a0e9-3af89d83c637",
           "urn:uuid:cfecdd23-f40b-5819-96a1-a13969641d16",
           "urn:uuid:40c65fe9-d6b4-5a23-8d74-a7751bc197e5",
           "urn:uuid:55d74659-1ed7-5884-b5ad-8f614a83417b"

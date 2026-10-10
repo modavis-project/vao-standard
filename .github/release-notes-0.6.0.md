@@ -7,3 +7,7 @@ The versioned 0.5.0 and 0.4.0 specifications, schemas, readers and fixtures rema
 Version 0.6.0 resolver routing is pending. The release includes all local normative resources. Historical accuracy and physical playability require separate certification; execution outside the declared reference subset reports unsupported.
 
 Normative resources use CC BY 4.0; software uses Apache-2.0; original MMIC synthetic data uses CC0-1.0 with code/lock exceptions. `REUSE.toml` defines the per-file mapping.
+
+Version DOI: [10.5281/zenodo.23287792](https://doi.org/10.5281/zenodo.23287792). The [concept DOI](https://doi.org/10.5281/zenodo.22122773) identifies the release series.
+
+The locked build environment updates `urllib3` to 2.8.0 and `setuptools` to 83.0.0, addressing the upstream streaming and source-distribution advisories documented in the changelog. MMIC environment assets and hashes are regenerated; historical 0.4/0.5 fixture bytes remain unchanged.

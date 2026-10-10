@@ -17,7 +17,7 @@ from urllib.parse import quote, urlsplit
 ROOT = Path(__file__).resolve().parent.parent
 VERSION = "0.6.0"
 PUBLICATION_DATE = "2026-10-10"
-DOI = "10.5281/zenodo.22122773"
+DOI = "10.5281/zenodo.23287792"
 DEFAULT_BASE_URL = "https://modavis-project.github.io/vao-standard/"
 DEFAULT_BASE_PATH = "/vao-standard/"
 

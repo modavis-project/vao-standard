@@ -6,7 +6,7 @@ artifacts. Registry assignments are not implied by specification publication.
 | System | Current edition | Status |
 | --- | --- | --- |
 | GitHub | signed `v0.6.0` tag and release artifacts | immutable release source |
-| Zenodo | VAO 0.6.0, concept `10.5281/zenodo.22122773` | versioned release series |
+| Zenodo | VAO 0.6.0, version `10.5281/zenodo.23287792`; concept `10.5281/zenodo.22122773` | versioned release series |
 | W3ID 0.6.0/MMIC 1.0.0 | canonical identifiers in the released files | routing pending |
 | W3ID 0.4.0/0.5.0 | existing immutable version routes | preserved |
 | IANA | `application/vnd.modavis.vao+zip` | provisional; not assigned |

@@ -12,6 +12,9 @@ All notable public changes will be recorded here. The project follows semantic v
 
 See the [complete 0.5.0-to-0.6.0 changes](Docs/VAO_0.6.0_CHANGELOG.md), [MMIC profile](Docs/VAO_MMIC_PROFILE_1.0.0.md) and [migration contract](Docs/MIGRATION_0.5_TO_0.6.0.md).
 
+The release also refreshes the hash-locked build dependencies to `urllib3` 2.8.0
+and `setuptools` 83.0.0, addressing their current upstream security advisories.
+
 ## [0.5.0] - 2026-08-31
 
 - Added identified cross-carrier distributions and release-descriptor fixity so a small bootstrap can retrieve exact members from a preservation carrier.

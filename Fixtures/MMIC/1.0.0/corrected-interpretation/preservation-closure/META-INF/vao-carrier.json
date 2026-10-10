@@ -7,6 +7,10 @@
   ],
   "embeddedRealizations": [
     {
+      "path": "payload/requirements-lock.txt",
+      "realizationId": "urn:uuid:06ff9498-4379-5772-bc12-18e4ac0ed0e5"
+    },
+    {
       "path": "payload/reference.py",
       "realizationId": "urn:uuid:1baa6489-3c7d-5c39-8cb6-c25f02221b2e"
     },
@@ -19,12 +23,8 @@
       "realizationId": "urn:uuid:8ae219bc-9970-586b-8dd5-ff5c1f1c35f4"
     },
     {
-      "path": "payload/requirements-lock.txt",
-      "realizationId": "urn:uuid:8d45603a-077b-5b37-b386-63c9609abb16"
-    },
-    {
       "path": "payload/semantic.json",
-      "realizationId": "urn:uuid:bf47c7bd-c135-5da0-b628-e64ce718877f"
+      "realizationId": "urn:uuid:8dfcc2a0-fe40-5eda-b95b-a3f8ea8ac6d2"
     },
     {
       "path": "payload/replacement-native.json",
@@ -42,7 +42,7 @@
   "formatVersion": "0.6.0",
   "id": "urn:uuid:01b01a99-3a46-53f7-9653-ff620b4ad298",
   "manifestByteSize": 21517,
-  "manifestSHA256": "61b592a840735d5b7f4e4827070cc996b8522cee83284b19a3c69b05b71ba8a2",
+  "manifestSHA256": "32a3a5e4959444ed9209c4e5e65280e1ec4baa691f4d5d055c3ca2e398c041dd",
   "releaseId": "urn:uuid:67475a4e-bcb6-5a32-938c-4a97df956ea4",
   "type": "VAOCarrier"
 }

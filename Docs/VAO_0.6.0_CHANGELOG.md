@@ -81,6 +81,23 @@ identities while retaining original asset bytes, realization identities and unkn
 extensions. It records fixity and provenance in a migration receipt. It does not
 promote provisional MMIC annotations automatically.
 
+## Release dependencies and distribution
+
+The hash-locked development environment advances `urllib3` from 2.7.0 to 2.8.0
+and `setuptools` from 80.10.2 to 83.0.0. These versions address the upstream
+[unbounded chunk-size buffering](https://github.com/urllib3/urllib3/security/advisories/GHSA-vxq7-64xx-v4gw),
+[chunked deflate loop](https://github.com/urllib3/urllib3/security/advisories/GHSA-gh4c-6fx4-qh6g)
+and [source-distribution exclusion](https://github.com/pypa/setuptools/security/advisories/GHSA-h35f-9h28-mq5c)
+advisories. MMIC fixture environment assets and their declared hashes are regenerated
+from the patched lockfile; preserved 0.4/0.5 fixture bytes remain unchanged.
+Their provenance retains the original deposited lock digest. Regression checks
+verify that historical digest separately from the current environment declaration.
+
+Citation metadata, the site and package links identify the 0.6.0 edition and its
+version DOI `10.5281/zenodo.23287792`. Signed release automation runs Node.js 24,
+checks Python 3.11 and 3.14, and publishes the deterministic source bundle only after
+validation and signature verification.
+
 ## Preserved behavior and limits
 
 The versioned 0.5.0 and 0.4.0 normative artifacts, schemas, readers and fixtures remain

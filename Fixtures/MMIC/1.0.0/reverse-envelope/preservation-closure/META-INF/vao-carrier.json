@@ -11,8 +11,8 @@
       "realizationId": "urn:uuid:0610ea70-2070-5bfb-b2a7-b477afd9203e"
     },
     {
-      "path": "payload/requirements-lock.txt",
-      "realizationId": "urn:uuid:5096460c-1d9c-51c1-8427-a20197c3a356"
+      "path": "payload/semantic.json",
+      "realizationId": "urn:uuid:3d6126ff-2ad0-50b3-9d5c-96ba8ef1347d"
     },
     {
       "path": "payload/observation.svg",
@@ -31,14 +31,14 @@
       "realizationId": "urn:uuid:e2945115-a1b6-50c7-9f1d-b89a5d0ef51c"
     },
     {
-      "path": "payload/semantic.json",
-      "realizationId": "urn:uuid:f2e02eb7-7559-5804-9760-15b9fd63fb4e"
+      "path": "payload/requirements-lock.txt",
+      "realizationId": "urn:uuid:f180d6ba-1622-5afe-94ea-c80918b10d33"
     }
   ],
   "formatVersion": "0.6.0",
   "id": "urn:uuid:1e9f0d3f-edfd-553b-8bae-be54b8a76f57",
   "manifestByteSize": 19973,
-  "manifestSHA256": "e5d86b68e30ca9e9f38f0b5fe4e9f4b01dc458274050f892081371dc50b983aa",
+  "manifestSHA256": "6f995f53dfffbb2ed390d86af4e71d4a07b4d769ba893585b969e70e960cabe7",
   "releaseId": "urn:uuid:f61b4fbc-1bec-5366-aeef-6d54414e12d3",
   "type": "VAOCarrier"
 }

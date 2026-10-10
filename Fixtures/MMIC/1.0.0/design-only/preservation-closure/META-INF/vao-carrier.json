@@ -7,16 +7,16 @@
   ],
   "embeddedRealizations": [
     {
+      "path": "payload/requirements-lock.txt",
+      "realizationId": "urn:uuid:05c4505e-9ef8-5731-b989-a987b3407236"
+    },
+    {
       "path": "payload/generation-report.json",
-      "realizationId": "urn:uuid:311dae19-0cf8-5265-900c-8649cd2c587b"
+      "realizationId": "urn:uuid:9a89504c-aa89-50ab-9c50-544154771ca5"
     },
     {
       "path": "payload/semantic.json",
-      "realizationId": "urn:uuid:587702b0-d873-5da2-8dc6-4f030191a170"
-    },
-    {
-      "path": "payload/requirements-lock.txt",
-      "realizationId": "urn:uuid:605215aa-728b-52ab-a260-e54713c29270"
+      "realizationId": "urn:uuid:a36d5ca2-54e0-50ea-aaa2-aa2d8205424a"
     },
     {
       "path": "payload/observation.svg",
@@ -32,7 +32,7 @@
     },
     {
       "path": "payload/layout.json",
-      "realizationId": "urn:uuid:f02a2bb8-a86f-5760-8b43-b88f190a36cf"
+      "realizationId": "urn:uuid:f91a1e37-540a-579e-9e62-761437d881d6"
     },
     {
       "path": "payload/input.mid",
@@ -42,7 +42,7 @@
   "formatVersion": "0.6.0",
   "id": "urn:uuid:6ee30a4a-7938-5719-b955-733c2e00e6d5",
   "manifestByteSize": 21233,
-  "manifestSHA256": "ee87746d5b67be98b336c5ae086425b490e72c8fbdf36c41767c777de6c7fe42",
+  "manifestSHA256": "cf3d3a900b2926b9a0310f157165a1e0d16053241f3512d187c6f8c152dc38cc",
   "releaseId": "urn:uuid:5109948a-2f6b-51a2-b50e-0cee62bdeefe",
   "type": "VAOCarrier"
 }

@@ -18,15 +18,15 @@
       "materializesProfileIds": [],
       "qualityTier": "bootstrap",
       "realizationIds": [
-        "urn:uuid:9ae19c4c-e7a0-5dd3-a1e5-93c78a7f7fd5",
+        "urn:uuid:f50dd32d-f38a-5d8e-bee8-7cdae2f2a27c",
         "urn:uuid:1a2ef335-5bcb-54d0-b65c-af060e40ba39",
-        "urn:uuid:f19d1ba4-3e0a-5118-a19b-af040e62e9bc",
+        "urn:uuid:5b6e3936-5499-5bfe-aac6-39d4e3d1212b",
         "urn:uuid:4654ec2a-f102-5331-b7b4-6799d772b02d"
       ],
       "requiredCapabilities": [],
       "selectionPolicy": "independent",
       "selectionSetId": "Documentation",
-      "totalByteSize": 146933,
+      "totalByteSize": 146932,
       "type": "AssetGroup"
     },
     {
@@ -110,8 +110,8 @@
       ],
       "ontologyVersionIRI": "https://w3id.org/modavis/vao/profile/mmic/1.0.0/ontology",
       "profileVersion": "1.0.0",
-      "semanticRealizationId": "urn:uuid:9ae19c4c-e7a0-5dd3-a1e5-93c78a7f7fd5",
-      "semanticSHA256": "a98039645e5176d71199e7db5c2b3c0909d596272d2ea0b1b842db2336b44f84",
+      "semanticRealizationId": "urn:uuid:f50dd32d-f38a-5d8e-bee8-7cdae2f2a27c",
+      "semanticSHA256": "b67ab9ec2c66cdced9e23cdc76515344353a8c28f17118bedc5123ba89b4265e",
       "subjectEntityIds": [
         "urn:uuid:2deede5a-1e32-5a6b-9e2a-ccc347446548"
       ]
@@ -153,7 +153,7 @@
         "en": "requirements-lock.txt"
       },
       "realizationIds": [
-        "urn:uuid:f19d1ba4-3e0a-5118-a19b-af040e62e9bc"
+        "urn:uuid:5b6e3936-5499-5bfe-aac6-39d4e3d1212b"
       ],
       "roles": [
         "https://w3id.org/modavis/vao/vocab/asset-role/source-evidence"
@@ -233,7 +233,7 @@
         "en": "semantic.json"
       },
       "realizationIds": [
-        "urn:uuid:9ae19c4c-e7a0-5dd3-a1e5-93c78a7f7fd5"
+        "urn:uuid:f50dd32d-f38a-5d8e-bee8-7cdae2f2a27c"
       ],
       "roles": [
         "https://w3id.org/modavis/vao/vocab/asset-role/source-evidence"
@@ -332,12 +332,12 @@
     },
     {
       "assetId": "urn:uuid:d6c09ee0-ba4b-517e-b600-dcb8bf50f816",
-      "byteSize": 59803,
+      "byteSize": 59802,
       "distributionIds": [],
       "extensions": {
         "https://w3id.org/modavis/vao/mmic#synthetic": false
       },
-      "id": "urn:uuid:f19d1ba4-3e0a-5118-a19b-af040e62e9bc",
+      "id": "urn:uuid:5b6e3936-5499-5bfe-aac6-39d4e3d1212b",
       "mediaType": "text/plain",
       "provenanceIds": [
         "urn:uuid:b0836867-57cf-5988-973d-feabcb62a197"
@@ -347,7 +347,7 @@
       "rightsIds": [
         "urn:uuid:85c69d95-415e-56c2-bf9b-e8fd967fa5ee"
       ],
-      "sha256": "cfc21919a7f6c3eda016e2d2b37c75298bf7760469bb6938833dd60255feb30b",
+      "sha256": "68aa306492b3ed1688e02a639ca18cc1855c49874e5f98cb5ada76c0227faa2a",
       "technicalMetadata": {
         "kind": "software"
       },
@@ -457,7 +457,7 @@
       "extensions": {
         "https://w3id.org/modavis/vao/mmic#synthetic": true
       },
-      "id": "urn:uuid:9ae19c4c-e7a0-5dd3-a1e5-93c78a7f7fd5",
+      "id": "urn:uuid:f50dd32d-f38a-5d8e-bee8-7cdae2f2a27c",
       "mediaType": "application/json",
       "provenanceIds": [
         "urn:uuid:b0836867-57cf-5988-973d-feabcb62a197"
@@ -467,7 +467,7 @@
       "rightsIds": [
         "urn:uuid:48db6998-ba19-55bc-a14d-f93dc56ec933"
       ],
-      "sha256": "a98039645e5176d71199e7db5c2b3c0909d596272d2ea0b1b842db2336b44f84",
+      "sha256": "b67ab9ec2c66cdced9e23cdc76515344353a8c28f17118bedc5123ba89b4265e",
       "technicalMetadata": {
         "kind": "data"
       },
@@ -496,7 +496,7 @@
         "urn:uuid:f309f731-dcab-5cc4-9b16-b8c52f7b5b42",
         "urn:uuid:1d2dfef9-a6c8-517f-b210-08dd4e78f31a",
         "urn:uuid:3d5da482-647a-5a1c-b2c4-e62aada4744c",
-        "urn:uuid:9ae19c4c-e7a0-5dd3-a1e5-93c78a7f7fd5"
+        "urn:uuid:f50dd32d-f38a-5d8e-bee8-7cdae2f2a27c"
       ],
       "id": "urn:uuid:48db6998-ba19-55bc-a14d-f93dc56ec933",
       "license": "https://creativecommons.org/publicdomain/zero/1.0/",
@@ -510,7 +510,7 @@
         "urn:uuid:5c93c4cd-fca0-559e-b27a-58fea869b1db",
         "urn:uuid:1a2ef335-5bcb-54d0-b65c-af060e40ba39",
         "urn:uuid:d6c09ee0-ba4b-517e-b600-dcb8bf50f816",
-        "urn:uuid:f19d1ba4-3e0a-5118-a19b-af040e62e9bc"
+        "urn:uuid:5b6e3936-5499-5bfe-aac6-39d4e3d1212b"
       ],
       "id": "urn:uuid:85c69d95-415e-56c2-bf9b-e8fd967fa5ee",
       "license": "https://spdx.org/licenses/Apache-2.0",
@@ -552,12 +552,12 @@
         "inputIds": [],
         "outputIds": [
           "urn:uuid:1a2ef335-5bcb-54d0-b65c-af060e40ba39",
-          "urn:uuid:f19d1ba4-3e0a-5118-a19b-af040e62e9bc",
+          "urn:uuid:5b6e3936-5499-5bfe-aac6-39d4e3d1212b",
           "urn:uuid:d0e68be0-80bb-5ad1-a99f-243b360057ce",
           "urn:uuid:4654ec2a-f102-5331-b7b4-6799d772b02d",
           "urn:uuid:43ebd5a7-2393-5f7e-b2dd-974434e216d2",
           "urn:uuid:1d2dfef9-a6c8-517f-b210-08dd4e78f31a",
-          "urn:uuid:9ae19c4c-e7a0-5dd3-a1e5-93c78a7f7fd5"
+          "urn:uuid:f50dd32d-f38a-5d8e-bee8-7cdae2f2a27c"
         ],
         "parameterValues": {
           "https://w3id.org/modavis/vao/mmic#synthetic": true

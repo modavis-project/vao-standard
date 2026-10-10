@@ -28,8 +28,8 @@ wheel resource/runtime checks must reproduce from the exact source.
 
 The [release record](../RELEASE_STATUS.md), [citation metadata](../CITATION.cff)
 and [0.5.0-to-0.6.0 changelog](VAO_0.6.0_CHANGELOG.md) identify the edition.
-GitHub and the new version of Zenodo concept `10.5281/zenodo.22122773` distribute
-matching release artifacts. SHA-256 companions identify exact bytes.
+GitHub and [Zenodo version `10.5281/zenodo.23287792`](https://doi.org/10.5281/zenodo.23287792) distribute
+matching release artifacts. The concept DOI `10.5281/zenodo.22122773` identifies the release series. SHA-256 companions identify exact bytes.
 
 Version 0.6.0 W3ID routing is pending. Use the immutable GitHub tag and Zenodo version
 as access points. Older published routes and artifact bytes are preserved.

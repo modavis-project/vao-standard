@@ -18,7 +18,8 @@ Read the [0.5.0-to-0.6.0 changelog](Docs/VAO_0.6.0_CHANGELOG.md) and
 [migration contract](Docs/MIGRATION_0.5_TO_0.6.0.md).
 The [GitHub release](https://github.com/modavis-project/vao-standard/releases/tag/v0.6.0)
 contains the immutable release files. The
-[Zenodo concept DOI](https://doi.org/10.5281/zenodo.22122773) identifies the release series.
+[Zenodo version DOI](https://doi.org/10.5281/zenodo.23287792) identifies this edition; the
+[concept DOI](https://doi.org/10.5281/zenodo.22122773) identifies the release series.
 Version 0.6.0 W3ID routing is pending; the release includes all normative resources
 and an offline dependency catalog.
 
