@@ -72,7 +72,10 @@ class MetadataTests(unittest.TestCase):
             self.assertIn("--hash=sha256:", stanza)
         for workflow in (ROOT / ".github" / "workflows").glob("*.yml"):
             text = workflow.read_text(encoding="utf-8")
-            self.assertIn("--require-hashes -r requirements-lock.txt", text)
+            if workflow.name == "publish-documentation.yml":
+                self.assertNotRegex(text, r"\bpip(?:3)?\s+install\b", workflow.name)
+            else:
+                self.assertIn("--require-hashes -r requirements-lock.txt", text, workflow.name)
 
     def test_semantic_artifact_syntax(self) -> None:
         from rdflib import Graph, URIRef
