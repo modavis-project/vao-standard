@@ -7,7 +7,7 @@
 - Version DOI: **[10.5281/zenodo.23287792](https://doi.org/10.5281/zenodo.23287792)**
 - Concept DOI: **[10.5281/zenodo.22122773](https://doi.org/10.5281/zenodo.22122773)**
 - Release tag: **[`v0.6.0`](https://github.com/modavis-project/vao-standard/releases/tag/v0.6.0)**
-- Version 0.6.0 W3ID routing: **pending**
+- W3ID routing for 0.6.0 and MMIC 1.0.0: **live since 2026-11-19**
 
 VAO 0.6.0 integrates Mechanical Music Information Carriers through MMIC 1.0.0,
 with documentation, decoding, comparison and generation contracts. Read the
@@ -35,7 +35,9 @@ execution and unavailable materializations remain explicit report states.
 
 ## Identifiers
 
-Canonical 0.6.0 and MMIC 1.0.0 identifiers are defined by the released normative
-resources. Resolver routing is pending. Until it is available, use the immutable
-GitHub release and the versioned Zenodo record; the offline catalog permits local
-validation. Existing published 0.4/0.5 routes are preserved.
+The [VAO 0.6.0](https://w3id.org/modavis/vao/0.6.0/) and
+[MMIC 1.0.0](https://w3id.org/modavis/vao/profile/mmic/1.0.0) identifiers resolve
+following [W3ID pull request 7235](https://github.com/perma-id/w3id.org/pull/7235).
+The [routing record](w3id/README.md) lists the endpoints. The immutable GitHub
+release and versioned Zenodo record retain the resources used by the offline
+catalog. Existing published 0.4/0.5 routes are preserved.

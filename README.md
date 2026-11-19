@@ -20,8 +20,10 @@ The [GitHub release](https://github.com/modavis-project/vao-standard/releases/ta
 contains the immutable release files. The
 [Zenodo version DOI](https://doi.org/10.5281/zenodo.23287792) identifies this edition; the
 [concept DOI](https://doi.org/10.5281/zenodo.22122773) identifies the release series.
-Version 0.6.0 W3ID routing is pending; the release includes all normative resources
-and an offline dependency catalog.
+The [VAO 0.6.0](https://w3id.org/modavis/vao/0.6.0/) and
+[MMIC 1.0.0](https://w3id.org/modavis/vao/profile/mmic/1.0.0) identifiers now
+resolve. See the [routing record](w3id/README.md) for the versioned endpoints
+and vocabulary aliases. The release includes an offline dependency catalog.
 
 ## Start here
 

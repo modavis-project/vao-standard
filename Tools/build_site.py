@@ -590,7 +590,7 @@ def artifacts_page(base_url: str, base_path: str) -> str:
   <div class="table-scroll"><table><thead><tr><th>Resource</th><th>Version</th><th>File</th><th>SHA-256</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div>
   <h2 id="authority">Authority</h2>
   <p>JSON Schema is the authoritative machine-validation layer. JSON-LD, RDF, and SHACL provide a semantic projection and do not preserve the source manifest bytes. The specification bundle records the normative source set and its fixity.</p>
-  <p>Version 0.6.0 resolver routing is pending. The release includes all normative resources and an offline dependency catalog.</p>
+  <p>The VAO 0.6.0 and <a href="https://w3id.org/modavis/vao/profile/mmic/1.0.0" rel="external">MMIC 1.0.0</a> identifiers resolve through W3ID. The release includes an offline dependency catalog.</p>
   <p>Canonical identifier: <a href="https://w3id.org/modavis/vao/0.6.0/" rel="external">w3id.org/modavis/vao/0.6.0/</a></p>
 </article>
 """
