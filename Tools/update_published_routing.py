@@ -37,11 +37,13 @@ def update(site: Path) -> None:
 
     manifest_path = site / "release-site-manifest.json"
     manifest = json.loads(manifest_path.read_bytes())
-    entry, = (item for item in manifest["files"] if item["path"] == ARTIFACTS_PAGE)
+    (entry,) = (item for item in manifest["files"] if item["path"] == ARTIFACTS_PAGE)
     payload = current.encode("utf-8")
     entry.update(sha256=sha256(payload).hexdigest(), size=len(payload))
     page.write_bytes(payload)
-    manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    manifest_path.write_text(
+        json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
 
 
 if __name__ == "__main__":

@@ -75,7 +75,9 @@ class MetadataTests(unittest.TestCase):
             if workflow.name == "publish-documentation.yml":
                 self.assertNotRegex(text, r"\bpip(?:3)?\s+install\b", workflow.name)
             else:
-                self.assertIn("--require-hashes -r requirements-lock.txt", text, workflow.name)
+                self.assertIn(
+                    "--require-hashes -r requirements-lock.txt", text, workflow.name
+                )
 
     def test_semantic_artifact_syntax(self) -> None:
         from rdflib import Graph, URIRef
